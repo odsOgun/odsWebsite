@@ -10,7 +10,7 @@ function Nav() {
   ];
 
   return (
-    <nav className="flex items-center w-full">
+    <nav className="flex items-center justify-center w-full">
       <div className="flex items-center h-16 py-2 max-w-[1120px] w-full px-2">
         <img src={ODSLogo} className="logo" alt="ODS logo" />
 
@@ -30,8 +30,8 @@ function Nav() {
           ))}
         </div>
 
-        <button className="bg-[#178A2D] font-semibold h-10 min-w-[110px] w-[110px] rounded flex justify-center items-center text-white">
-          <span>Register</span>
+        <button className="bg-[#178A2D] font-semibold h-10 min-w-[110px] w-[110px] rounded flex justify-center items-center text-white tracking-[0.2px] px-3">
+          <span className="text-sm font-semibold">Register</span>
           <ArrowRight />
         </button>
       </div>
