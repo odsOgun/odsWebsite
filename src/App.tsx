@@ -4,8 +4,8 @@ import Nav from './components/local/nav';
 
 function App() {
   return (
-    <div className="">
-      <div className="container">
+    <div>
+      <div className='container'>
         <Nav />
       </div>
       <Hero />
