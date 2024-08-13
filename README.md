@@ -14,7 +14,7 @@ npm run dev
 
 [Figma Link](<https://www.figma.com/design/70OK7JBA9MbWPJcAOuAYjV/Website-(New)?node-id=1-6&t=P72lXr0akfJarjDX-1>)
 
-Vercel dev [Desktop Only For Now][https://ods-pink.vercel.app/]
+Vercel dev [Desktop Only For Now](https://ods-pink.vercel.app/)
 
 Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
