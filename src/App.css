@@ -44,3 +44,23 @@
 .geist-lf {
   font-family: geistMono;
 }
+.art-bg {
+  height: 172px;
+  width: 100%;
+  background-image: url(./assets/img/readme/artBg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1440px) {
+  .art-bg {
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+}
+.position-center {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -42%);
+}
