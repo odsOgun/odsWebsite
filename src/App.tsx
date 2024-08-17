@@ -5,7 +5,7 @@ import Nav from './components/local/nav';
 function App() {
   return (
     <div>
-      <div className='container'>
+      <div className='container max-md:px-5'>
         <Nav />
       </div>
       <Hero />
