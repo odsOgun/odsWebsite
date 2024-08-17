@@ -29,24 +29,24 @@ function SponsorLogos() {
 function Hero() {
   return (
     <div className='relative'>
-      <div className='hero-bg pb-[76px] '>
-        <div className='max-w-[713px] mx-auto pt-[100px]'>
-          <div className='flex flex-col gap-8'>
-            <div className='text-6xl leading-[64px] text-center tracking-[-1px] text-[#23323F]'>
-              <p className='italic font-normal platypi-gf'>
+      <div className='hero-bg px-5 pt-10 pb-[76px] md:pt-[100px] '>
+        <div className='max-w-[713px] mx-auto '>
+          <div className='flex flex-col gap-6 md:gap-8'>
+            <div className='text-[34px] md:text-6xl leading-[40px] md:leading-[64px] text-left md:text-center tracking-[0.5px] md:tracking-[-1px] text-[#23323F] max-md:max-w-[332px]'>
+              <h2 className='italic font-normal platypi-gf'>
                 Innovation:{' '}
-                <span className='font-semibold tracking-[-1px] not-italic'>
+                <span className='font-semibold tracking-[0.5px] md:tracking-[-1px] not-italic'>
                   Pathway to our nation's prosperity
                 </span>
-              </p>
+              </h2>
             </div>
-            <p className='text-base font-normal tracking-[0.2px] text-[#627587] text-center'>
+            <p className='text-sm md:text-base md:leading-[22px] font-normal tracking-[0.2px] text-[#627587] md:text-center max-md:max-w-[335px]'>
               Ogun Digital Summit 2024 is focused on improving collaborations, paving the way for
               new innovations and igniting conversation towards technology advancements and
               prosperity for Nigeria's digital technology ecosystem.
             </p>
 
-            <div className='flex items-center justify-center gap-4'>
+            <div className='flex items-center gap-4 mt-1 md:justify-center'>
               <button className='bg-[#178A2D] font-semibold h-10 min-w-[110px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
                 <span className='text-sm font-semibold'>Register</span>
                 <ArrowRight />
@@ -59,9 +59,9 @@ function Hero() {
           </div>
         </div>
 
-        <div className='max-w-[713px] mx-auto pt-[100px]'>
+        <div className='max-w-[713px] mx-auto mt-20 md:mt-[100px]'>
           <div className='flex flex-col justify-center w-full'>
-            <p className='text-center font-semibold text-base uppercase text-[#627587] tracking-[3px]'>
+            <p className='md:text-center font-semibold text-xs leading-5 md:text-base uppercase text-[#627587] tracking-[3px]'>
               Proudly supported by
             </p>
             <SponsorLogos />
