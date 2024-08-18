@@ -1,21 +1,32 @@
-import { ArrowRight, DownArrow } from '@/assets/icons';
+import { ArrowRight, ArrowRightGreen, DownArrow } from '@/assets/icons';
 import ODSLogo from '@/assets/svgs/nav/ODSLogo.svg';
 import ODSLogoMobile from '@/assets/svgs/nav/ODSLogo2.svg';
 import MenuSvg from '@/assets/svgs/nav/menu.svg';
+import { useState } from 'react';
 
 function Nav() {
-  const navItems = [
-    { label: 'Home', hasIcon: false },
+  // Define types for navigation items
+  interface NavItemProps {
+    label: string;
+    hasIcon?: boolean;
+    icon?: React.ReactNode;
+  }
+
+  const navItems: NavItemProps[] = [
+    { label: 'Home' },
     { label: 'About', hasIcon: true, icon: <DownArrow /> },
-    { label: 'Sponsor', hasIcon: false },
-    { label: 'Exhibitors', hasIcon: false }
+    { label: 'Sponsor' },
+    { label: 'Store' },
+    { label: 'Exhibitors' }
   ];
 
+  const [navState, setNavState] = useState<boolean>(false);
+
   return (
-    <nav className='flex items-center justify-center w-full '>
-      <div className='flex items-center h-16 py-2 md:py-[10px] max-w-[1120px] w-full md:px-2 max-md:justify-between'>
-        <img src={ODSLogo} className='logo max-md:hidden' alt='ODS logo' />
-        <img src={ODSLogoMobile} className='logo md:hidden' alt='ODS logo' />
+    <nav className='flex items-center justify-center w-full'>
+      <div className='flex items-center h-[54px] w-full py-2 max-w-[1120px] px-2 md:h-16 md:py-[10px] md:px-2 max-md:justify-between'>
+        <img src={ODSLogo} className='logo md:hidden' alt='ODS logo' />
+        <img src={ODSLogoMobile} className='logo max-md:hidden' alt='ODS logo' />
 
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => (
@@ -37,12 +48,43 @@ function Nav() {
         </button>
 
         {/* mobile */}
-        <div>
+        <div onClick={() => setNavState(!navState)}>
           <img src={MenuSvg} className='cursor-pointer md:hidden' alt='Hamburger' />
         </div>
       </div>
+      {/* mobileNav */}
+
+      <MobileNav />
     </nav>
   );
+
+  function MobileNav() {
+    return (
+      <div
+        className={`mobileNav absolute h-[408px] w-[90vw] bg-white px-5 pt-5 pb-10 md:hidden ${navState ? 'showNav' : ''}`}
+      >
+        <div className='flex flex-col w-full gap-6'>
+          {navItems.map((item, index) => (
+            <div key={index} className='flex items-center cursor-pointer h-7'>
+              <div className='font-semibold text-base leading-6 tracking-[0.2px] text-[#627587]'>
+                {item.label}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className='flex flex-col items-center gap-6 mt-6'>
+          <button className='bg-[#178A2D] font-semibold h-10 w-full rounded flex justify-center items-center tracking-[0.2px] text-white'>
+            <span className='text-sm font-semibold'>Register</span>
+            <ArrowRight />
+          </button>
+          <button className='w-full rounded-[2px] h-6 bg-white flex justify-center items-center gap-2'>
+            <span className='text-[#178A2D] text-sm font-semibold'>Become a sponsor</span>
+            <ArrowRightGreen />
+          </button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Nav;

@@ -16,7 +16,7 @@ const sponsors = [
 
 function SponsorLogos() {
   return (
-    <div className='flex items-center justify-between px-6 mt-2 md:mt-5 h-[62px] md:h-[72px]'>
+    <div className='flex items-center justify-between px-6 mt-2 h-[62px] md:h-[72px] md:mt-5'>
       {sponsors.map(({ label, icon }) => (
         <div key={label}>
           <img src={icon} alt={label} />
@@ -29,8 +29,8 @@ function SponsorLogos() {
 function Hero() {
   return (
     <div className='relative'>
-      <div className='hero-bg px-5 pt-10 pb-[120px] md:pb-[76px] md:pt-[100px] '>
-        <div className='max-w-[713px] mx-auto '>
+      <div className='hero-bg px-5 pt-10 pb-[120px] md:pt-[100px] md:pb-[76px]'>
+        <div className='max-w-[713px] mx-auto'>
           <div className='flex flex-col gap-6 md:gap-8'>
             <div className='text-[34px] md:text-6xl leading-[40px] md:leading-[64px] text-left md:text-center tracking-[0.5px] md:tracking-[-1px] text-[#23323F] max-md:max-w-[332px]'>
               <h2 className='italic font-normal platypi-gf'>
@@ -40,7 +40,7 @@ function Hero() {
                 </span>
               </h2>
             </div>
-            <p className='text-sm md:text-base md:leading-[22px] font-normal tracking-[0.2px] text-[#627587] md:text-center max-md:max-w-[335px]'>
+            <p className='text-sm md:text-base leading-[22px] md:leading-[22px] font-normal tracking-[0.2px] text-[#627587] max-md:max-w-[335px] md:text-center'>
               Ogun Digital Summit 2024 is focused on improving collaborations, paving the way for
               new innovations and igniting conversation towards technology advancements and
               prosperity for Nigeria's digital technology ecosystem.
@@ -51,7 +51,7 @@ function Hero() {
                 <span className='text-sm font-semibold'>Register</span>
                 <ArrowRight />
               </button>
-              <button className='min-w-[161px] rounded-[2px] h-6 bg-white flex justify-center items-center gap-2'>
+              <button className='min-w-[161px] h-6 rounded-[2px] bg-white flex justify-center items-center gap-2'>
                 <span className='text-[#178A2D] text-sm font-semibold'>Become a sponsor</span>
                 <ArrowRightGreen />
               </button>
@@ -61,7 +61,7 @@ function Hero() {
 
         <div className='max-w-[713px] mx-auto mt-20 md:mt-[100px]'>
           <div className='flex flex-col justify-center w-full'>
-            <p className='md:text-center font-semibold text-xs leading-5 md:text-base uppercase text-[#627587] tracking-[3px]'>
+            <p className='text-xs md:text-base font-semibold leading-5 md:leading-5 uppercase text-[#627587] tracking-[3px] md:text-center'>
               Proudly supported by
             </p>
             <SponsorLogos />
