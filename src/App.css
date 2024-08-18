@@ -64,3 +64,13 @@
   left: 50%;
   transform: translate(-50%, -42%);
 }
+@media only screen and (max-width: 768px) {
+  .position-center {
+    transform: translate(-50%, -70%);
+  }
+  .art-bg {
+    background-image: url(./assets/img/readme/artBgMobile.png);
+
+    height: 84px;
+  }
+}

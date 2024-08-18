@@ -16,7 +16,7 @@ const sponsors = [
 
 function SponsorLogos() {
   return (
-    <div className='flex items-center justify-between px-6 mt-5 h-[72px]'>
+    <div className='flex items-center justify-between px-6 mt-2 md:mt-5 h-[62px] md:h-[72px]'>
       {sponsors.map(({ label, icon }) => (
         <div key={label}>
           <img src={icon} alt={label} />
@@ -29,7 +29,7 @@ function SponsorLogos() {
 function Hero() {
   return (
     <div className='relative'>
-      <div className='hero-bg px-5 pt-10 pb-[76px] md:pt-[100px] '>
+      <div className='hero-bg px-5 pt-10 pb-[120px] md:pb-[76px] md:pt-[100px] '>
         <div className='max-w-[713px] mx-auto '>
           <div className='flex flex-col gap-6 md:gap-8'>
             <div className='text-[34px] md:text-6xl leading-[40px] md:leading-[64px] text-left md:text-center tracking-[0.5px] md:tracking-[-1px] text-[#23323F] max-md:max-w-[332px]'>
@@ -46,7 +46,7 @@ function Hero() {
               prosperity for Nigeria's digital technology ecosystem.
             </p>
 
-            <div className='flex items-center gap-4 mt-1 md:justify-center'>
+            <div className='flex flex-wrap items-center gap-4 mt-1 md:justify-center'>
               <button className='bg-[#178A2D] font-semibold h-10 min-w-[110px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
                 <span className='text-sm font-semibold'>Register</span>
                 <ArrowRight />
