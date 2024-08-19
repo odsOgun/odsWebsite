@@ -15,7 +15,7 @@ const renderer = ({ days, hours, minutes, seconds }: CountdownRenderProps): JSX.
   ];
 
   return (
-    <div className='flex py-3 pl-3'>
+    <div className='flex py-3 pl-3 max-md:max-w-[232px] max-md:h-[58px] justify-center items-center'>
       {timeUnits.map((item) => (
         <div key={item.label} className='flex flex-col w-16 h-[42px] md:h-12 text-center gap-1'>
           <div className='text-sm md:text-xl leading-5 md:leading-6 font-normal md:font-semibold text-[#F2F9FF] tracking-[-0.2px] md:tracking-[-0.5px]'>
@@ -32,7 +32,7 @@ const renderer = ({ days, hours, minutes, seconds }: CountdownRenderProps): JSX.
 
 const CountDown: React.FC = () => {
   return (
-    <div className='md:h-[72px] w-[88vw] max-md:max-w-[335px] md:w-[719px] rounded-2xl bg-[#0E140F] absolute position-center'>
+    <div className='md:h-[72px] w-[88vw] max-md:max-w-[335px] md:w-[719px] rounded-2xl bg-[#0E140F] absolute position-center max-md:px-2'>
       <div className='flex items-center justify-between w-full max-md:flex-col'>
         <Countdown date={new Date(2024, 9, 29)} renderer={renderer} />
 

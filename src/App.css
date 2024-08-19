@@ -95,3 +95,14 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+@media screen and (max-width: 1022px) and (min-width: 768px) {
+  .changePadding {
+    padding-left: 21px !important;
+    padding-right: 21px !important;
+  }
+  .changeFont-wh213o {
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+}
