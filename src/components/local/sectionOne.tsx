@@ -62,7 +62,7 @@ function SectionOne() {
           </div>
         </div>
 
-        <div className='flex justify-between w-full bg-[#0E140F] p-6'>
+        <div className='flex justify-between w-full bg-[#0E140F] p-6 overflow-hidden'>
           <h2 className='text-white md:text-5xl font-semibold flex items-center gap-4'>
             7200+<span className='text-sm tracking-[3px]'>ATTENDEES</span>
           </h2>
