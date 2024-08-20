@@ -40,7 +40,7 @@ function Hero() {
                 </span>
               </h2>
             </div>
-            <p className='text-sm md:text-base leading-[22px] md:leading-[22px] font-normal tracking-[0.2px] text-[#627587] max-md:max-w-[335px] md:text-center'>
+            <p className='text-sm md:text-base leading-[22px] md:leading-[22px] font-normal tracking-[0.2px] text-[#627587]  md:text-center'>
               Ogun Digital Summit 2024 is focused on improving collaborations, paving the way for
               new innovations and igniting conversation towards technology advancements and
               prosperity for Nigeria's digital technology ecosystem.
