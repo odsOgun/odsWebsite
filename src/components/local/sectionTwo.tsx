@@ -149,7 +149,7 @@ function SectionTwo() {
               Join our masterclass trainers to help us train young individuals at ODS. It's free and
               we don't charge anyone for this.
             </p>
-            <button className='bg-[#178A2D] font-semibold h-10 min-w-[260px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
+            <button className='bg-[#178A2D] font-semibold h-10 w-full max-w-[260px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
               <span className='text-sm font-semibold'>Apply to conduct a masterclass</span>
               <ArrowRight />
             </button>
