@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
-export type Props = {
+export interface CalendarCardProps {
   day: string;
   date: string;
   title: string;
   items: string[];
   showConditions?: boolean[];
-};
+}
 
-function CalenderCard({ day, date, title, items, showConditions }: Props) {
+function CalenderCard({ day, date, title, items, showConditions }: CalendarCardProps) {
   const showItem = showConditions?.map((condition) => condition).includes(true);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);

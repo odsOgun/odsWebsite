@@ -1,11 +1,11 @@
-export type Props = {
+export interface CustomTabBarProps {
   tabs: string[];
   activeTab: number;
   setActiveTab: (tab: number) => void;
-};
+}
 
-function CustomTabBar({ tabs, activeTab, setActiveTab }: Props) {
-  const md = window.matchMedia('1200px');
+function CustomTabBar({ tabs, activeTab, setActiveTab }: CustomTabBarProps) {
+  const md = window.matchMedia('1200px').matches;
 
   return (
     <div className='bg-[#F7F8F8] md:w-[550px] w-full h-[45px] rounded-xl flex relative'>
