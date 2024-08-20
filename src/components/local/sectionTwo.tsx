@@ -3,6 +3,8 @@ import { useState } from 'react';
 import CustomTabBar from '../ui/customTabbar';
 import CalendarCard from '../ui/calendarCard';
 import SponsorCard, { SponsorCardProps } from '../ui/sponsorCard';
+import SectionTwoImg from '@/assets/img/section-two-image.png';
+import SectionTwoImg2 from '@/assets/img/section-two-image2.png';
 
 enum Tabs {
   Conference,
@@ -64,26 +66,26 @@ const events = [
 const sponsorCardItems = [
   {
     title: 'Network',
-    image: 'src/assets/img/sponsor1.png',
+    image: '/img/sponsor1.png',
     description: "Meet the biggest players in Africa's innovation and business community.",
     bgColor: '#E5EEFE'
   },
   {
     title: 'Generate Leads',
-    image: 'src/assets/img/sponsor2.png',
+    image: '/img/sponsor2.png',
     description: 'Meet future clients and partners for your business.',
     bgColor: '#FEF5E5'
   },
   {
     title: 'Gain Exposure',
-    image: 'src/assets/img/sponsor3.png',
+    image: '/img/sponsor3.png',
     description:
       "Get your brands in front of the people that matter in Africa's startup and business community.",
     bgColor: '#FEE5E5'
   },
   {
     title: 'Innovate',
-    image: 'src/assets/img/sponsor4.png',
+    image: '/img/sponsor4.png',
     description: 'Find opportunities to collaborate and create new solutions.',
     bgColor: '#EDFEE5'
   }
@@ -94,25 +96,25 @@ const whatToLookForwardItems = [
     title: 'Top Speakers',
     description:
       'We will feature leading founders, government ministers, enterprise tech leaders and high profile entrepreneurs recognised locally and globally.',
-    image: 'src/assets/img/top-speakers.png'
+    image: '/img/top-speakers.png'
   },
   {
     title: 'Fresh Insights',
     description:
       'We will feature leading founders, government ministers, enterprise tech leaders and high profile entrepreneurs recognised locally and globally.',
-    image: 'src/assets/img/fresh-insight.png'
+    image: '/img/fresh-insight.png'
   },
   {
     title: 'Free Masterclass Sessions',
     description:
       'Gain full knowledge on growing your career globally, getting remote international gigs and also learn how to increase sales if you run a startup/business for free.',
-    image: 'src/assets/img/free-masterclass.png'
+    image: '/img/free-masterclass.png'
   },
   {
     title: 'Exploring Other Sectors',
     description:
       'We will be diverse this year as we also intend to explore opportunities in Art, culture and entertainment sector and the role technology plays',
-    image: 'src/assets/img/exploring.png'
+    image: '/img/exploring.png'
   }
 ];
 
@@ -124,7 +126,7 @@ function SectionTwo() {
       <div className='max-w-[1120px] w-full px-8 mx-auto pt-20 xl:box-content'>
         <div className='w-full mb-20 md:flex md:justify-between md:mb-40'>
           <div className='mb-6 md:basis-1/3 md:mb-0'>
-            <img src='src/assets/img/section-two-image.png' />
+            <img src={SectionTwoImg} alt='SectionTwo' />
           </div>
           <div className='md:basis-1/2'>
             <h1 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
@@ -156,7 +158,7 @@ function SectionTwo() {
           </div>
 
           <div className='mt-6 md:basis-1/3 md:mb-0'>
-            <img src='src/assets/img/section-two-image2.png' />
+            <img src={SectionTwoImg2} />
           </div>
         </div>
 

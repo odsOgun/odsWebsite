@@ -3,6 +3,9 @@ import FireIcon from '@/assets/svgs/fire.svg';
 import NorthAmericaIcon from '@/assets/svgs/northAmerica.svg';
 import CodeIcon from '@/assets/svgs/code.svg';
 import RocketIcon from '@/assets/svgs/rocket.svg';
+import One from '@/assets/img/one.png';
+import Two from '@/assets/img/two.png';
+import Three from '@/assets/img/three.png';
 
 const cardItems = [
   {
@@ -52,13 +55,13 @@ function SectionOne() {
 
         <div className='flex flex-col items-end w-full gap-8 py-20 md:flex-row'>
           <div className='md:w-1/3 md:h-2/3'>
-            <img src='src/assets/img/one.png' alt='one' />
+            <img src={One} alt='one' />
           </div>
           <div className='md:w-1/3'>
-            <img src='src/assets/img/three.png' alt='three' />
+            <img src={Three} alt='three' />
           </div>
           <div className='md:w-1/3 md:h-2/3'>
-            <img src='src/assets/img/two.png' alt='two' />
+            <img src={Two} alt='two' />
           </div>
         </div>
 
