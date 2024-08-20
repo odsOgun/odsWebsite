@@ -121,9 +121,9 @@ function SectionTwo() {
 
   return (
     <div className='bg-white'>
-      <div className='max-w-[1120px] w-full px-8 mx-auto pt-20'>
-        <div className='md:flex md:justify-between w-full md:mb-40 mb-20'>
-          <div className='md:basis-1/3 mb-6 md:mb-0'>
+      <div className='max-w-[1120px] w-full px-8 mx-auto pt-20 xl:box-content'>
+        <div className='w-full mb-20 md:flex md:justify-between md:mb-40'>
+          <div className='mb-6 md:basis-1/3 md:mb-0'>
             <img src='src/assets/img/section-two-image.png' />
           </div>
           <div className='md:basis-1/2'>
@@ -140,7 +140,7 @@ function SectionTwo() {
           </div>
         </div>
 
-        <div className='md:flex md:justify-between w-full'>
+        <div className='w-full md:flex md:justify-between'>
           <div className='md:basis-1/2'>
             <h1 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
               Take a Masterclass session during Ogun Digital Summit 2024 and make a real impact.
@@ -155,7 +155,7 @@ function SectionTwo() {
             </button>
           </div>
 
-          <div className='md:basis-1/3 mt-6 md:mb-0'>
+          <div className='mt-6 md:basis-1/3 md:mb-0'>
             <img src='src/assets/img/section-two-image2.png' />
           </div>
         </div>
@@ -169,7 +169,7 @@ function SectionTwo() {
               Get to know our agenda to help you plan ahead for this year
             </p>
           </div>
-          <div className='my-10 flex flex-col justify-center items-center'>
+          <div className='flex flex-col items-center justify-center my-10'>
             <CustomTabBar
               tabs={['Conference days', 'Off conference', 'All']}
               activeTab={activeTab}
@@ -197,8 +197,8 @@ function SectionTwo() {
           </div>
         </div>
 
-        <div className='flex justify-center items-center flex-col'>
-          <div className='md:w-2/3 text-center'>
+        <div className='flex flex-col items-center justify-center'>
+          <div className='text-center md:w-2/3'>
             <h2 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
               Why join us as a Sponsor?
             </h2>
@@ -213,7 +213,7 @@ function SectionTwo() {
           </div>
 
           <div className='my-20'>
-            <div className='flex flex-col md:flex-row gap-10 items-center'>
+            <div className='flex flex-col items-center gap-10 md:flex-row'>
               {sponsorCardItems.map((item, index) => (
                 <SponsorCard
                   key={index}
@@ -227,7 +227,7 @@ function SectionTwo() {
             </div>
           </div>
 
-          <div className='flex flex-col md:flex-row justify-between my-20'>
+          <div className='flex flex-col justify-between my-20 md:flex-row'>
             <h2 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold md:basis-2/5'>
               What to look forward to for this year's event
             </h2>
@@ -244,7 +244,7 @@ function SectionTwo() {
             </div>
           </div>
 
-          <div className='flex flex-col md:flex-row justify-between gap-4'>
+          <div className='flex flex-col justify-between gap-4 md:flex-row'>
             {whatToLookForwardItems.map((item, index) => (
               <div
                 key={index}
@@ -255,7 +255,7 @@ function SectionTwo() {
                   backgroundPosition: 'center'
                 }}
               >
-                <div className='text-white text-left h-fit mt-auto'>
+                <div className='mt-auto text-left text-white h-fit'>
                   <h1 className='font-semibold text-base text-[#F2F9FF] mb-2'>{item.title}</h1>
                   <p className='text-sm leading-6 text-[#B0C5D6]'>{item.description}</p>
                 </div>

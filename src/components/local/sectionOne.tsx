@@ -34,9 +34,9 @@ const cardItems = [
 function SectionOne() {
   return (
     <div className='bg-foreground'>
-      <div className='max-w-[1120px] w-full px-8 mx-auto py-20'>
+      <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
         <div className='max-w-[420px]'>
-          <h1 className='text-white text-2xl md:text-4xl platypi-gf font-semibold'>
+          <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
             Our numbers in the last 4 years.
           </h1>
           <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
@@ -50,7 +50,7 @@ function SectionOne() {
           </button>
         </div>
 
-        <div className='flex md:flex-row flex-col py-20 w-full gap-8 items-end'>
+        <div className='flex flex-col items-end w-full gap-8 py-20 md:flex-row'>
           <div className='md:w-1/3 md:h-2/3'>
             <img src='src/assets/img/one.png' alt='one' />
           </div>
@@ -63,20 +63,20 @@ function SectionOne() {
         </div>
 
         <div className='flex justify-between w-full bg-[#0E140F] p-6 overflow-hidden'>
-          <h2 className='text-white md:text-5xl font-semibold flex items-center gap-4'>
+          <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
             7200+<span className='text-sm tracking-[3px]'>ATTENDEES</span>
           </h2>
-          <h2 className='text-white md:text-5xl font-semibold flex items-center gap-4'>
+          <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
             50+<span className='text-sm tracking-[3px]'>SPEAKERS</span>
           </h2>
-          <h2 className='text-white md:text-5xl font-semibold flex items-center gap-4'>
+          <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
             30+<span className='text-sm tracking-[3px]'>SESSIONS</span>
           </h2>
         </div>
 
         <div className='py-20'>
           <div className='md:w-1/2 md:mx-auto'>
-            <h2 className='text-white text-2xl md:text-4xl platypi-gf font-semibold text-center'>
+            <h2 className='text-2xl font-semibold text-center text-white md:text-4xl platypi-gf'>
               We've made a real impact in people's lives.
             </h2>
             <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5 text-center'>
@@ -90,7 +90,7 @@ function SectionOne() {
 
         <div>
           <div className='max-w-[670px]'>
-            <h1 className='text-white text-2xl md:text-4xl platypi-gf font-semibold'>
+            <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
               Why thousands of young individuals attend Ogun Digital Summit annually.
             </h1>
             <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
@@ -100,11 +100,11 @@ function SectionOne() {
             </p>
           </div>
 
-          <div className='py-20 flex gap-8 md:flex-row flex-col'>
+          <div className='flex flex-col gap-8 py-20 md:flex-row'>
             {cardItems.map(({ icon, title, description }, index) => (
               <div key={index} className=''>
                 <img src={icon} alt={title} />
-                <h3 className='text-white font-semibold text-base mb-4 mt-2'>{title}</h3>
+                <h3 className='mt-2 mb-4 text-base font-semibold text-white'>{title}</h3>
                 <p className='text-[#B0C5D6] text-sm'>{description}</p>
               </div>
             ))}
