@@ -112,7 +112,7 @@ const whatToLookForwardItems = [
     title: 'Exploring Other Sectors',
     description:
       'We will be diverse this year as we also intend to explore opportunities in Art, culture and entertainment sector and the role technology plays',
-    image: 'src/assets/img/explore.png'
+    image: 'src/assets/img/exploring.png'
   }
 ];
 
@@ -121,7 +121,7 @@ function SectionTwo() {
 
   return (
     <div className='bg-white'>
-      <div className='max-w-[1120px] w-full px-8 mx-auto py-20'>
+      <div className='max-w-[1120px] w-full px-8 mx-auto pt-20'>
         <div className='md:flex md:justify-between w-full md:mb-40 mb-20'>
           <div className='md:basis-1/3 mb-6 md:mb-0'>
             <img src='src/assets/img/section-two-image.png' />
