@@ -5,10 +5,10 @@ import gmail from '@/assets/img/gmail.png';
 
 const footer = () => {
   return (
-    <div>
+    <div className='bg-[#101611] '>
       <div className='art-bg' />
-      <div className=' max-w-[100%] w-full h-96 bg-[#101611]  '>
-        <div className='flex justify-center align-center pt-[80px]'>
+      <div className=' max-w-[1120px] mx-auto my-0 w-full p-20 px-8 xl:box-content  '>
+        <div className='flex justify-center align-center '>
           <img src={ODSlogo} alt='ogundigitalsummitlogo' />
         </div>
 
@@ -26,7 +26,7 @@ const footer = () => {
             <img src={gmail} alt='gmaillogo' />
           </div>
 
-          <div className='text-[#627587] w-[450px] text-base leading-6 font-normal'>
+          <div className='text-[#627587] text-center text-xs md:text-base leading-[18px] md:leading-6 font-normal tracking-[-0.2px] md:tracking-[0.2px]'>
             <p>Copyright. 2024 Ogun Digital Summit. All rights reserved</p>
           </div>
         </div>
