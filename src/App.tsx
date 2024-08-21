@@ -4,6 +4,7 @@ import MobileApp from './components/local/mobileApp';
 import Nav from './components/local/nav';
 import SectionOne from './components/local/sectionOne';
 import SectionTwo from './components/local/sectionTwo';
+import Footer from './components/local/footer';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <SectionTwo />
       <div>
         <MobileApp />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
