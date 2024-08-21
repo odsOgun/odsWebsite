@@ -5,6 +5,10 @@
   font-family: geistMono;
   src: url('./assets/fonts/Geist/GeistMonoVF.woff2');
 }
+*,
+html {
+  scroll-behavior: smooth !important;
+}
 #root {
   /* min-height: 100vh; */
 
@@ -13,6 +17,7 @@
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  overflow-x: hidden; /* temp fix for cal section */
 }
 .inter-gf {
   font-family: 'Inter', sans-serif;
@@ -105,4 +110,13 @@
     font-size: 30px !important;
     line-height: 36px !important;
   }
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+iframe {
+  border: 1px solid #020817;
+  border-radius: 20px;
+  outline: unset !important;
 }

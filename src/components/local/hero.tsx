@@ -5,6 +5,7 @@ import OgunGov from '@/assets/svgs/sponsors/ogunGov.svg';
 import TechEconomy from '@/assets/svgs/sponsors/techeconomy.svg';
 import OgunDaily from '@/assets/svgs/sponsors/ogunDaily.svg';
 import CountDown from './countdown';
+import Sitelinks from '@/mock/sitelinks.json';
 
 const sponsors = [
   { label: 'Grazac', icon: GrazacLogo },
@@ -16,7 +17,7 @@ const sponsors = [
 
 function SponsorLogos() {
   return (
-    <div className='flex items-center justify-between px-6 mt-2 h-[62px] md:h-[72px] md:mt-5'>
+    <div className='max-md:gap-3 flex items-center justify-between md:px-6 mt-2 h-[62px] md:h-[72px] md:mt-5'>
       {sponsors.map(({ label, icon }) => (
         <div key={label}>
           <img src={icon} alt={label} />
@@ -47,14 +48,18 @@ function Hero() {
             </p>
 
             <div className='flex flex-wrap items-center gap-4 mt-1 md:justify-center'>
-              <button className='bg-[#178A2D] font-semibold h-10 min-w-[110px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
-                <span className='text-sm font-semibold'>Register</span>
-                <ArrowRight />
-              </button>
-              <button className='min-w-[161px] h-6 rounded-[2px] bg-white flex justify-center items-center gap-2'>
-                <span className='text-[#178A2D] text-sm font-semibold'>Become a sponsor</span>
-                <ArrowRightGreen />
-              </button>
+              <a href={Sitelinks.register} target='_blank'>
+                <button className='bg-[#178A2D] font-semibold h-10 min-w-[110px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
+                  <span className='text-sm font-semibold'>Register</span>
+                  <ArrowRight />
+                </button>
+              </a>
+              <a href={Sitelinks.becomeAsponsor} target='_blank'>
+                <button className='min-w-[161px] h-6 rounded-[2px] bg-white flex justify-center items-center gap-2'>
+                  <span className='text-[#178A2D] text-sm font-semibold'>Become a sponsor</span>
+                  <ArrowRightGreen />
+                </button>
+              </a>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import ODSlogo from '@/assets/img/ODSlogo.png';
 import instagram from '@/assets/img/instagram.png';
 import twitter from '@/assets/img/twitter.png';
 import gmail from '@/assets/img/gmail.png';
+import Sitelinks from '@/mock/sitelinks.json';
 
 const footer = () => {
   return (
@@ -21,9 +22,15 @@ const footer = () => {
 
         <div className=' flex  justify-around align-center mt-12 md:mt-[64px] max-md:flex-col  max-md:items-center max-md:gap-12 '>
           <div className='flex justify-center align-center gap-8   '>
-            <img src={instagram} alt='instagramlogo' />
-            <img src={twitter} alt='twitterlogo' />
-            <img src={gmail} alt='gmaillogo' />
+            <a href={Sitelinks.instagram} target='_blank'>
+              <img src={instagram} alt='instagramlogo' />
+            </a>
+            <a href={Sitelinks.twitter} target='_blank'>
+              <img src={twitter} alt='twitterlogo' />
+            </a>
+            <a href={Sitelinks.email} target='_blank'>
+              <img src={gmail} alt='gmaillogo' />
+            </a>
           </div>
 
           <div className='text-[#627587] text-center text-xs md:text-base leading-[18px] md:leading-6 font-normal tracking-[-0.2px] md:tracking-[0.2px]'>
