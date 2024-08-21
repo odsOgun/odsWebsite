@@ -5,6 +5,7 @@ import CalendarCard from '../ui/calendarCard';
 import SponsorCard, { SponsorCardProps } from '../ui/sponsorCard';
 import SectionTwoImg from '@/assets/img/section-two-image.png';
 import SectionTwoImg2 from '@/assets/img/section-two-image2.png';
+import Sitelinks from '@/mock/sitelinks.json';
 
 enum Tabs {
   Conference,
@@ -122,7 +123,7 @@ function SectionTwo() {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.Conference);
 
   return (
-    <div className='bg-white'>
+    <div className='bg-white' id='exhibitors'>
       <div className='max-w-[1120px] w-full px-8 mx-auto pt-20 xl:box-content'>
         <div className='w-full mb-20 md:flex md:justify-between md:mb-40'>
           <div className='mb-6 md:basis-1/3 md:mb-0'>
@@ -135,10 +136,12 @@ function SectionTwo() {
             <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
               Increase your start visibility and reach by booking a boot with us today
             </p>
-            <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
-              <span className='text-sm font-semibold'>Become an exhibitor</span>
-              <ArrowRight />
-            </button>
+            <a href={Sitelinks.becomeAnExhibitor} target='_blank'>
+              <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
+                <span className='text-sm font-semibold'>Become an exhibitor</span>
+                <ArrowRight />
+              </button>
+            </a>
           </div>
         </div>
 
@@ -151,10 +154,12 @@ function SectionTwo() {
               Join our masterclass trainers to help us train young individuals at ODS. It's free and
               we don't charge anyone for this.
             </p>
-            <button className='bg-[#178A2D] font-semibold h-10 w-full max-w-[260px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
-              <span className='text-sm font-semibold'>Apply to conduct a masterclass</span>
-              <ArrowRight />
-            </button>
+            <a href={Sitelinks.applyMasterclass} target='_blank'>
+              <button className='bg-[#178A2D] font-semibold h-10 w-full max-w-[260px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
+                <span className='text-sm font-semibold'>Apply to conduct a masterclass</span>
+                <ArrowRight />
+              </button>
+            </a>
           </div>
 
           <div className='mt-6 md:basis-1/3 md:mb-0'>
@@ -199,7 +204,7 @@ function SectionTwo() {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center'>
+        <div id='sponsor' className='flex flex-col items-center justify-center'>
           <div className='text-center md:w-2/3'>
             <h2 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
               Why join us as a Sponsor?
@@ -208,10 +213,12 @@ function SectionTwo() {
               With over 5,000 participants expected to grace Ogun Digital Summit 2024, we’ve got the
               perfect audience for you.
             </p>
-            <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white mx-auto'>
-              <span className='text-sm font-semibold'>Become a sponsor</span>
-              <ArrowRight />
-            </button>
+            <a href={Sitelinks.becomeAsponsor} target='_blank'>
+              <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white mx-auto'>
+                <span className='text-sm font-semibold'>Become a sponsor</span>
+                <ArrowRight />
+              </button>
+            </a>
           </div>
 
           <div className='my-20'>
@@ -239,10 +246,12 @@ function SectionTwo() {
                 starts here, wherever you sit in the ecosystem, you'll find the insights,
                 inspiration and connections that you need to thrive.
               </p>
-              <button className='bg-[#178A2D] font-semibold h-10 min-w-[120px] rounded flex justify-center items-center tracking-[0.2px] text-white leading-6'>
-                <span className='text-sm font-semibold'>Register</span>
-                <ArrowRight />
-              </button>
+              <a href={Sitelinks.register} target='_blank'>
+                <button className='bg-[#178A2D] font-semibold h-10 min-w-[120px] rounded flex justify-center items-center tracking-[0.2px] text-white leading-6'>
+                  <span className='text-sm font-semibold'>Register</span>
+                  <ArrowRight />
+                </button>
+              </a>
             </div>
           </div>
 

@@ -6,6 +6,7 @@ import RocketIcon from '@/assets/svgs/rocket.svg';
 import One from '@/assets/img/one.png';
 import Two from '@/assets/img/two.png';
 import Three from '@/assets/img/three.png';
+import Sitelinks from '@/mock/sitelinks.json';
 
 const cardItems = [
   {
@@ -47,10 +48,12 @@ function SectionOne() {
             creatives and founders with a strong focus to promote youth empowerment, tech
             entrepreneurship and social innovation.
           </p>
-          <button className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
-            <span className='text-sm font-semibold'>Become a Sponsor</span>
-            <ArrowRight fill='#23323F' />
-          </button>
+          <a href={Sitelinks.becomeAsponsor} target='_blank'>
+            <button className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
+              <span className='text-sm font-semibold'>Become a Sponsor</span>
+              <ArrowRight fill='#23323F' />
+            </button>
+          </a>
         </div>
 
         <div className='flex flex-col items-end w-full gap-8 py-20 md:flex-row'>
@@ -88,7 +91,18 @@ function SectionOne() {
             </p>
           </div>
 
-          <div className='h-[500px] bg-red-300 mt-20 rounded-xl'></div>
+          <div className='h-[286px] md:h-[432px] w-full max-w-[900px]  mt-20 rounded-xl mx-auto'>
+            <iframe
+              frameBorder='0'
+              width='100%'
+              height='100%'
+              src='https://www.youtube.com/embed/E5Y0KjFYG2Q?si=QKgVbHYpcPqsoGtk&amp;controls=0'
+              title='YouTube video player'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              referrerPolicy='strict-origin-when-cross-origin'
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
         <div>
