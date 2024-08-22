@@ -5,7 +5,7 @@ export interface CustomTabBarProps {
 }
 
 function CustomTabBar({ tabs, activeTab, setActiveTab }: CustomTabBarProps) {
-  const md = window.matchMedia('1200px').matches;
+  const md = window.matchMedia('1200px');
 
   return (
     <div className='bg-[#F7F8F8] md:w-[550px] w-full h-[45px] rounded-xl flex relative'>
