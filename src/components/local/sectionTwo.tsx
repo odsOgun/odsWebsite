@@ -236,7 +236,7 @@ function SectionTwo() {
             </div>
           </div>
 
-          <div className='flex flex-col justify-between my-20 md:flex-row'>
+          <div className='flex flex-col justify-between md:my-20 mb-20 md:flex-row'>
             <h2 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold md:basis-2/5'>
               What to look forward to for this year's event
             </h2>
