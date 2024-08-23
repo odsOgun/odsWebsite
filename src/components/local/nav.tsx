@@ -24,6 +24,29 @@ function Nav() {
 
   const [navState, setNavState] = useState<boolean>(false);
 
+  // Handle link clicks
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    link?: string
+  ) => {
+    if (link?.startsWith('#')) {
+      event.preventDefault(); // Prevent default behavior
+
+      const targetId = link.substring(1); // Get the section ID (remove #)
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Update the URL without reloading the page
+        window.history.pushState(null, '', '/' + targetId);
+
+        // Smooth scroll to the section
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <nav className='flex items-center justify-center w-full'>
       <div className='flex items-center h-[54px] w-full py-2 max-w-[1120px] px-2 md:h-16 md:py-[10px] md:px-2 max-md:justify-between'>
@@ -32,11 +55,15 @@ function Nav() {
 
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {
-            // Determine the target based on the link
             const target = item.link?.startsWith('#') ? '_self' : '_blank';
 
             return (
-              <a href={item?.link} target={target} key={index}>
+              <a
+                href={item.link}
+                target={target}
+                key={index}
+                onClick={(e) => handleLinkClick(e, item.link)}
+              >
                 <div
                   className={`py-[2px] px-3 cursor-pointer ${
                     item.hasIcon ? 'flex justify-center items-center gap-[10px]' : ''
@@ -82,7 +109,10 @@ function Nav() {
                 href={item?.link}
                 target={target}
                 key={index}
-                onClick={() => setNavState(!navState)}
+                onClick={(e) => {
+                  handleLinkClick(e, item.link);
+                  setNavState(!navState);
+                }}
               >
                 <div className='flex items-center cursor-pointer h-7'>
                   <div className='font-semibold text-base leading-6 tracking-[0.2px] text-[#627587]'>
