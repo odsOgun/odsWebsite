@@ -15,9 +15,27 @@ const footer = () => {
 
         <div className='flex  justify-center align-center text-base font-semibold  text-[#B0C5D6] pt-[48px] list-none gap-10 md:gap-16 leading-6 max-md:flex-col max-md:items-center  '>
           <li>About</li>
-          <li>Sponsors</li>
-          <li>Store</li>
-          <li>Exhibitors</li>
+          <li>
+            <a href='https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' target='_blank'>
+              Sponsors
+            </a>
+          </li>
+
+          <li>
+            <a
+              href='https://ogundigitalsummit.bumpa.shop'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Store
+            </a>
+          </li>
+
+          <li>
+            <a href='https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' target='_blank'>
+              Exhibitors
+            </a>
+          </li>
         </div>
 
         <div className=' flex  justify-around align-center mt-12 md:mt-[64px] max-md:flex-col  max-md:items-center max-md:gap-12 '>
