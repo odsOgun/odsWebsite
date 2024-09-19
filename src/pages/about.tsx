@@ -287,12 +287,8 @@ function About() {
           <WhatToLookForwardTo />
         </div>
       </div>
-      <div>
-        <MobileApp />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <MobileApp />
+      <Footer />
     </div>
   );
 }
