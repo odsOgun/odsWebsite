@@ -3,6 +3,9 @@
 const Sponsor = () => {
   return (
     <div>
+      <div className='container max-md:px-5'>
+        <Nav />
+      </div>
       <div className="w-[100%] h-[618px] bg-[url('src/assets/img/pastspeakers.png')] ">
         <h1 className='w-[765px] h-[128px] pt-[389px] ml-[60px] leading-[3.75rem] tracking-wide text-[#F2F9FF] font-semibold text-6xl '>
           <span className='italic font-normal'>Past Speakers:</span> Leading Digital Transformation

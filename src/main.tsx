@@ -1,7 +1,7 @@
+import './App.css';
+import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page.tsx';
 import About from './pages/about.tsx';
@@ -38,12 +38,16 @@ const router = createBrowserRouter([
     path: '/about',
     element: <About />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: '/about',
+    element: <About />
   }
 ]);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App>
-      <RouterProvider router={router} />
-    </App>
+    {/* <App> */}
+    <RouterProvider router={router} />
+    {/* </App> */}
   </StrictMode>
 );

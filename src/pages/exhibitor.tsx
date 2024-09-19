@@ -20,10 +20,14 @@ import smalltechnoeconomy from '../assets/img/smalltechnoeconomy.png';
 import smallogundaily from '../assets/img/smallogundaily.png';
 import capsafex from '../assets/img/capsafex.png';
 import smallogun from '../assets/img/smallogun.png';
+import Nav from '@/components/local/nav';
 
 const Exhibitor = () => {
   return (
     <div>
+      <div className='container max-md:px-5'>
+        <Nav />
+      </div>
       {/* Hero */}
       <div className="w-[375px] h-[552px] shrink-0                                    lg:w-[100%] lg:h-[618px] object-contain bg-[url('src/assets/img/Stagex.png')]">
         <h1 className='font-[Platypi] text-3xl font-semibold text-[#fff] w-[343px] h-[80px] leading-9 tracking-tighter pt-[241px] pl-[16px] pr-[16px]       lg:font-[Platypi] lg:font-semibold lg:text-[#fff] lg:w-[765px] lg:h-[128px] lg:text-6xl lg:leading-[3.75rem] lg:pt-[226px] lg:pl-[60px] lg:tracking-tighter '>
