@@ -116,7 +116,8 @@ const Exhibitor = () => {
       {/*Leading Companies  */}
       <div className='w-[375px] h-[1,296px]   lg:w-[100%] lg:h-[766px] bg-[#101611] pt-[100px]'>
         <h2 className='w-[335px] h-[200px] leading-9 ml-[20px] mr-[20px]           lg:mt-[8px] font-[Playtpi] font-semibold text-[#F2F9FF] lg:w-[700px] lg:h-[120px] text-3xl lg:leading-10 tracking-tighter lg:ml-[60px]'>
-          Why Leading Companies Choose to <br /> Exhibit at Ogun Digital Summit Every <br /> Year
+          Why Leading Companies
+          <br /> Choose to Exhibit at Ogun Digital Summit Every <br /> Year
         </h2>
         <p className='font-[Inter] w-[335px] h-[176px]  font-normal ml-[20px] mr-[20px]         mt-[16px] text-[#B0C5D6] lg:w-[700px] lg:h-[88px] lg:ml-[60px] text-sm'>
           Ogun Digital Summit is where the global tech ecosystem converges—offering exhibitors a
