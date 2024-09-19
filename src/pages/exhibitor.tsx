@@ -21,6 +21,7 @@ import smallogundaily from '../assets/img/smallogundaily.png';
 import capsafex from '../assets/img/capsafex.png';
 import smallogun from '../assets/img/smallogun.png';
 import Nav from '@/components/local/nav';
+import Footer from '@/components/local/footer';
 
 const Exhibitor = () => {
   return (
@@ -175,6 +176,7 @@ const Exhibitor = () => {
       <div>
         <MobileApp />
       </div>
+      <Footer />
     </div>
   );
 };
