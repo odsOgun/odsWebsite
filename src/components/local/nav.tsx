@@ -18,7 +18,7 @@ function Nav() {
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
     { label: 'Sponsor', link: '/sponsor' },
-    { label: 'Store', link: 'https://ogundigitalsummit.bumpa.shop' },
+    { label: 'Store', link: 'https://selar.co/m/ods2024' },
     { label: 'Exhibitors', link: '/exhibitors' }
   ];
 

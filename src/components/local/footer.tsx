@@ -24,11 +24,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a
-              href='https://ogundigitalsummit.bumpa.shop'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a href='https://selar.co/m/ods2024' target='_blank' rel='noopener noreferrer'>
               Store
             </a>
           </li>
