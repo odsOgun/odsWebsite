@@ -1,4 +1,3 @@
-import '../App.css';
 import Hero from '@/components/local/hero';
 import MobileApp from '@/components/local/mobileApp';
 import Nav from '@/components/local/nav';

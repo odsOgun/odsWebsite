@@ -1,6 +1,7 @@
+import './App.css';
+import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page.tsx';
 import Home from './pages/home.tsx';

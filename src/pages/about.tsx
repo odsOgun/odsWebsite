@@ -1,9 +1,93 @@
+import { useEffect, useRef, useState } from 'react';
 import Nav from '@/components/local/nav';
+import { HeartIcon, PersonIcon, ConcentricCirclesIcon, StarIcon } from '@/assets/icons';
 
 import HeroImg from '@/assets/img/about-hero.png';
 import MapImage from '@/assets/img/about-one.png';
 import Image2 from '@/assets/img/about-two.png';
-import { useEffect, useRef, useState } from 'react';
+import Image3 from '@/assets/img/about-3.png';
+import Image4 from '@/assets/img/about-4.png';
+import Image5 from '@/assets/img/about-5.png';
+import Image6 from '@/assets/img/about-6.png';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Sitelinks from '@/mock/sitelinks.json';
+import { ArrowRight } from '@/assets/icons';
+import WhatToLookForwardTo from '@/components/local/whatToLookForwardTo';
+import MobileApp from '@/components/local/mobileApp';
+import Footer from '@/components/local/footer';
+
+const items = [
+  {
+    icon: HeartIcon,
+    title: '6,000+ Inspired Minds',
+    description:
+      'Over the past three years, more than 6,000 participants have joined our summit, each one leaving with the inspiration, knowledge, and connections needed to pursue careers in the digital technology sector. '
+  },
+  {
+    icon: PersonIcon,
+    title: 'Quadrupling Talent',
+    description:
+      'The digital talent ecosystem in Ogun State has seen unprecedented growth, with the number of tech professionals quadrupling since our first summit in 2020. This surge in talent is a direct result of the opportunities and networks created through our events.'
+  },
+  {
+    icon: ConcentricCirclesIcon,
+    title: 'Community Empowerment',
+    description:
+      'We believe that technology should be accessible to everyone, regardless of where they live. In line with this belief, we established a digital economy station in the Isara community, valued at over 8 million naira. This state-of-the-art facility provides local students with early exposure to computers and IT, opening up new avenues for learning and growth.'
+  },
+  {
+    icon: StarIcon,
+    title: 'Startup Success',
+    description:
+      'Our summit has been a fertile ground for innovative ideas, connecting startup founders with visionary investors. These collaborations have led to groundbreaking projects and startups that are now making waves in the industry.'
+  }
+];
+
+const carouselItems = [
+  { img: Image3, alt: 'Workshops' },
+  { img: Image4, alt: 'Isara Digital Economy Station' },
+  { img: Image5, alt: 'Investor-Startup Collaborations' },
+  { img: Image6, alt: 'Trainings' }
+];
+
+const journeyItems = [
+  {
+    title: 'ODS 2023: Bridging Innovation and Opportunity',
+    bgColor: '#EDFEE5',
+    points: [
+      'Experts discussed sustainable innovation and the future of technology.',
+      '50+ startups connected with investors, leading to successful partnerships.',
+      'Expanded outreach programs, introducing tech to underserved communities.'
+    ]
+  },
+  {
+    title: 'ODS 2022: The Rise of Digital Pioneers',
+    bgColor: '#E5EEFE',
+    points: [
+      'AI, blockchain, and digital marketing sessions drew over 2,000 participants.',
+      'Focused on making technology accessible in rural areas, with special programs for youth and women.',
+      'Expanded outreach programs, introducing tech to underserved communities.'
+    ]
+  },
+  {
+    title: 'ODS 2021: Empowering the Next Generation',
+    bgColor: '#FEF5E5',
+    points: [
+      'Explored the role of youth in the digital economy, fostering entrepreneurship and digital literacy.',
+      'Launched skills programs, increasing tech professionals.',
+      'Initiated our first digital inclusion project in Isara.'
+    ]
+  },
+  {
+    title: 'ODS 2020: The Beginning of a Movement',
+    bgColor: '#FEE5E5',
+    points: [
+      'The first Ogun Digital Summit, laying the foundation for a digital revolution.',
+      'Set the stage for what would become a yearly tradition of innovation and collaboration.',
+      'Brought together the first cohort of tech enthusiasts and pioneers.'
+    ]
+  }
+];
 
 function About() {
   const [showNav, setShowNav] = useState(false);
@@ -46,7 +130,7 @@ function About() {
         <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
           <div className='py-20 flex justify-between'>
             <div className='md:w-1/2'>
-              <h2 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
+              <h2 className='text-2xl font-semibold text-[#F2F9FF] md:text-4xl platypi-gf'>
                 Why We're Here
               </h2>
               <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
@@ -117,6 +201,97 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
+        <div className='md:w-1/2'>
+          <h2 className='text-2xl font-semibold text-[#23323F] md:text-4xl platypi-gf'>
+            Building a Brighter Future, One Step at a Time
+          </h2>
+          <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
+            Since its inception, the Ogun Digital Summit has been a beacon of innovation and
+            empowerment, leaving an indelible mark on individuals, communities, and the broader
+            digital landscape. Our commitment to driving change through technology has translated
+            into tangible results that continue to resonate across the region.
+          </p>
+        </div>
+        <div className='grid grid-cols-2 gap-10 my-20'>
+          {items.map((item, index) => (
+            <div key={index} className=''>
+              <item.icon />
+              <h3 className='text-lg font-semibold text-[#23323F] mt-2'>{item.title}</h3>
+              <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='w-full mb-20'>
+        <Carousel className='' opts={{ align: 'center' }}>
+          <CarouselContent className='-ml-20'>
+            {carouselItems.map((item, index) => (
+              <CarouselItem key={index} className='pl-20'>
+                <div className='w-[447px] h-[480px] rounded-xl bg-red-50'>
+                  <img src={item.img} alt={item.alt} className='w-full h-full object-cover' />
+                </div>
+                <p className='text-base text-[#23323F] mt-2 italic'>{item.alt}</p>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+
+      <div className='bg-[#101611]'>
+        <div className='max-w-[1120px] w-full px-8 mx-auto pt-20'>
+          <div className='text-center w-1/2 mx-auto'>
+            <h2 className='text-2xl font-semibold text-[#F2F9FF] md:text-4xl platypi-gf'>
+              Our Journey So Far
+            </h2>
+            <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
+              From our start to now, the Ogun Digital Summit has grown into a key player in driving
+              digital change, connecting visionaries, and empowering communities across Ogun State.
+            </p>
+          </div>
+          <div className='mt-20'>
+            {journeyItems.map((item, index) => (
+              <div
+                key={index}
+                className='px-10 py-6 rounded-lg my-5 last:my-0 mx-auto'
+                style={{ backgroundColor: item.bgColor, width: `calc(100% - ${index * 100}px)` }}
+              >
+                <h3 className='text-lg font-semibold mb-4'>{item.title}</h3>
+                <ul className='list-disc ml-6'>
+                  {item.points.map((point, index) => (
+                    <li key={index} className='text-[#627587] text-sm leading-6'>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className='flex justify-center py-20'>
+            <a href={Sitelinks.becomeAsponsor} target='_blank'>
+              <button className='bg-[#178A2D] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
+                <span className='text-sm font-semibold text-white'>View Past Events</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className=''>
+        <div className='max-w-[1120px] w-full px-8 mx-auto py-20'>
+          <WhatToLookForwardTo />
+        </div>
+      </div>
+      <div>
+        <MobileApp />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowRightGreen, DownArrow } from '@/assets/icons';
+import { ArrowRight, ArrowRightGreen } from '@/assets/icons';
 import ODSLogo from '@/assets/svgs/nav/ODSLogo.svg';
 import ODSLogoMobile from '@/assets/svgs/nav/ODSLogo2.svg';
 import MenuSvg from '@/assets/svgs/nav/menu.svg';
@@ -15,8 +15,8 @@ function Nav() {
   }
 
   const navItems: NavItemProps[] = [
-    { label: 'Home' },
-    { label: 'About', hasIcon: true, icon: <DownArrow /> },
+    { label: 'Home', link: '/' },
+    { label: 'About', link: '/about' },
     { label: 'Sponsor', link: '#sponsor' },
     { label: 'Store', link: 'https://ogundigitalsummit.bumpa.shop' },
     { label: 'Exhibitors', link: '#exhibitors' }
@@ -33,7 +33,8 @@ function Nav() {
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {
             // Determine the target based on the link
-            const target = item.link?.startsWith('#') ? '_self' : '_blank';
+            const target =
+              item.link?.startsWith('#') || item.link?.startsWith('/') ? '_self' : '_blank';
 
             return (
               <a href={item?.link} target={target} key={index}>
@@ -75,7 +76,8 @@ function Nav() {
       >
         <div className='flex flex-col w-full gap-6'>
           {navItems.map((item, index) => {
-            const target = item.link?.startsWith('#') ? '_self' : '_blank';
+            const target =
+              item.link?.startsWith('#') || item.link?.startsWith('/') ? '_self' : '_blank';
 
             return (
               <a
