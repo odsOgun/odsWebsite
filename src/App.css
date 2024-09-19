@@ -17,7 +17,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  /* overflow-x: hidden; /* temp fix for cal section */
+  overflow-x: hidden; /* temp fix for cal section */
 }
 .inter-gf {
   font-family: 'Inter', sans-serif;
