@@ -41,7 +41,7 @@ const Sponsor = () => {
   return (
     <div>
       {/* {Hero} */}
-      <div className="w-[606px] h-[424px] object-contain  bg-no-repeat bg-[url('src/assets/img/smallpastspeakers.png')]          lg:w-[100%] lg:h-[618px] lg:bg-[url('src/assets/img/pastspeakers.png')] ">
+      <div className="w-[100%] h-[424px] object-contain  bg-no-repeat bg-[url('src/assets/img/smallpastspeakers.png')]          lg:w-[100%] lg:h-[618px] lg:bg-[url('src/assets/img/pastspeakers.png')] ">
         <h1 className='w-[343px] h-[120px] pl-[16px] pr-[16px] pt-[186px] text-3xl leading-10 tracking-tighter    lg:w-[765px] lg:h-[128px] lg:pt-[389px] lg:ml-[60px] lg:leading-[3.75rem] lg:tracking-wide text-[#F2F9FF] font-semibold lg:text-6xl '>
           <span className='font-light    italic lg:font-normal'>Past Speakers:</span> Leading
           Digital Transformation
@@ -97,28 +97,28 @@ const Sponsor = () => {
       <div className='block lg:hidden'>
         <div className='flex flex-wrap justify-between flex-col gap-[12px] ml-[20px] mr-[20px] object-contain'>
           <div>
-            <img src={olubunmifabanwo} alt='Pastspeakers' />
+            <img className='rounded-xl' src={olubunmifabanwo} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={harrison} alt='Pastspeakers' />
+            <img className='rounded-xl' src={harrison} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={ibikun} alt='Pastspeakers' />
+            <img className='rounded-xl' src={ibikun} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={joshua} alt='Pastspeakers' />
+            <img className='rounded-xl' src={joshua} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={mobilespeaker} alt='Pastspeakers' />
+            <img className='rounded-xl' src={mobilespeaker} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={mobilespeaker} alt='Pastspeakers' />
+            <img className='rounded-xl' src={mobilespeaker} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={odunayo} alt='Pastspeakers' />
+            <img className='rounded-xl' src={odunayo} alt='Pastspeakers' />
           </div>
           <div>
-            <img src={bayo} alt='Pastspeakers' />
+            <img className='rounded-xl' src={bayo} alt='Pastspeakers' />
           </div>
         </div>
       </div>
