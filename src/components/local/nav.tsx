@@ -15,11 +15,11 @@ function Nav() {
   }
 
   const navItems: NavItemProps[] = [
-    { label: 'Home' },
-    { label: 'About', hasIcon: true, icon: <DownArrow /> },
-    { label: 'Sponsor', link: '#sponsor' },
+    { label: 'Home', link: '/' },
+    { label: 'About', link: '/about', hasIcon: true, icon: <DownArrow /> },
+    { label: 'Sponsor', link: '/sponsor' },
     { label: 'Store', link: 'https://ogundigitalsummit.bumpa.shop' },
-    { label: 'Exhibitors', link: '#exhibitors' }
+    { label: 'Exhibitors', link: '/exhibitors' }
   ];
 
   const [navState, setNavState] = useState<boolean>(false);
@@ -33,7 +33,7 @@ function Nav() {
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {
             // Determine the target based on the link
-            const target = item.link?.startsWith('#') ? '_self' : '_blank';
+            const target = item.link?.startsWith('http') ? '_blank' : '_self';
 
             return (
               <a href={item?.link} target={target} key={index}>
