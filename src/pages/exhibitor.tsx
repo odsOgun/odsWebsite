@@ -78,7 +78,7 @@ const Exhibitor = () => {
           </div>
         </div>
         <div className=' lg:hidden'>
-          <div className='flex justify-between align-center mt-[32px] '>
+          <div className='flex justify-between align-center mt-[32px] object-cover'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallgrazac} alt='' />
             </div>
@@ -86,23 +86,23 @@ const Exhibitor = () => {
               <img src={smallgrazac1} alt='' />
             </div>
           </div>
-          <div className='flex justify-between align-center '>
+          <div className='flex justify-between align-center  object-contain'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallafex} alt='' />
             </div>
-            <div className='w-[50%] ml-[16px] mr-[16px]'>
+            <div className='w-[50%] ml-[16px] mr-[16px] object-contain'>
               <img src={smalltechnoeconomy} alt='' />
             </div>
           </div>
-          <div className='flex justify-between align-center '>
+          <div className='flex justify-between align-center object-contain'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallogundaily} alt='' />
             </div>
-            <div className='w-[50%] ml-[16px] mr-[16px]'>
+            <div className='w-[50%] ml-[16px] mr-[16px] object-contain'>
               <img src={capsafex} alt='' />
             </div>
           </div>
-          <div className='flex justify-between align-center '>
+          <div className='flex justify-between align-center object-contain '>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallogun} alt='' />
             </div>
@@ -122,8 +122,8 @@ const Exhibitor = () => {
           continuous cycle of tech advancement.
         </p>
         <div className='flex flex-wrap  justify-center align-center ml-[20px] mr-[20px]  lg:ml-[60px] lg:mr-[60px] mt-[80px]'>
-          <div>
-            <img src={users} alt='' />
+          <div className=''>
+            <img src={users} alt='usersicon' />
             <h4 className='mt-[8px] w-[227px] h-[24px] text-[#F2F9FF] font-[inter] font-semibold text-lg leading-6 tracking-wide'>
               Reach a Targeted Audience
             </h4>
@@ -133,7 +133,7 @@ const Exhibitor = () => {
             </p>
           </div>
           <div>
-            <img src={africa} alt='' />
+            <img src={africa} alt='africaicon' />
             <h4 className='mt-[8px] w-[255px] h-[24px] text-[#F2F9FF] font-semibold text-lg leading-6 tracking-wide'>
               Boost Brand Visibility
             </h4>
@@ -144,8 +144,8 @@ const Exhibitor = () => {
           </div>
         </div>
         <div className='flex  flex-wrap  justify-center align-center  ml-[20px] mr-[20px] lg:ml-[60px] lg:mr-[60px] mt-[32px]'>
-          <div>
-            <img src={database} alt='' />
+          <div className='mt-[80px] lg:mt-0'>
+            <img src={database} alt='databaseicon' />
             <h4 className='mt-[8px] text-[#F2F9FF] font-[inter]  font-semibold text-lg leading-6 tracking-wide'>
               Network with Industry Leaders
             </h4>
@@ -156,7 +156,7 @@ const Exhibitor = () => {
             </p>
           </div>
           <div>
-            <img src={facestar} alt='' />
+            <img src={facestar} alt='facestaricon' />
             <h4 className=' mt-[8px] text-[#F2F9FF] font-[inter] font-semibold text-lg leading-6  tracking-wide'>
               Have Fun and Unwind
             </h4>

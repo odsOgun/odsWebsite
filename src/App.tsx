@@ -1,4 +1,4 @@
-// import Footer from './components/local/footer';
+import Footer from './components/local/footer';
 import Nav from './components/local/nav';
 
 function App({ children }: { children: React.ReactNode }) {
@@ -8,7 +8,9 @@ function App({ children }: { children: React.ReactNode }) {
         <Nav />
       </div>
       <div>{children}</div>
-      <div>{/* <Footer /> */}</div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
