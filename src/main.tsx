@@ -8,6 +8,7 @@ import About from './pages/about.tsx';
 import Home from './pages/home.tsx';
 import Sponsor from './pages/sponsor.tsx';
 import Exhibitor from './pages/exhibitor.tsx';
+import Speakers from './pages/speakers.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,11 +25,11 @@ const router = createBrowserRouter([
     element: <Sponsor />,
     errorElement: <ErrorPage />
   },
-  // {
-  //   path: '/store',
-  //   element: <Store />,
-  //   errorElement: <ErrorPage />
-  // },
+  {
+    path: '/speaker',
+    element: <Speakers />,
+    errorElement: <ErrorPage />
+  },
   {
     path: '/exhibitors',
     element: <Exhibitor />,
