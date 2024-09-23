@@ -33,7 +33,7 @@ function WhatToLookForwardTo() {
     <div>
       <div className='flex flex-col justify-between md:my-20 mb-20 md:flex-row'>
         <h2 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold md:basis-2/5'>
-          What to look forward to for this year's event
+          What to look forward to for in this year's event
         </h2>
         <div className='md:basis-2/5'>
           <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-4'>
