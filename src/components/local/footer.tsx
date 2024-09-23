@@ -13,7 +13,11 @@ const Footer = () => {
         </div>
 
         <div className='flex justify-center align-center text-base font-semibold text-[#B0C5D6] pt-[48px] list-none gap-10 md:gap-16 leading-6 max-md:flex-col max-md:items-center'>
-          <li>About</li>
+          <li>
+            <a href='/about' target='_blank' rel='noopener noreferrer'>
+              About
+            </a>
+          </li>
           <li>
             <a
               href='https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form'

@@ -17,9 +17,9 @@ function Nav() {
   const navItems: NavItemProps[] = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    { label: 'Sponsor', link: '/sponsor' },
+    { label: 'Sponsor', link: '#' },
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
-    { label: 'Exhibitors', link: '/exhibitors' }
+    { label: 'Exhibitors', link: '#' }
   ];
 
   const [navState, setNavState] = useState<boolean>(false);
