@@ -139,11 +139,11 @@ function About() {
                 Ogun Digital Summit started in 2020 with a strong focus on building and shaping the
                 tech ecosystem development in Ogun State and this was inspired based on the need to
                 bring together tech talents, creatives, entrepreneurs, investors and ecosystem
-                players under one roof. <br />
-                Through previous editions, the Ogun Digital Summit has ignited a fire within the
-                hearts of more than 7,500+ individuals, propelling them to not only forge careers in
-                the digital technology sector but also to harness the power of technology in
-                tackling significant challenges, thereby revolutionizing our digital economy.
+                players under one roof. Through previous editions, the Ogun Digital Summit has
+                ignited a fire within the hearts of more than 7,500+ individuals, propelling them to
+                not only forge careers in the digital technology sector but also to harness the
+                power of technology in tackling significant challenges, thereby revolutionizing our
+                digital economy.
               </p>
             </div>
             <img src={MapImage} alt='map' className='md:w-[285px] md:h-[248px] py-8 md:py-0' />
