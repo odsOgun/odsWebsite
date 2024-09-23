@@ -281,9 +281,9 @@ function About() {
             ))}
           </div>
           <div className='flex justify-center py-20'>
-            <a href={Sitelinks.becomeAsponsor} target='_blank'>
+            <a href={Sitelinks.ourImpact} target='_blank'>
               <button className='bg-[#178A2D] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
-                <span className='text-sm font-semibold text-white'>View Past Events</span>
+                <span className='text-sm font-semibold text-white'>Our Impact</span>
                 <ArrowRight />
               </button>
             </a>
