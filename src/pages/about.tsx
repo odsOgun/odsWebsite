@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Nav from '@/components/local/nav';
 import { HeartIcon, PersonIcon, ConcentricCirclesIcon, StarIcon } from '@/assets/icons';
-
 import HeroImg from '@/assets/img/about-hero.png';
 import MapImage from '@/assets/img/about-one.png';
 import Image2 from '@/assets/img/about-two.png';
@@ -12,14 +11,14 @@ import Image6 from '@/assets/img/about-6.png';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Sitelinks from '@/mock/sitelinks.json';
 import { ArrowRight } from '@/assets/icons';
-import WhatToLookForwardTo from '@/components/local/whatToLookForwardTo';
+// import WhatToLookForwardTo from '@/components/local/whatToLookForwardTo';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 
 const items = [
   {
     icon: HeartIcon,
-    title: '6,000+ Inspired Minds',
+    title: '7,500+ Inspired Minds',
     description:
       'Over the past three years, more than 6,000 participants have joined our summit, each one leaving with the inspiration, knowledge, and connections needed to pursue careers in the digital technology sector. '
   },
@@ -52,39 +51,39 @@ const carouselItems = [
 
 const journeyItems = [
   {
-    title: 'ODS 2023: Bridging Innovation and Opportunity',
+    title: 'ODS 2023 : Innovating Beyond Boundaries : Exploring AI and Web 2 Evolutionary Impact',
     bgColor: '#EDFEE5',
     points: [
-      'Experts discussed sustainable innovation and the future of technology.',
-      '50+ startups connected with investors, leading to successful partnerships.',
-      'Expanded outreach programs, introducing tech to underserved communities.'
+      'Experts discussed the impact of AI and and web 3 in our daily lives',
+      'Startups connected with VCs and Investors in a closed door meeting',
+      'Industry experts shared their stories on building startups in the 21st century.'
     ]
   },
   {
-    title: 'ODS 2022: The Rise of Digital Pioneers',
+    title: 'ODS 2022 : Digital Technology : Key to Sustainable Future',
     bgColor: '#E5EEFE',
     points: [
-      'AI, blockchain, and digital marketing sessions drew over 2,000 participants.',
-      'Focused on making technology accessible in rural areas, with special programs for youth and women.',
-      'Expanded outreach programs, introducing tech to underserved communities.'
+      'Keynote delivered by Eng. Noimot Salako Oyedele, Deputy Governor of Ogun State',
+      'Industry leaders discussed utilizing social media as a tool for business/startup growth',
+      'Built ICT digital station worth NGN 10 million to give pupils in local community access to tech'
     ]
   },
   {
-    title: 'ODS 2021: Empowering the Next Generation',
+    title: 'ODS 2021 : Competency for the future',
     bgColor: '#FEF5E5',
     points: [
-      'Explored the role of youth in the digital economy, fostering entrepreneurship and digital literacy.',
-      'Launched skills programs, increasing tech professionals.',
-      'Initiated our first digital inclusion project in Isara.'
+      'Focus was on the future of work and how to best prepare ahead',
+      'Global Leaders discussed how to prepare for global opportunities',
+      'Leaders discussed the do’s and don’t when it comes to building startup in Africa'
     ]
   },
   {
-    title: 'ODS 2020: The Beginning of a Movement',
+    title: 'ODS 2020 : Building the tech ecosystem in Ogun : Way Forward',
     bgColor: '#FEE5E5',
     points: [
-      'The first Ogun Digital Summit, laying the foundation for a digital revolution.',
-      'Set the stage for what would become a yearly tradition of innovation and collaboration.',
-      'Brought together the first cohort of tech enthusiasts and pioneers.'
+      'Launched the first edition of Ogun Digital Summit laying the foundation for a digital revolution.',
+      'Experts discussed how to harness the opportunities in the state based on the available tertiary institutions.',
+      'Brought together talents, creatives and tech entrepreneurs for the first time in Ogun State'
     ]
   }
 ];
@@ -134,16 +133,17 @@ function About() {
           <div className='md:py-20 flex justify-between flex-col md:flex-row'>
             <div className='md:w-1/2'>
               <h2 className='text-2xl font-semibold text-[#F2F9FF] md:text-4xl platypi-gf'>
-                Why We're Here
+                Our Story
               </h2>
               <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
-                At the Ogun Digital Summit, we don't just embrace the future—we create it. Our
-                mission is to ignite a digital renaissance, where innovation thrives and
-                opportunities are boundless. We are dedicated to empowering individuals with the
-                tools, knowledge, and connections they need to turn bold ideas into reality. By
-                bridging the digital divide and fostering a culture of creativity and collaboration,
-                we aim to transform challenges into opportunities, building a brighter, more
-                inclusive future for all.
+                Ogun Digital Summit started in 2020 with a strong focus on building and shaping the
+                tech ecosystem development in Ogun State and this was inspired based on the need to
+                bring together tech talents, creatives, entrepreneurs, investors and ecosystem
+                players under one roof. <br />
+                Through previous editions, the Ogun Digital Summit has ignited a fire within the
+                hearts of more than 7,500+ individuals, propelling them to not only forge careers in
+                the digital technology sector but also to harness the power of technology in
+                tackling significant challenges, thereby revolutionizing our digital economy.
               </p>
             </div>
             <img src={MapImage} alt='map' className='md:w-[285px] md:h-[248px] py-8 md:py-0' />
@@ -251,8 +251,8 @@ function About() {
               Our Journey So Far
             </h2>
             <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
-              From our start to now, the Ogun Digital Summit has grown into a key player in driving
-              digital change, connecting visionaries, and empowering communities across Ogun State.
+              Ogun Digital Summit has grown into a key player in driving the digital age change,
+              connecting visionaries and empowering communities in Ogun State.
             </p>
           </div>
           <div className='mt-20'>
@@ -290,11 +290,11 @@ function About() {
           </div>
         </div>
       </div>
-      <div className=''>
+      {/* <div className=''>
         <div className='max-w-[1120px] w-full px-8 mx-auto py-20'>
           <WhatToLookForwardTo />
         </div>
-      </div>
+      </div> */}
       <MobileApp />
       <Footer />
     </div>
