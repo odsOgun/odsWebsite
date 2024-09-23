@@ -23,6 +23,7 @@ import smallogun from '../assets/img/smallogun.png';
 import Nav from '@/components/local/nav';
 import Footer from '@/components/local/footer';
 
+
 const Exhibitor = () => {
   return (
     <div>
@@ -31,6 +32,7 @@ const Exhibitor = () => {
       </div>
       {/* Hero */}
       <div className="w-[375px] h-[552px] shrink-0                                    lg:w-[100%] lg:h-[618px] object-contain bg-[url('src/assets/img/Stagex.png')]">
+
         <h1 className='font-[Platypi] text-3xl font-semibold text-[#fff] w-[343px] h-[80px] leading-9 tracking-tighter pt-[241px] pl-[16px] pr-[16px]       lg:font-[Platypi] lg:font-semibold lg:text-[#fff] lg:w-[765px] lg:h-[128px] lg:text-6xl lg:leading-[3.75rem] lg:pt-[226px] lg:pl-[60px] lg:tracking-tighter '>
           Exhibitors making a mark at ODS’24
         </h1>
@@ -46,6 +48,7 @@ const Exhibitor = () => {
       {/* Meet Our Exhibitors */}
       <div className='w-[375px] h-[946px]                        lg:w-[100%] lg:h-[812px] bg-[#101611]'>
         <h2 className='w-[345px] h-[40px] font-[Platypi] font-semibold text-[#F2F9FF] pl-[16px]     lg:pl-[60px] pt-[100px] text-3xl  leading-10 tracking-tighter'>
+
           Meet Our Exhibitors
         </h2>
         <p className='text-sm leading-5 font-[inter] font-normal text-[#B0C5D6]  pl-[16px]  lg:leading-6  tracking-wide lg:text-base pt-[40px] lg:pl-[60px]'>
@@ -83,7 +86,9 @@ const Exhibitor = () => {
           </div>
         </div>
         <div className=' lg:hidden'>
+
           <div className='flex justify-between align-center mt-[32px] '>
+
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallgrazac} alt='' />
             </div>
@@ -108,6 +113,7 @@ const Exhibitor = () => {
             </div>
           </div>
           <div className='flex justify-between align-center '>
+
             <div className='w-[50%] ml-[16px] mr-[16px]'>
               <img src={smallogun} alt='' />
             </div>
@@ -130,6 +136,7 @@ const Exhibitor = () => {
         <div className='flex flex-wrap  justify-center align-center ml-[20px] mr-[20px]  lg:ml-[60px] lg:mr-[60px] mt-[80px]'>
           <div>
             <img src={users} alt='' />
+
             <h4 className='mt-[8px] w-[227px] h-[24px] text-[#F2F9FF] font-[inter] font-semibold text-lg leading-6 tracking-wide'>
               Reach a Targeted Audience
             </h4>
@@ -144,6 +151,7 @@ const Exhibitor = () => {
               Boost Brand Visibility
             </h4>
             <p className='w-[335px] h-[88px] lg:w-[544px] lg:h-[44px] text-[#B0C5D6] text-sm font-normal'>
+
               We bring together the best talents in Nigeria tech ecosystem to create opportunities
               for professional growth and aid collaboration and partnerships.
             </p>
@@ -177,6 +185,7 @@ const Exhibitor = () => {
         <MobileApp />
       </div>
       <Footer />
+
     </div>
   );
 };
