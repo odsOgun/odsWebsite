@@ -1,6 +1,8 @@
-import { AppStore, GoogleStore } from '@/assets/icons';
+// import { AppStore, GoogleStore } from '@/assets/icons';
 import AppImg from '@/assets/img/readme/appPic.png';
 import AppImgDesktop from '@/assets/img/readme/appPicDesktop.png';
+import comingSoon2 from '@/assets/img/comingSoon2.png';
+import comingSoon1 from '@/assets/img/comingSoon1.png';
 
 const MobileApp = () => {
   return (
@@ -19,8 +21,10 @@ const MobileApp = () => {
               </p>
             </div>
             <div className='flex items-center justify-center gap-4 mt-8 md:items-start md:justify-start'>
-              <AppStore />
-              <GoogleStore />
+              {/* <AppStore /> */}
+              <img src={comingSoon1} alt='coming soon ...' className=' max-w-[124px] h-[42px]' />
+              {/* <GoogleStore /> */}
+              <img src={comingSoon2} alt='coming soon ...' className=' max-w-[124px] h-[42px]' />
             </div>
           </div>
 
