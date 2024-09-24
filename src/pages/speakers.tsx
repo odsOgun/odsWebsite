@@ -5,7 +5,7 @@ import speaker2 from '@/assets/img/speaker2.png';
 import speaker3 from '@/assets/img/speaker3.png';
 import speaker4 from '@/assets/img/speaker4.png';
 import speaker5 from '@/assets/img/speaker5.png';
-import speaker6 from '@/assets/img/speaker6.png';
+// import speaker6 from '@/assets/img/speaker6.png';
 import speaker7 from '@/assets/img/speaker7.png';
 import speaker8 from '@/assets/img/speaker8.png';
 import speaker9 from '@/assets/img/speaker9.png';
@@ -34,14 +34,14 @@ const Speakers = () => {
     },
     {
       title: 'Dr Gbonjubolaabiri Abiri',
-      position: 'CEO, Grazac',
+      position: 'CEO, Redi-Med Services',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker2
     },
     {
       title: 'Abegunade Olamilekan',
-      position: 'comedian',
+      position: 'Comedian',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker3
@@ -55,28 +55,28 @@ const Speakers = () => {
     },
     {
       title: 'Kiki Osinbajo',
-      position: 'CEO, Grazac',
+      position: 'CEO, Ciar',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker5
     },
-    {
-      title: 'Niyi Fagbemi',
-      position: 'Travel Film Maker',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker6
-    },
+    // {
+    //   title: 'Niyi Fagbemi',
+    //   position: 'Travel Film Maker',
+    //   description:
+    //     'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+    //   image: speaker6
+    // },
     {
       title: 'Adenrele Sonariwo',
-      position: 'CEO, Grazac',
+      position: 'Entrepreneur and Art curator',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker7
     },
     {
       title: 'Rahaman Abiola',
-      position: 'CEO, Grazac',
+      position: 'Editor-in-Chief - Legit.ng',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker8
