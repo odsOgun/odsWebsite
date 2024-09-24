@@ -13,14 +13,12 @@ import master1 from '@/assets/img/master1.png';
 import master2 from '@/assets/img/master2.png';
 import master3 from '@/assets/img/master3.png';
 import master4 from '@/assets/img/master5.png';
-
 import Guest from '@/assets/img/guest.png';
 import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
 import Guest3 from '@/assets/img/guest3.png';
 import Guest4 from '@/assets/img/guest4.png';
 import { useEffect, useState } from 'react';
-
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
