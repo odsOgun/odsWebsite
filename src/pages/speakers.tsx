@@ -1,13 +1,24 @@
 import Nav from '@/components/local/nav';
 import HeroImg from '@/assets/img/speaker-hero.png';
-import speaker from '@/assets/img/Speaker1.png';
+import speaker1 from '@/assets/img/Speaker1.png';
+import speaker2 from '@/assets/img/speaker2.png';
+import speaker3 from '@/assets/img/speaker3.png';
+import speaker4 from '@/assets/img/speaker4.png';
+import speaker5 from '@/assets/img/speaker5.png';
+import speaker6 from '@/assets/img/speaker6.png';
+import speaker7 from '@/assets/img/speaker7.png';
+import speaker8 from '@/assets/img/speaker8.png';
+import speaker9 from '@/assets/img/speaker9.png';
+import master1 from '@/assets/img/master1.png';
+import master2 from '@/assets/img/master2.png';
+import master3 from '@/assets/img/master3.png';
+import master4 from '@/assets/img/master5.png';
 import Guest from '@/assets/img/guest.png';
 import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
 import Guest3 from '@/assets/img/guest3.png';
 import Guest4 from '@/assets/img/guest4.png';
 import { useEffect, useState } from 'react';
-
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
@@ -15,98 +26,98 @@ import { ArrowRight } from '@/assets/icons';
 const Speakers = () => {
   const whatToLookForwardItems = [
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Graac',
+      title: 'Mohammed Jega',
+      position: 'Director, Vogue Pay',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker1
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Dr Gbonjubolaabiri Abiri',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker2
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Abegunade Olamilekan',
+      position: 'comedian',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker3
+    },
+    {
+      title: 'Bayo Omoboriowo',
+      position: 'Photographer',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker4
+    },
+    {
+      title: 'Kiki Osinbajo',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker5
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Niyi Fagbemi',
+      position: 'Travel Film Maker',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker6
+    },
+    {
+      title: 'Adenrele Sonariwo',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker7
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Rahaman Abiola',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker8
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Niyi Fagbemi',
+      position: 'Travel Film Maker',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
-    },
-    {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
-    },
-    {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
-    },
-    {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker9
     }
   ];
 
   const Master = [
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Omolara Dada',
+      position: 'Growth Lead, Anchor',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master1
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Sodiq Akinjobi',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master2
     },
     {
-      title: 'Victor Adeleye',
+      title: 'Kutaje O. Joseph',
       position: 'CEO, Grazac',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master3
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Ibiniyi Obikoya',
+      position: 'Tech Lead, Korapay',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master4
     }
   ];
 
