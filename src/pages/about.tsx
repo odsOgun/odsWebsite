@@ -12,33 +12,34 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import Sitelinks from '@/mock/sitelinks.json';
 import { ArrowRight } from '@/assets/icons';
 // import WhatToLookForwardTo from '@/components/local/whatToLookForwardTo';
-import MobileApp from '@/components/local/mobileApp';
-import Footer from '@/components/local/footer';
 
-const items = [
+import MobileApp from '@/components/local/mobileApp';
+import Sitelinks from '@/mock/sitelinks.json';
+const whatToLookForwardItems = [
   {
     icon: HeartIcon,
     title: '7,500+ Inspired Minds',
     description:
-      'Over the past three years, more than 6,000 participants have joined our summit, each one leaving with the inspiration, knowledge, and connections needed to pursue careers in the digital technology sector. '
+      'We will feature leading founders, government ministers, enterprise tech leaders and high profile entrepreneurs recognised locally and globally.',
+    image: '/img/top-speakers.png'
   },
   {
-    icon: PersonIcon,
-    title: 'Quadrupling Talent',
+    title: 'Fresh Insights',
     description:
-      'The digital talent ecosystem in Ogun State has seen unprecedented growth, with the number of tech professionals quadrupling since our first summit in 2020. This surge in talent is a direct result of the opportunities and networks created through our events.'
+      'We will feature leading founders, government ministers, enterprise tech leaders and high profile entrepreneurs recognised locally and globally.',
+    image: '/img/fresh-insight.png'
   },
   {
-    icon: ConcentricCirclesIcon,
-    title: 'Community Empowerment',
+    title: 'Free Masterclass Sessions',
     description:
-      'We believe that technology should be accessible to everyone, regardless of where they live. In line with this belief, we established a digital economy station in the Isara community, valued at over 8 million naira. This state-of-the-art facility provides local students with early exposure to computers and IT, opening up new avenues for learning and growth.'
+      'Gain full knowledge on growing your career globally, getting remote international gigs and also learn how to increase sales if you run a startup/business for free.',
+    image: '/img/free-masterclass.png'
   },
   {
-    icon: StarIcon,
-    title: 'Startup Success',
+    title: 'Exploring Other Sectors',
     description:
-      'Our summit has been a fertile ground for innovative ideas, connecting startup founders with visionary investors. These collaborations have led to groundbreaking projects and startups that are now making waves in the industry.'
+      'We will be diverse this year as we also intend to explore opportunities in Art, culture and entertainment sector and the role technology plays',
+    image: '/img/exploring.png'
   }
 ];
 
@@ -297,8 +298,9 @@ function About() {
       </div> */}
       <MobileApp />
       <Footer />
+
     </div>
   );
-}
+};
 
 export default About;

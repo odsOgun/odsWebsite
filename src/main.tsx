@@ -1,14 +1,16 @@
-import './App.css';
-import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page.tsx';
 import About from './pages/about.tsx';
 import Home from './pages/home.tsx';
 import Sponsor from './pages/sponsor.tsx';
 import Exhibitor from './pages/exhibitor.tsx';
+
 import Speakers from './pages/speakers.tsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
     element: <Speakers />,
     errorElement: <ErrorPage />
   },
+
   {
     path: '/exhibitors',
     element: <Exhibitor />,
@@ -43,6 +46,7 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />
+
   }
 ]);
 createRoot(document.getElementById('root')!).render(
@@ -50,5 +54,6 @@ createRoot(document.getElementById('root')!).render(
     {/* <App> */}
     <RouterProvider router={router} />
     {/* </App> */}
+
   </StrictMode>
 );
