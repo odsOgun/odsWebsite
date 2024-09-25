@@ -5,7 +5,7 @@ import speaker2 from '@/assets/img/speaker2.png';
 import speaker3 from '@/assets/img/speaker3.png';
 import speaker4 from '@/assets/img/speaker4.png';
 import speaker5 from '@/assets/img/speaker5.png';
-// import speaker6 from '@/assets/img/speaker6.png';
+import speaker10 from '@/assets/img/speaker10.png';
 import speaker7 from '@/assets/img/speaker7.png';
 import speaker8 from '@/assets/img/speaker8.png';
 import speaker9 from '@/assets/img/speaker9.png';
@@ -22,12 +22,13 @@ import { useEffect, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
+import { ArrowLeft } from '@/assets/icons';
 
 const Speakers = () => {
   const whatToLookForwardItems = [
     {
       title: 'Mohammed Jega',
-      position: 'Director, Vogue Pay',
+      position: 'Ceo and co-founded Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker1
@@ -60,13 +61,13 @@ const Speakers = () => {
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker5
     },
-    // {
-    //   title: 'Niyi Fagbemi',
-    //   position: 'Travel Film Maker',
-    //   description:
-    //     'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-    //   image: speaker6
-    // },
+    {
+      title: 'Dr Sina',
+      position: 'co-founder tryprivhealth',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker10
+    },
     {
       title: 'Adenrele Sonariwo',
       position: 'Entrepreneur and Art curator',
@@ -89,7 +90,22 @@ const Speakers = () => {
       image: speaker9
     }
   ];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const itemsPerPage = 8;
+
+  const visibleItems = whatToLookForwardItems.slice(currentIndex, currentIndex + itemsPerPage);
+  const handleNext = () => {
+    if (currentIndex + itemsPerPage < whatToLookForwardItems.length) {
+      setCurrentIndex(currentIndex + itemsPerPage);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex - itemsPerPage >= 0) {
+      setCurrentIndex(currentIndex - itemsPerPage);
+    }
+  };
   const Master = [
     {
       title: 'Omolara Dada',
@@ -170,16 +186,16 @@ const Speakers = () => {
           </div>
         </div>
       </div>
-
-      {/* Speaker Cards Section */}
-      <section className={`py-10 ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}>
+      <section
+        className={`py-10 sm:py-[160px] ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
+      >
         <div
-          className={`m-auto w-[90%] lg:w-[948px] sm:grid md:grid-cols-3 sm:grid-cols-2 grid-rows-1  justify-between gap-4 md:flex-row sm:py-[160px] ${showModal ? '' : ''}`}
+          className={`m-auto w-[90%] lg:w-[1280] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
         >
-          {whatToLookForwardItems.map((item, index) => (
+          {visibleItems.map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl h-[360px] lg:w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
+              className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
               style={{
                 backgroundImage: showModal === index ? 'none' : `url(${item.image})`,
                 backgroundSize: 'cover',
@@ -189,7 +205,7 @@ const Speakers = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`h-[200px] w-[447px] rounded-md mx-auto ${showModal === index ? 'block' : 'hidden'}`}
+                className={`h-[200px] w-[447px] rounded-md mx-auto   ${showModal === index ? 'block' : 'hidden'}`}
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: 'cover',
@@ -222,11 +238,31 @@ const Speakers = () => {
             </div>
           ))}
         </div>
+        <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
+          <span
+            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
+              currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            onClick={handlePrev}
+          >
+            <ArrowLeft fill='#2B4155' />
+          </span>
+          <span
+            className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
+              currentIndex + itemsPerPage >= whatToLookForwardItems.length
+                ? 'opacity-50 cursor-not-allowed'
+                : ''
+            }`}
+            onClick={handleNext}
+          >
+            <ArrowRight fill='#2B4155' />
+          </span>
+        </div>
       </section>
-      <section className='md:py-[100px] m-auto lg:ml-[160px]'>
+      <section className='md:flex md:flex-row-reverse gap-20  justify-center items-center mb-8 md:mb-0 md:py-[100px] m-auto lg:ml-[160px]'>
         <div className='xl:w-[505px] xl:mx-0  mx-auto w-[90%]  md:mb-[80px] mb-[40px]'>
           <h1 className=' md:w-[358px] text-[34px] platypi-gf leading-10 font-semibold text-[#23323F] md:text-4xl platypi-gf'>
-            Our numbers in the last 4 years.
+            Our speakers in the last 4 years.
           </h1>
           <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
             It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
@@ -242,7 +278,7 @@ const Speakers = () => {
         </div>
         <div>
           <div className=' '>
-            <div className='xl:w-[855px] xl:m-0 w-[90%] sm:block hidden m-auto'>
+            <div className='xl:w-[535px] xl:m-0 w-[95%] sm:block hidden mx-auto'>
               <img src={Guest} alt='one' />
             </div>
             <div className='flex flex-col justify-center sm:hidden items-center gap-[19px] w-[90%] mx-auto'>
