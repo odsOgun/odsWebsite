@@ -120,8 +120,8 @@ function About() {
             style={{ backgroundImage: `url(${HeroImg})`, backgroundPosition: 'center' }}
           ></div>
 
-          <div className='md:w-1/2 md:leading-[64px] absolute bottom-16 md:left-28'>
-            <h1 className='md:text-[60px] platypi-gf text-white font-semibold text-4xl p-6'>
+          <div className='md:w-1/2  absolute bottom-16 md:left-28'>
+            <h1 className='md:text-[60px] md:leading-[64px] platypi-gf text-white font-semibold text-4xl p-6'>
               <span className='font-normal italic'>About Us: </span>Shaping The Future Tech
               Landscape
             </h1>

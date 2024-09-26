@@ -17,9 +17,9 @@ function Nav() {
   const navItems: NavItemProps[] = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    { label: 'Sponsor', link: '#' },
+    { label: 'Sponsor', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' },
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
-    { label: 'Exhibitors', link: '#' },
+    { label: 'Exhibitors', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' },
     { label: 'Speakers', link: '/speaker' }
   ];
 
@@ -34,7 +34,7 @@ function Nav() {
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {
             // Determine the target based on the link
-            const target = item.link?.startsWith('#') ? '_self' : '_blank';
+            const target = item.link?.startsWith('/') ? '_self' : '_blank';
 
             return (
               <a href={item?.link} target={target} key={index}>
@@ -76,7 +76,7 @@ function Nav() {
       >
         <div className='flex flex-col w-full gap-6'>
           {navItems.map((item, index) => {
-            const target = item.link?.startsWith('#') ? '_self' : '_blank';
+            const target = item.link?.startsWith('/') ? '_self' : '_blank';
 
             return (
               <a

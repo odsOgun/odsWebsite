@@ -16,11 +16,12 @@ function Home() {
       <SectionOne />
       <SectionTwo />
       <div>
-        <MobileApp />
-      </div>
-      <div>
         <Merch />
       </div>
+      <div>
+        <MobileApp />
+      </div>
+
       <div>
         <Footer />
       </div>
