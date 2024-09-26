@@ -26,16 +26,16 @@ const Exhibitor = () => {
     <div>
       {/* Hero */}
       <div className="w-[100%] h-[552px] shrink-0                                    lg:w-[100%] lg:h-[618px] object-contain bg-[url('src/assets/img/Stagex.png')]">
-        <h1 className='font-[Platypi] text-3xl font-semibold text-[#fff] w-[343px] h-[80px] leading-9 tracking-tighter pt-[241px] pl-[16px] pr-[16px]       lg:font-[Platypi] lg:font-semibold lg:text-[#fff] lg:w-[765px] lg:h-[128px] lg:text-6xl lg:leading-[3.75rem] lg:pt-[226px] lg:pl-[60px] lg:tracking-tighter '>
+        <h1 className='font-[Platypi] text-3xl font-semibold text-[#fff]  h-[80px] leading-9 tracking-tighter pt-[241px] pl-[16px] pr-[16px]       lg:font-[Platypi] lg:font-semibold lg:text-[#fff] lg:w-[765px] lg:h-[128px] lg:text-6xl lg:leading-[3.75rem] lg:pt-[226px] lg:pl-[60px] lg:tracking-tighter '>
           Exhibitors making a mark at ODS’24
         </h1>
-        <p className=' w-[343px] h-[110px] text-sm leading-5   pl-[16px] pr-[16px]   pt-[90px]                                 font-[inter] lg:w-[765px] lg:h-[72px] text-[#B0C5D6] font-normal lg:text-base lg:leading-6 lg:pt-[150px] lg:pl-[60px]'>
+        <p className=' h-[110px] text-sm leading-5   pl-[16px] pr-[16px]   pt-[90px]                                 font-[inter] lg:w-[765px] lg:h-[72px] text-[#B0C5D6] font-normal lg:text-base lg:leading-6 lg:pt-[150px] lg:pl-[60px]'>
           It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
           creatives and founders with a strong focus to promote youth empowerment, tech
           entrepreneurship and social <br /> innovation.
         </p>
         <button className='flex  font-[inter] font-semibold text-sm rounded ml-[16px]  pt-[10px] pr-[12px] pb-[10px] pl-[12px] lg:ml-[60px] lg:mt-[100px] mt-[118px]  bg-[#ACFAAC] w-[155px]'>
-          Join Exhibitors <img className='' src={keyboard_arrow_right} alt='' />
+          Join Exhibitors <img className='' src={keyboard_arrow_right} alt='arrowicon' />
         </button>
       </div>
       {/* Meet Our Exhibitors */}
@@ -50,61 +50,61 @@ const Exhibitor = () => {
         <div className='hidden lg:block'>
           <div className=' flex flex-wrap justify-between align-center ml-[60px] mr-[60px] mt-[48px]'>
             <div>
-              <img src={Grazacblue} alt='' />
+              <img src={Grazacblue} alt='grazacbluecard' />
             </div>
             <div>
-              <img src={Grazacborder} alt='' />
+              <img src={Grazacborder} alt='grazacbordercard' />
             </div>
             <div>
-              <img src={Afex} alt='' />
+              <img src={Afex} alt='afexcard' />
             </div>
             <div>
-              <img src={techeconomycard} alt='' />
+              <img src={techeconomycard} alt='techeconomycard' />
             </div>
           </div>
           <div className='flex justify-between align-center ml-[60px] mr-[60px] mt-[32px] '>
             <div>
-              <img src={Oguncard} alt='' />
+              <img src={Oguncard} alt='bigoguncard' />
             </div>
             <div>
-              <img src={Afexcard1} alt='' />
+              <img src={Afexcard1} alt='bogafexcard1' />
             </div>
             <div>
-              <img src={Afexcard2} alt='' />
+              <img src={Afexcard2} alt='bigafexcard2' />
             </div>
             <div>
-              <img src={techeconomycard1} alt='' />
+              <img src={techeconomycard1} alt='bigtechnoeconomycard' />
             </div>
           </div>
         </div>
         <div className=' lg:hidden'>
           <div className='flex justify-between align-center mt-[32px] object-cover'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
-              <img src={smallgrazac} alt='' />
+              <img src={smallgrazac} alt='grazaccard' />
             </div>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
-              <img src={smallgrazac1} alt='' />
+              <img src={smallgrazac1} alt='grazac1card' />
             </div>
           </div>
           <div className='flex justify-between align-center  object-contain'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
-              <img src={smallafex} alt='' />
+              <img src={smallafex} alt='afexcard' />
             </div>
             <div className='w-[50%] ml-[16px] mr-[16px] object-contain'>
-              <img src={smalltechnoeconomy} alt='' />
+              <img src={smalltechnoeconomy} alt='technoeconomycard' />
             </div>
           </div>
           <div className='flex justify-between align-center object-contain'>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
-              <img src={smallogundaily} alt='' />
+              <img src={smallogundaily} alt='ogundailycard' />
             </div>
             <div className='w-[50%] ml-[16px] mr-[16px] object-contain'>
-              <img src={capsafex} alt='' />
+              <img src={capsafex} alt='afexcard' />
             </div>
           </div>
           <div className='flex justify-between align-center object-contain '>
             <div className='w-[50%] ml-[16px] mr-[16px]'>
-              <img src={smallogun} alt='' />
+              <img src={smallogun} alt='oguncard' />
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ const Exhibitor = () => {
         <h2 className=' h-[200px] leading-9 ml-[20px] mr-[20px]           lg:mt-[8px] font-[Playtpi] font-semibold text-[#F2F9FF] lg:w-[700px] lg:h-[120px] text-3xl lg:leading-10 tracking-tighter lg:ml-[60px]'>
           Why Leading Companies Choose to Exhibit at Ogun Digital Summit Every Year
         </h2>
-        <p className='font-[Inter] w-[335px] h-[176px]  font-normal ml-[20px] mr-[20px]         mt-[16px] text-[#B0C5D6] lg:w-[700px] lg:h-[88px] lg:ml-[60px] text-sm'>
+        <p className='font-[Inter] h-[176px]  font-normal ml-[20px] mr-[20px]         mt-[16px] text-[#B0C5D6] lg:w-[700px] lg:h-[88px] lg:ml-[60px] text-sm'>
           Ogun Digital Summit is where the global tech ecosystem converges—offering exhibitors a
           unique opportunity to connect with visionary tech talents, entrepreneurs, investors, and
           industry leaders, all in one place. It's the ideal platform to showcase your innovations,
@@ -123,17 +123,17 @@ const Exhibitor = () => {
         <div className='flex flex-wrap  justify-center align-center ml-[20px] mr-[20px]  lg:ml-[60px] lg:mr-[60px] mt-[80px]'>
           <div className=''>
             <img src={users} alt='usersicon' />
-            <h4 className='mt-[8px] w-[227px] h-[24px] text-[#F2F9FF] font-[inter] font-semibold text-lg leading-6 tracking-wide'>
+            <h4 className='mt-[8px]  h-[24px] text-[#F2F9FF] font-[inter] font-semibold text-lg leading-6 tracking-wide'>
               Reach a Targeted Audience
             </h4>
-            <p className='w-[335px] h-[88px] lg:w-[544px] lg:h-[44px] text-[#B0C5D6] text-sm font-normal'>
+            <p className=' h-[88px] lg:w-[544px] lg:h-[44px] text-[#B0C5D6] text-sm font-normal'>
               You can directly and indirectly learn and engage with industry experts, offering
               valuable opportunities to gain deeper insights into your areas of interest
             </p>
           </div>
           <div>
             <img src={africa} alt='africaicon' />
-            <h4 className='mt-[8px] w-[255px] h-[24px] text-[#F2F9FF] font-semibold text-lg leading-6 tracking-wide'>
+            <h4 className='mt-[8px]  h-[24px] text-[#F2F9FF] font-semibold text-lg leading-6 tracking-wide'>
               Boost Brand Visibility
             </h4>
             <p className=' h-[88px] lg:w-[544px] lg:h-[44px] text-[#B0C5D6] text-sm font-normal'>

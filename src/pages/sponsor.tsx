@@ -52,10 +52,10 @@ const Sponsor = () => {
       </div>
 
       <div>
-        <h3 className='w-[218px] h-[68px] font-[Platypi] font-semibold mt-[80px] text-2xl leading-8 ml-[20px]  text-[#23323F] tracking-tighter lg:w-[669px] lg:h-[40px] lg:text-3xl lg:ml-[80px] lg:leading-10'>
+        <h3 className='w-[218px] h-[68px] font-[Platypi] font-semibold mt-[80px] text-2xl leading-8 ml-[20px]  mr-[20px]  text-[#23323F] tracking-tighter lg:w-[669px] lg:h-[40px] lg:text-3xl lg:ml-[80px] lg:leading-10'>
           Our past speakers in the last 4 years.
         </h3>
-        <p className='w-[335px] h-[110px] font-[inter] font-normal text-sm leading-5 tracking-wide ml-[20px] mt-[8px] text-[#627587] lg:w-[669px] lg:h-[72px] lg:ml-[80px] lg:leading-6 lg:text-base lg:tracking-wide'>
+        <p className=' h-[110px] font-[inter] font-normal text-sm leading-5 tracking-wide ml-[20px] mt-[8px] text-[#627587] lg:w-[669px] lg:h-[72px] lg:ml-[80px] lg:leading-6 lg:text-base lg:tracking-wide'>
           It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
           creatives and founders with a strong focus to promote youth empowerment, tech
           entrepreneurship and social innovation.
