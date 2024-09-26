@@ -6,7 +6,7 @@ import Merch4 from '@/assets/img/merch4.png';
 
 const Merch = () => {
   return (
-    <div className='mx-auto w-[90%] md:max-w-[1120px]'>
+    <div className='mx-auto w-[90%] md:max-w-[1120px] mt-20'>
       <div className='md:basis-1/2 md:w-[479px]'>
         <h1 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
           Get the Ogun digital summit ‘24 Merch

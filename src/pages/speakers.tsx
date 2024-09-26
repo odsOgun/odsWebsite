@@ -34,14 +34,14 @@ const Speakers = () => {
       image: speaker1
     },
     {
-      title: 'Dr Gbonjubolaabiri Abiri',
+      title: 'Dr Gbonjubola Abiri',
       position: 'CEO, Redi-Med Services',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker2
     },
     {
-      title: 'Abegunade Olamilekan',
+      title: 'Dr. Smile',
       position: 'Comedian',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
@@ -49,7 +49,7 @@ const Speakers = () => {
     },
     {
       title: 'Bayo Omoboriowo',
-      position: 'Photographer',
+      position: 'Founder Madhousetikera',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker4
@@ -116,14 +116,14 @@ const Speakers = () => {
     },
     {
       title: 'Sodiq Akinjobi',
-      position: 'CEO, Grazac',
+      position: 'Developer Ecostystem CM at google',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: master2
     },
     {
       title: 'Kutaje O. Joseph',
-      position: 'CEO, Grazac',
+      position: 'Senior Product Designer, Reliance Health ',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: master3
@@ -176,12 +176,12 @@ const Speakers = () => {
 
           <div className='md:w-[55%] md:leading-[64px] absolute bottom-16 md:left-28'>
             <h1 className='md:text-[60px] platypi-gf md:leading-[64px] text-white font-semibold text-4xl p-6'>
-              <span className='font-normal italic'>Past Speakers:</span> Leading Digital
-              Transformation
+              <span className='font-normal italic'></span> Speakers Lineup:
             </h1>
             <p className='text-[#B0C5D6] inter-gf text-base leading-6 pl-6'>
-              Meet the speakers who discussed about diversities and culture in digital
-              transformation
+              We're bringing together a remarkable group of bold innovators and doers from across
+              Africa, spanning industries such as entertainment, technology, agriculture, the
+              creative sector, finance, and policy-making.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ const Speakers = () => {
         className={`py-10 sm:py-[160px] ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
       >
         <div
-          className={`m-auto w-[90%] lg:w-[1280] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
+          className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
         >
           {visibleItems.map((item, index) => (
             <div
