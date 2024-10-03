@@ -64,6 +64,7 @@ import Home from './pages/home.tsx';
 import Sponsor from './pages/sponsor.tsx';
 import Exhibitor from './pages/exhibitor.tsx';
 import Speakers from './pages/speakers.tsx';
+import PastSpeakers from './pages/past-speaker.tsx';
 
 const router = createBrowserRouter([
   {
@@ -84,6 +85,11 @@ const router = createBrowserRouter([
   {
     path: '/speaker',
     element: <Speakers />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/past-speaker',
+    element: <PastSpeakers />,
     errorElement: <ErrorPage />
   },
   {

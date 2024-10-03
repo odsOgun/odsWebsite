@@ -18,7 +18,7 @@ import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
 import Guest3 from '@/assets/img/guest3.png';
 import Guest4 from '@/assets/img/guest4.png';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
@@ -90,20 +90,26 @@ const Speakers = () => {
       image: speaker9
     }
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const itemsPerPage = 8;
-
+  // Define the types for state variables
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const itemsPerPage: number = 8; // Define how many items per page
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
   const visibleItems = whatToLookForwardItems.slice(currentIndex, currentIndex + itemsPerPage);
-  const handleNext = () => {
-    if (currentIndex + itemsPerPage < whatToLookForwardItems.length) {
-      setCurrentIndex(currentIndex + itemsPerPage);
+
+  // Handle the 'Previous' button click
+  const handlePrev = (): void => {
+    if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex - itemsPerPage);
     }
   };
-
-  const handlePrev = () => {
-    if (currentIndex - itemsPerPage >= 0) {
-      setCurrentIndex(currentIndex - itemsPerPage);
+  // Handle the 'Next' button click
+  const handleNext = (): void => {
+    const totalItems: number = 20; // Example total items
+    if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex + itemsPerPage);
     }
   };
   const Master = [
@@ -187,6 +193,7 @@ const Speakers = () => {
         </div>
       </div>
       <section
+        ref={sectionRef}
         className={`py-10 sm:py-[160px] ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
       >
         <div
@@ -269,7 +276,7 @@ const Speakers = () => {
             creatives and founders with a strong focus to promote youth empowerment, tech
             entrepreneurship and social innovation.
           </p>
-          <a href='#' target='_blank'>
+          <a href='/past-speaker'>
             <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
               <span className='text-sm text-[#ffff] font-semibold'>View past Speakers</span>
               <ArrowRight fill='#ffff ' />
