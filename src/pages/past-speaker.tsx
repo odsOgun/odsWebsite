@@ -1,5 +1,5 @@
 import Nav from '@/components/local/nav';
-import HeroImg from '@/assets/img/speaker-hero.png';
+import HeroImg from '@/assets/img/past-speaker-hero.png';
 import olubunmi from '@/assets/img/past-speaker/olubunmi.png';
 import harrison from '@/assets/img//past-speaker/harrison.png';
 import ibikun from '@/assets/img/past-speaker/ibikun.png';
