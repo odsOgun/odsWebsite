@@ -4,6 +4,7 @@ import Nav from '@/components/local/nav';
 import SectionOne from '@/components/local/sectionOne';
 import SectionTwo from '@/components/local/sectionTwo';
 import Footer from '@/components/local/footer';
+import Merch from '@/components/local/merch';
 
 function Home() {
   return (
@@ -15,8 +16,12 @@ function Home() {
       <SectionOne />
       <SectionTwo />
       <div>
+        <Merch />
+      </div>
+      <div>
         <MobileApp />
       </div>
+
       <div>
         <Footer />
       </div>

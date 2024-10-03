@@ -1,112 +1,145 @@
 import Nav from '@/components/local/nav';
 import HeroImg from '@/assets/img/speaker-hero.png';
-import speaker from '@/assets/img/Speaker1.png';
+import speaker1 from '@/assets/img/Speaker1.png';
+import speaker2 from '@/assets/img/speaker2.png';
+import speaker3 from '@/assets/img/speaker3.png';
+import speaker4 from '@/assets/img/speaker4.png';
+import speaker5 from '@/assets/img/speaker5.png';
+import speaker10 from '@/assets/img/speaker10.png';
+import speaker7 from '@/assets/img/speaker7.png';
+import speaker8 from '@/assets/img/speaker8.png';
+import speaker9 from '@/assets/img/speaker9.png';
+import master1 from '@/assets/img/master1.png';
+import master2 from '@/assets/img/master2.png';
+import master3 from '@/assets/img/master3.png';
+import master4 from '@/assets/img/master5.png';
 import Guest from '@/assets/img/guest.png';
 import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
 import Guest3 from '@/assets/img/guest3.png';
 import Guest4 from '@/assets/img/guest4.png';
-import { useEffect, useState } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
+import { ArrowLeft } from '@/assets/icons';
 
 const Speakers = () => {
   const whatToLookForwardItems = [
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Graac',
+      title: 'Mohammed Jega',
+      position: 'Ceo and co-founded Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker1
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Dr Gbonjubola Abiri',
+      position: 'CEO, Redi-Med Services',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker2
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Dr. Smile',
+      position: 'Comedian',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker3
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Bayo Omoboriowo',
+      position: 'Founder Madhousetikera',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker4
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Kiki Osinbajo',
+      position: 'CEO, Ciar',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker5
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Dr Sina',
+      position: 'co-founder tryprivhealth',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker10
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Adenrele Sonariwo',
+      position: 'Entrepreneur and Art curator',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker7
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Rahaman Abiola',
+      position: 'Editor-in-Chief - Legit.ng',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker8
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Niyi Fagbemi',
+      position: 'Travel Film Maker',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: speaker9
     }
   ];
 
+  // Define the types for state variables
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const itemsPerPage: number = 8; // Define how many items per page
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
+  const visibleItems = whatToLookForwardItems.slice(currentIndex, currentIndex + itemsPerPage);
+
+  // Handle the 'Previous' button click
+  const handlePrev = (): void => {
+    if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex - itemsPerPage);
+    }
+  };
+  // Handle the 'Next' button click
+  const handleNext = (): void => {
+    const totalItems: number = 20; // Example total items
+    if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex + itemsPerPage);
+    }
+  };
   const Master = [
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Omolara Dada',
+      position: 'Growth Lead, Anchor',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master1
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Sodiq Akinjobi',
+      position: 'Developer Ecostystem CM at google',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master2
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Kutaje O. Joseph',
+      position: 'Senior Product Designer, Reliance Health ',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master3
     },
     {
-      title: 'Victor Adeleye',
-      position: 'CEO, Grazac',
+      title: 'Ibiniyi Obikoya',
+      position: 'Tech Lead, Korapay',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker
+      image: master4
     }
   ];
 
@@ -149,26 +182,27 @@ const Speakers = () => {
 
           <div className='md:w-[55%] md:leading-[64px] absolute bottom-16 md:left-28'>
             <h1 className='md:text-[60px] platypi-gf md:leading-[64px] text-white font-semibold text-4xl p-6'>
-              <span className='font-normal italic'>Past Speakers:</span> Leading Digital
-              Transformation
+              <span className='font-normal italic'></span> Speakers Lineup:
             </h1>
             <p className='text-[#B0C5D6] inter-gf text-base leading-6 pl-6'>
-              Meet the speakers who discussed about diversities and culture in digital
-              transformation
+              We're bringing together a remarkable group of bold innovators and doers from across
+              Africa, spanning industries such as entertainment, technology, agriculture, the
+              creative sector, finance, and policy-making.
             </p>
           </div>
         </div>
       </div>
-
-      {/* Speaker Cards Section */}
-      <section className={`py-10 ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}>
+      <section
+        ref={sectionRef}
+        className={`py-10 sm:py-[160px] ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
+      >
         <div
-          className={`m-auto w-[90%] lg:w-[948px] sm:grid md:grid-cols-3 sm:grid-cols-2 grid-rows-1  justify-between gap-4 md:flex-row sm:py-[160px] ${showModal ? '' : ''}`}
+          className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
         >
-          {whatToLookForwardItems.map((item, index) => (
+          {visibleItems.map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl h-[360px] lg:w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
+              className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
               style={{
                 backgroundImage: showModal === index ? 'none' : `url(${item.image})`,
                 backgroundSize: 'cover',
@@ -178,7 +212,7 @@ const Speakers = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`h-[200px] w-[447px] rounded-md mx-auto ${showModal === index ? 'block' : 'hidden'}`}
+                className={`h-[200px] w-[447px] rounded-md mx-auto   ${showModal === index ? 'block' : 'hidden'}`}
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: 'cover',
@@ -211,18 +245,38 @@ const Speakers = () => {
             </div>
           ))}
         </div>
+        <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
+          <span
+            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
+              currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            onClick={handlePrev}
+          >
+            <ArrowLeft fill='#2B4155' />
+          </span>
+          <span
+            className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
+              currentIndex + itemsPerPage >= whatToLookForwardItems.length
+                ? 'opacity-50 cursor-not-allowed'
+                : ''
+            }`}
+            onClick={handleNext}
+          >
+            <ArrowRight fill='#2B4155' />
+          </span>
+        </div>
       </section>
-      <section className='md:py-[100px] m-auto lg:ml-[160px]'>
+      <section className='md:flex md:flex-row-reverse gap-20  justify-center items-center mb-8 md:mb-0 md:py-[100px] m-auto lg:ml-[160px]'>
         <div className='xl:w-[505px] xl:mx-0  mx-auto w-[90%]  md:mb-[80px] mb-[40px]'>
           <h1 className=' md:w-[358px] text-[34px] platypi-gf leading-10 font-semibold text-[#23323F] md:text-4xl platypi-gf'>
-            Our numbers in the last 4 years.
+            Our speakers in the last 4 years.
           </h1>
           <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
             It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
             creatives and founders with a strong focus to promote youth empowerment, tech
             entrepreneurship and social innovation.
           </p>
-          <a href='#' target='_blank'>
+          <a href='/past-speaker'>
             <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
               <span className='text-sm text-[#ffff] font-semibold'>View past Speakers</span>
               <ArrowRight fill='#ffff ' />
@@ -231,7 +285,7 @@ const Speakers = () => {
         </div>
         <div>
           <div className=' '>
-            <div className='xl:w-[855px] xl:m-0 w-[90%] sm:block hidden m-auto'>
+            <div className='xl:w-[535px] xl:m-0 w-[95%] sm:block hidden mx-auto'>
               <img src={Guest} alt='one' />
             </div>
             <div className='flex flex-col justify-center sm:hidden items-center gap-[19px] w-[90%] mx-auto'>
