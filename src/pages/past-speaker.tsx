@@ -310,12 +310,11 @@ const PastSpeakers = () => {
 
           <div className='md:w-[55%] md:leading-[64px] absolute bottom-16 md:left-28'>
             <h1 className='md:text-[60px] platypi-gf md:leading-[64px] text-white font-semibold text-4xl p-6'>
-              <span className='font-normal italic'>Past Speakers:</span> Leading Digital
-              Transformation
+              <span className='font-normal italic'>Past Speakers:</span>
             </h1>
             <p className='text-[#B0C5D6] inter-gf text-base leading-6 pl-6'>
-              Meet the speakers who discussed about diversities and culture in digital
-              transformation
+              See the line-up of amazing speakers we have had graced Ogun digital summit over the
+              years
             </p>
           </div>
         </div>
@@ -328,9 +327,8 @@ const PastSpeakers = () => {
             Our past speakers in the last 4 years.
           </h3>
           <p className='text-center  text-[#627587] text-sm leading-[24px] tracking-[0.2px] font-normal md:text-base md:text-left '>
-            It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
-            creatives and founders with a strong focus to promote youth empowerment, tech
-            entrepreneurship and social innovation.
+            For the past 4 years, we have had amazing array of speakers who have have graced Ogun
+            digital summit over the years
           </p>
         </div>
         <div className='md:w-[668px]  h-[44px] bg-[#F7F8F8] rounded-[10px] flex justify-between items-center mb-10 md:mb-20 p-[2px] '>

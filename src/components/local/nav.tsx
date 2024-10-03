@@ -19,7 +19,7 @@ function Nav() {
     { label: 'About', link: '/about' },
     { label: 'Sponsor', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' },
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
-    { label: 'Exhibitors', link: '/exhibitors' },
+    { label: 'Exhibitors', link: '/#' },
     { label: 'Speakers', link: '/speaker' }
   ];
 
