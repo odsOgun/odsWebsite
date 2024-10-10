@@ -40,7 +40,7 @@ const PastSpeakers = () => {
     },
     {
       title: 'Harrison Obiefule',
-      position: 'Co-founder lead , super team DAO, NG',
+      position: 'Co-lead , superteamNG',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: harrison
@@ -54,7 +54,7 @@ const PastSpeakers = () => {
     },
     {
       title: 'Joshua Chibueze',
-      position: 'Co-founder and CEO, piggy vest',
+      position: 'Co-founder, piggyvest',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: Joshua
@@ -76,7 +76,7 @@ const PastSpeakers = () => {
     },
     {
       title: 'Odunayo Eweniyi',
-      position: 'Co-founder founder and CEO piggyvest',
+      position: 'Co-founder, piggyvest',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: odunayo
@@ -153,7 +153,7 @@ const PastSpeakers = () => {
   const Ods21 = [
     {
       title: 'Mohammed Jega',
-      position: 'Ceo and co-founded Domineum',
+      position: 'Co founder, Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: mohammed
@@ -219,7 +219,7 @@ const PastSpeakers = () => {
     },
     {
       title: 'Harrison Obiefule',
-      position: 'Co-founder lead , super team DAO, NG',
+      position: 'Co-lead , superteamNG',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: harrison
@@ -233,7 +233,7 @@ const PastSpeakers = () => {
     },
     {
       title: 'Mohammed Jega',
-      position: 'Ceo and co-founded Domineum',
+      position: 'Co founder Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: mohammed

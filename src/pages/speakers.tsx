@@ -28,7 +28,7 @@ const Speakers = () => {
   const whatToLookForwardItems = [
     {
       title: 'Mohammed Jega',
-      position: 'Ceo and co-founded Domineum',
+      position: 'Co founder Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker1
@@ -49,7 +49,7 @@ const Speakers = () => {
     },
     {
       title: 'Bayo Omoboriowo',
-      position: 'Founder Madhousetikera',
+      position: 'Founder Madhouse tikera',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker4
