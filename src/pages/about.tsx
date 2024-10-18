@@ -11,7 +11,6 @@ import Image6 from '@/assets/img/about-6.png';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Sitelinks from '@/mock/sitelinks.json';
 import { ArrowRight } from '@/assets/icons';
-// import WhatToLookForwardTo from '@/components/local/whatToLookForwardTo';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 
