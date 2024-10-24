@@ -189,7 +189,7 @@ const Speakers = () => {
     },
     {
       title: 'Kutaje O. Joseph',
-      position: 'Senior Product Designer, Reliance Health ',
+      position: 'UX design mentor, Designlab ',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: master3
