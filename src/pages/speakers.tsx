@@ -370,9 +370,12 @@ const Speakers = () => {
           <h3 className='platypi-gf text-center text-[#23323F] font-semibold text-2xl leading-[34px] tracking-[-0.5px] md:text-[40px] md:leading-[48px] md:tracking-[-1px]  changeFont-wh213o '>
             Masterclass Trainers
           </h3>
-          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
+          {/* <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
             Meet our masterclass trainers who will help us train young individuals at ODS. It’s free
             and we don’t charge anyone for this.
+          </p> */}
+          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
+            Meet our masterclass trainers for this year's Ogun digital Summit
           </p>
         </div>
         <div
