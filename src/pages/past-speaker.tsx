@@ -24,6 +24,8 @@ import aderenle from '@/assets/img/past-speaker/aderenle.png';
 import daniel from '@/assets/img/past-speaker/daniel.png';
 import raheem from '@/assets/img/past-speaker/raheem.png';
 import abiola from '@/assets/img/past-speaker/abiola.png';
+import owolabi from '@/assets/img/past-speaker/owolabi.png';
+import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 
 import { useEffect, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
@@ -211,61 +213,25 @@ const PastSpeakers = () => {
   ];
   const Ods20 = [
     {
-      title: 'Olubunmi Fabanwo',
-      position: 'Affiliate Program Manager',
+      title: 'Blessing Abeng',
+      position: 'Einsteinette limited',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: olubunmi
+      image: blessing
     },
     {
-      title: 'Harrison Obiefule',
-      position: 'Co-lead , superteamNG',
+      title: 'Oluwatobi Owolabi',
+      position: 'Lead, GBG Abeokuta',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: harrison
+      image: owolabi
     },
     {
-      title: 'Ibikun Adeleke',
-      position: 'Chief Investment officer , Emergence Capital',
+      title: 'Oluwatobi Akinpelu',
+      position: 'Software engineer farmcrowdy',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: ibikun
-    },
-    {
-      title: 'Mohammed Jega',
-      position: 'Co founder Domineum',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: mohammed
-    },
-    {
-      title: 'Bayo Omoboriowo',
-      position: 'Photographer to the former president.',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: bayo
-    },
-    {
-      title: 'Odunayo Eweniyi',
-      position: 'Co-founder founder and CEO piggyvest',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: odunayo
-    },
-
-    {
-      title: 'Raheem Yusuf ',
-      position: 'VP, Technology and innovation AFEX.',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: raheem
-    },
-    {
-      title: 'Abiola Odetola',
-      position: 'SA to governor of Ogun State ,2015- 2023',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: abiola
+      image: oluwatobi
     }
   ];
   const [showNav, setShowNav] = useState(false);

@@ -9,6 +9,14 @@ import speaker10 from '@/assets/img/speaker10.png';
 import speaker7 from '@/assets/img/speaker7.png';
 import speaker8 from '@/assets/img/speaker8.png';
 import speaker9 from '@/assets/img/speaker9.png';
+import speaker11 from '@/assets/img/speaker11.png';
+import speaker12 from '@/assets/img/speaker12.png';
+import speaker13 from '@/assets/img/speaker13.png';
+import speaker14 from '@/assets/img/speaker14.png';
+import speaker15 from '@/assets/img/speaker17.png';
+import speaker17 from '@/assets/img/speaker16.png';
+import speaker18 from '@/assets/img/speaker15.png';
+
 import master1 from '@/assets/img/master1.png';
 import master2 from '@/assets/img/master2.png';
 import master3 from '@/assets/img/master3.png';
@@ -27,29 +35,51 @@ import { ArrowLeft } from '@/assets/icons';
 const Speakers = () => {
   const whatToLookForwardItems = [
     {
+      title: 'Kashifu Inuwa',
+      position: 'DG, NITDA',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker17
+    },
+    {
+      title: 'Iyin Aboyeji',
+      position: 'Managing Partner, Accelerate Africa',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker11
+    },
+    {
       title: 'Mohammed Jega',
-      position: 'Co founder Domineum',
+      position: 'Co-founder Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker1
     },
     {
-      title: 'Dr Gbonjubola Abiri',
-      position: 'CEO, Redi-Med Services',
+      title: 'Mayowa Kuyoro',
+      position: 'Partner McKinsey',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker2
+      image: speaker14
     },
     {
-      title: 'Dr. Smile',
-      position: 'Comedian',
+      title: 'Salem King',
+      position: 'Content Creator/Storyteller',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker3
+      image: speaker13
     },
+    {
+      title: 'Dr. Ademola Adenubi',
+      position: 'Founder, EduTAMS',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker15
+    },
+
     {
       title: 'Bayo Omoboriowo',
-      position: 'Founder Madhouse tikera',
+      position: 'Founder Madhouse by tikera',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker4
@@ -61,12 +91,27 @@ const Speakers = () => {
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker5
     },
+
     {
-      title: 'Dr Sina',
-      position: 'co-founder tryprivhealth',
+      title: 'Dr. Smile',
+      position: 'Comedian',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker3
+    },
+    {
+      title: 'Dr Ajidahun Olusina',
+      position: 'Co-founder tryprivhealth',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker10
+    },
+    {
+      title: 'Dr Ishola Adebayo',
+      position: 'Lecturer, Tai Solarin UOE',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker18
     },
     {
       title: 'Adenrele Sonariwo',
@@ -83,11 +128,26 @@ const Speakers = () => {
       image: speaker8
     },
     {
+      title: 'Dr Gbonjubola Abiri',
+      position: 'CEO, Redi-Med Services',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker2
+    },
+    {
       title: 'Niyi Fagbemi',
       position: 'Travel Film Maker',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker9
+    },
+
+    {
+      title: 'Samuel Ogunyinka (Psalmist)',
+      position: 'Spoken word artist',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker12
     }
   ];
 
@@ -106,7 +166,7 @@ const Speakers = () => {
   };
   // Handle the 'Next' button click
   const handleNext = (): void => {
-    const totalItems: number = 20; // Example total items
+    const totalItems: number = 10; // Example total items
     if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
       setCurrentIndex(currentIndex + itemsPerPage);
