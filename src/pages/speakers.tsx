@@ -43,14 +43,14 @@ const Speakers = () => {
     },
     {
       title: 'Iyin Aboyeji',
-      position: 'CEO, Flutterwave',
+      position: 'Managing Partner, Accelerate Africa',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker11
     },
     {
       title: 'Mohammed Jega',
-      position: 'CEO and Co-founded Domineum',
+      position: 'Co-founder Domineum',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker1
@@ -79,7 +79,7 @@ const Speakers = () => {
 
     {
       title: 'Bayo Omoboriowo',
-      position: 'Founder Madhousetikera',
+      position: 'Founder Madhouse by tikera',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker4
