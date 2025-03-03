@@ -14,6 +14,7 @@ import { ArrowRight } from '@/assets/icons';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 
+
 const items = [
   {
     icon: HeartIcon,
