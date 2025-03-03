@@ -23,7 +23,6 @@ import onyeka from '@/assets/img/past-speaker/onyeka.png';
 import aderenle from '@/assets/img/past-speaker/aderenle.png';
 import daniel from '@/assets/img/past-speaker/daniel.png';
 import raheem from '@/assets/img/past-speaker/raheem.png';
-// import abiola from '@/assets/img/past-speaker/abiola.png';
 import owolabi from '@/assets/img/past-speaker/owolabi.png';
 import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
