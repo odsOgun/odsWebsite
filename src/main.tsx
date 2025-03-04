@@ -62,7 +62,7 @@ import ErrorPage from './error-page.tsx';
 import About from './pages/about.tsx';
 import Home from './pages/home.tsx';
 import Sponsor from './pages/sponsor.tsx';
-import Exhibitor from './pages/exhibitor.tsx';
+// import Exhibitor from './pages/exhibitor.tsx';
 import Speakers from './pages/speakers.tsx';
 import PastSpeakers from './pages/past-speaker.tsx';
 import ExhibitorForm from './components/form/exhibitor.tsx';

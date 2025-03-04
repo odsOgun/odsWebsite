@@ -22,7 +22,7 @@ function Nav() {
 
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
     // { label: 'Exhibitors', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' },
-    { label: 'Exhibitors', link: '/exhibitor' },
+    { label: 'Exhibitors', link: '/exhibitors' },
 
     { label: 'Speakers', link: '/speaker' }
   ];
