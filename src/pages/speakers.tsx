@@ -189,7 +189,7 @@ const Speakers = () => {
     },
     {
       title: 'Kutaje O. Joseph',
-      position: 'Senior Product Designer, Reliance Health ',
+      position: 'UX design mentor, Designlab ',
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: master3
@@ -391,9 +391,12 @@ const Speakers = () => {
           <h3 className='platypi-gf text-center text-[#23323F] font-semibold text-2xl leading-[34px] tracking-[-0.5px] md:text-[40px] md:leading-[48px] md:tracking-[-1px]  changeFont-wh213o '>
             Masterclass Trainers
           </h3>
-          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
+          {/* <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
             Meet our masterclass trainers who will help us train young individuals at ODS. It’s free
             and we don’t charge anyone for this.
+          </p> */}
+          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
+            Meet our masterclass trainers for this year's Ogun digital Summit
           </p>
         </div>
         <div
