@@ -118,10 +118,13 @@ const whatToLookForwardItems = [
     image: '/img/exploring.png'
   }
 ];
+interface SectionTwoProps {
+  onOpenSponsorModal: () => void;
+  onOpenExhibitorModal: () => void;
+}
 
-function SectionTwo() {
+function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoProps ) {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.Conference);
-
   return (
     <div className='bg-white' id='exhibitors'>
       <div className='max-w-[1120px] w-full px-8 mx-auto pt-20 xl:box-content'>
@@ -136,12 +139,12 @@ function SectionTwo() {
             <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
               Increase your start visibility and reach by booking a boot with us today
             </p>
-            <a href={Sitelinks.becomeAnExhibitor} target='_blank'>
-              <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
+            {/* <a href={Sitelinks.becomeAnExhibitor} target='_blank'> */}
+              <button onClick={onOpenExhibitorModal} className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white'>
                 <span className='text-sm font-semibold'>Become an exhibitor</span>
                 <ArrowRight />
               </button>
-            </a>
+            {/* </a> */}
           </div>
         </div>
 
@@ -213,12 +216,12 @@ function SectionTwo() {
               With over 5,000 participants expected to grace Ogun Digital Summit 2024, we’ve got the
               perfect audience for you.
             </p>
-            <a href={Sitelinks.becomeAsponsor} target='_blank'>
-              <button className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white mx-auto'>
+            {/* <a href={Sitelinks.becomeAsponsor} target='_blank'> */}
+              <button onClick={onOpenSponsorModal} className='bg-[#178A2D] font-semibold h-10 min-w-[190px] rounded flex justify-center items-center tracking-[0.2px] text-white mx-auto'>
                 <span className='text-sm font-semibold'>Become a sponsor</span>
                 <ArrowRight />
               </button>
-            </a>
+            {/* </a> */}
           </div>
 
           <div className='my-20'>

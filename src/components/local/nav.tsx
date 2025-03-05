@@ -18,11 +18,11 @@ function Nav() {
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
     // { label: 'Sponsor', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' },
-    { label: 'Sponsor', link: '/sponsors' },
+    { label: 'Sponsor', link: '/' },
 
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
     // { label: 'Exhibitors', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' },
-    { label: 'Exhibitors', link: '/exhibitors' },
+    { label: 'Exhibitors', link: '/' },
 
     { label: 'Speakers', link: '/speaker' }
   ];

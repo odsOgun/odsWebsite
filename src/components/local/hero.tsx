@@ -34,8 +34,10 @@ function SponsorLogos() {
     </div>
   );
 }
-
-function Hero() {
+interface SectionOneProps {
+  onOpenSponsorModal: () => void;
+}
+function Hero({ onOpenSponsorModal }: SectionOneProps) {
   return (
     <div className='relative'>
       <div className='hero-bg px-5 pt-10 pb-[120px] md:pt-[100px] md:pb-[76px]'>
@@ -62,12 +64,12 @@ function Hero() {
                   <ArrowRight />
                 </button>
               </a>
-              <a href={Sitelinks.becomeAsponsor} target='_blank'>
-                <button className='min-w-[161px] h-6 rounded-[2px] bg-white flex justify-center items-center gap-2'>
+              {/* <a href={Sitelinks.becomeAsponsor} target='_blank'> */}
+                <button onClick={onOpenSponsorModal} className='min-w-[161px] h-6 rounded-[2px] bg-white flex justify-center items-center gap-2'>
                   <span className='text-[#178A2D] text-sm font-semibold'>Become a sponsor</span>
                   <ArrowRightGreen />
                 </button>
-              </a>
+              {/* </a> */}
             </div>
           </div>
         </div>
