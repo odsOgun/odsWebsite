@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Hero from '@/components/local/hero';
 import MobileApp from '@/components/local/mobileApp';
 import Nav from '@/components/local/nav';
