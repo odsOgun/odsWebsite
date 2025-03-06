@@ -28,8 +28,6 @@ import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
 import falola from '@/assets/img/past-speaker/falola.png';
 import justice from '@/assets/img/past-speaker/justice.jpeg';
-
-
 import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
