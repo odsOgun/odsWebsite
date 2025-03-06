@@ -134,8 +134,7 @@ const Exhibitor = () => {
             </h4>
             <p className=' h-[88px] lg:w-[544px] lg:h-[44px] text-[#B0C5D6] text-sm font-normal'>
               You can directly and indirectly learn and engage with industry experts, offering
-              valuable opportunities to gain deeper insights into your areas of interest
-            </p>
+             </p>
           </div>
           <div className='lg:mr-[60px] '>
             <img src={africa} alt='africaicon' />

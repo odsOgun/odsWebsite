@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+  import { useEffect, useState } from 'react';
 import Nav from '@/components/local/nav';
 import { HeartIcon, PersonIcon, ConcentricCirclesIcon, StarIcon } from '@/assets/icons';
 import HeroImg from '@/assets/img/about-hero.png';
@@ -13,6 +13,7 @@ import Sitelinks from '@/mock/sitelinks.json';
 import { ArrowRight } from '@/assets/icons';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
+
 
 const items = [
   {
@@ -49,6 +50,15 @@ const carouselItems = [
 ];
 
 const journeyItems = [
+  {
+    title: 'ODS 2024: Innovation: Pathway to our Nation’s Prosperity',
+    bgColor: '#E5E9EC',
+    points: [
+      'Experts discussed sustainable innovation and the future of technology.',
+      '50+ startups connected with investors, leading to successful partnerships.',
+      'Expanded outreach programs, introducing tech to underserved communities.'
+    ]
+  },
   {
     title: 'ODS 2023 : Innovating Beyond Boundaries : Exploring AI and Web 2 Evolutionary Impact',
     bgColor: '#EDFEE5',
@@ -286,6 +296,12 @@ function About() {
                 <ArrowRight />
               </button>
             </a>
+            {/* <a href={Sitelinks.ourImpact} target='_blank'> */}
+              <button className='bg-transparent font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F] border border-[#ffff] ml-5'>
+                <span className='text-sm font-semibold text-white'>Our Statistics</span>
+                <ArrowRight />
+              </button>
+            {/* </a> */}
           </div>
         </div>
       </div>

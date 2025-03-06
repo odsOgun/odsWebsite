@@ -17,10 +17,10 @@ import speaker15 from '@/assets/img/speaker17.png';
 import speaker17 from '@/assets/img/speaker16.png';
 import speaker18 from '@/assets/img/speaker15.png';
 
-import master1 from '@/assets/img/master1.png';
-import master2 from '@/assets/img/master2.png';
-import master3 from '@/assets/img/master3.png';
-import master4 from '@/assets/img/master5.png';
+// import master1 from '@/assets/img/master1.png';
+// import master2 from '@/assets/img/master2.png';
+// import master3 from '@/assets/img/master3.png';
+// import master4 from '@/assets/img/master5.png';
 import Guest from '@/assets/img/guest.png';
 import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
@@ -30,7 +30,7 @@ import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
-import { ArrowLeft } from '@/assets/icons';
+// import { ArrowLeft } from '@/assets/icons';
 
 const Speakers = () => {
   const whatToLookForwardItems = [
@@ -152,69 +152,76 @@ const Speakers = () => {
   ];
 
   // Define the types for state variables
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentIndex] = useState<number>(0);
   const itemsPerPage: number = 8; // Define how many items per page
   const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
   const visibleItems = whatToLookForwardItems.slice(currentIndex, currentIndex + itemsPerPage);
 
-  // Handle the 'Previous' button click
-  const handlePrev = (): void => {
-    if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      setCurrentIndex(currentIndex - itemsPerPage);
-    }
-  };
-  // Handle the 'Next' button click
-  const handleNext = (): void => {
-    const totalItems: number = 10; // Example total items
-    if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      setCurrentIndex(currentIndex + itemsPerPage);
-    }
-  };
-  const Master = [
-    {
-      title: 'Omolara Dada',
-      position: 'Growth Lead, Anchor',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master1
-    },
-    {
-      title: 'Sodiq Akinjobi',
-      position: 'Developer Ecostystem CM at google',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master2
-    },
-    {
-      title: 'Kutaje O. Joseph',
-      position: 'UX design mentor, Designlab ',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master3
-    },
-    {
-      title: 'Ibiniyi Obikoya',
-      position: 'Tech Lead, Korapay',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master4
-    }
-  ];
+  // // Handle the 'Previous' button click
+  // const handlePrev = (): void => {
+  //   if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
+  //     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  //     setCurrentIndex(currentIndex - itemsPerPage);
+  //   }
+  // };
+  // // Handle the 'Next' button click
+  // const handleNext = (): void => {
+  //   const totalItems: number = 10; // Example total items
+  //   if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
+  //     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  //     setCurrentIndex(currentIndex + itemsPerPage);
+  //   }
+  // };
+  // const Master = [
+  //   {
+  //     title: 'Omolara Dada',
+  //     position: 'Growth Lead, Anchor',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master1
+  //   },
+  //   {
+  //     title: 'Sodiq Akinjobi',
+  //     position: 'Developer Ecostystem CM at google',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master2
+  //   },
+  //   {
+  //     title: 'Kutaje O. Joseph',
+  //     position: 'UX design mentor, Designlab ',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master3
+  //   },
+  //   {
+  //     title: 'Ibiniyi Obikoya',
+  //     position: 'Tech Lead, Korapay',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master4
+  //   }
+  // ];
 
   const [showNav, setShowNav] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showModal] = useState<number | null>(null);
-
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth <= 768);
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
     setShowNav(currentScrollPos > 0);
   };
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 500);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -254,12 +261,14 @@ const Speakers = () => {
       </div>
       <section
         ref={sectionRef}
-        className={`py-10 sm:py-[160px] ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
+        // className={`py-10 sm:py-[160px] relative  ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
+        className={`   ${showModal !== null ? 'bg-[#101611B2] opacity-7' : ''}`}
       >
         <div
-          className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
+          // className={` relative m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
+          className={` relative m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4    justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
         >
-          {visibleItems.map((item, index) => (
+          {(isSmallScreen ? visibleItems.slice(0, 2) : visibleItems).map((item, index) => (
             <div
               key={index}
               className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
@@ -304,8 +313,20 @@ const Speakers = () => {
               </div>
             </div>
           ))}
+          <div className='absolute top-0 left-0 w-full h-full bg-[#000000] backdrop-blur-lg bg-opacity-60  sm:rounded-xl '>
+            <div className=' h-2/10 sm:max-w-[458px] m-auto flex flex-col justify-center absolute top-[40%]  lg:left-1/3'>
+              <h1 className='font-semibold text-[40px] leading-10 platypi-gf text-[#FFFFFF] text-center '>
+                Coming soon...
+              </h1>
+              <p className='text-[16px] leading-6 font-normal text-[#FFFFFF] mt-4 text-center inter-gf'>
+                Exciting news! Stay tuned as we unveil the incredible speakers for the Ogun Digital
+                Summit 2025.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
+
+        {/* <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
           <span
             className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
               currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
@@ -324,7 +345,7 @@ const Speakers = () => {
           >
             <ArrowRight fill='#2B4155' />
           </span>
-        </div>
+        </div> */}
       </section>
       <section className='md:flex md:flex-row-reverse gap-20  justify-center items-center mb-8 md:mb-0 md:py-[100px] m-auto lg:ml-[160px]'>
         <div className='xl:w-[505px] xl:mx-0  mx-auto w-[90%]  md:mb-[80px] mb-[40px]'>
@@ -365,17 +386,14 @@ const Speakers = () => {
           </div>
         </div>
       </section>
-      <section className={``}>
+      {/* <section className={``}>
         <div className=' mx-auto flex flex-col gap-4 w-full max-w-[335px] md:max-w-[558px] md:mb-[80px] mb-[40px] '>
           <h3 className='platypi-gf text-center text-[#23323F] font-semibold text-2xl leading-[34px] tracking-[-0.5px] md:text-[40px] md:leading-[48px] md:tracking-[-1px]  changeFont-wh213o '>
             Masterclass Trainers
           </h3>
-          {/* <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
+          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
             Meet our masterclass trainers who will help us train young individuals at ODS. It’s free
             and we don’t charge anyone for this.
-          </p> */}
-          <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base  '>
-            Meet our masterclass trainers for this year's Ogun digital Summit
           </p>
         </div>
         <div
@@ -416,18 +434,12 @@ const Speakers = () => {
                 >
                   {item.description}
                 </p>
-                {/* <span
-                  className={`flex items-center text-[12px] leading-6 text-[#ACFAAC]  ${showModal === index ? "hidden" : "block"}`}
-                  onClick={() => setShowModal(index)}
-                >
-                  Read More
-                  <ArrowRightLightGreen />
-                </span> */}
+                
               </div>
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <MobileApp />
       <Footer />
     </div>

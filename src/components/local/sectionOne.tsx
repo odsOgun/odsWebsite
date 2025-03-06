@@ -6,7 +6,6 @@ import RocketIcon from '@/assets/svgs/rocket.svg';
 import One from '@/assets/img/one.png';
 import Two from '@/assets/img/two.png';
 import Three from '@/assets/img/three.png';
-import Sitelinks from '@/mock/sitelinks.json';
 
 const cardItems = [
   {
@@ -35,7 +34,11 @@ const cardItems = [
   }
 ];
 
-function SectionOne() {
+interface SectionOneProps {
+  onOpenSponsorModal: () => void;
+}
+
+function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
   return (
     <div className='bg-foreground'>
       <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
@@ -49,13 +52,14 @@ function SectionOne() {
             entrepreneurship and social innovation.
           </p>
           <div className='flex gap-[10px]'>
-            <a href={Sitelinks.becomeAsponsor} target='_blank'>
-              <button className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
-                <span className='text-sm font-semibold'>Become a Sponsor</span>
-                <ArrowRight fill='#23323F' />
-              </button>
-            </a>
-            <a href={Sitelinks.becomeAsponsor} target='_blank'>
+            <button
+              onClick={onOpenSponsorModal}
+              className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'
+            >
+              <span className='text-sm font-semibold'>Become a Sponsor</span>
+              <ArrowRight fill='#23323F' />
+            </button>
+            <a href="/statistics" >
               <button className='bg-inherit font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#ACFAAC]'>
                 <span className='text-sm font-semibold'>View Our Statistics</span>
                 <ArrowRight fill='#ACFAAC' />
@@ -111,28 +115,28 @@ function SectionOne() {
               allowFullScreen
             ></iframe>
           </div>
-        </div>
 
-        <div>
-          <div className='max-w-[670px]'>
-            <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
-              Why thousands of young individuals attend Ogun Digital Summit annually.
-            </h1>
-            <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
-              Ogun Digital Summit is the global tech ecosystem - where visionaries, tech talents,
-              entrepreneurs, investors and enterprise tech leaders come together in the right
-              balance to accelerate the infinite cycle of tech innovation.
-            </p>
-          </div>
+          <div>
+            <div className='max-w-[670px]'>
+              <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
+                Why thousands of young individuals attend Ogun Digital Summit annually.
+              </h1>
+              <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
+                Ogun Digital Summit is the global tech ecosystem - where visionaries, tech talents,
+                entrepreneurs, investors and enterprise tech leaders come together in the right
+                balance to accelerate the infinite cycle of tech innovation.
+              </p>
+            </div>
 
-          <div className='flex flex-col gap-8 py-20 md:flex-row'>
-            {cardItems.map(({ icon, title, description }, index) => (
-              <div key={index} className=''>
-                <img src={icon} alt={title} />
-                <h3 className='mt-2 mb-4 text-base font-semibold text-white'>{title}</h3>
-                <p className='text-[#B0C5D6] text-sm'>{description}</p>
-              </div>
-            ))}
+            <div className='flex flex-col gap-8 py-20 md:flex-row'>
+              {cardItems.map(({ icon, title, description }, index) => (
+                <div key={index} className=''>
+                  <img src={icon} alt={title} />
+                  <h3 className='mt-2 mb-4 text-base font-semibold text-white'>{title}</h3>
+                  <p className='text-[#B0C5D6] text-sm'>{description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

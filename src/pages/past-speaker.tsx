@@ -23,12 +23,11 @@ import onyeka from '@/assets/img/past-speaker/onyeka.png';
 import aderenle from '@/assets/img/past-speaker/aderenle.png';
 import daniel from '@/assets/img/past-speaker/daniel.png';
 import raheem from '@/assets/img/past-speaker/raheem.png';
-import abiola from '@/assets/img/past-speaker/abiola.png';
 import owolabi from '@/assets/img/past-speaker/owolabi.png';
 import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
 import falola from '@/assets/img/past-speaker/falola.png';
-
+import justice from '@/assets/img/past-speaker/justice.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
@@ -74,11 +73,13 @@ const PastSpeakers = () => {
     },
 
     {
-      title: 'Abiola Odetola',
-      position: 'SA to governor of Ogun State ,2015- 2023',
+      title: 'Justice Eziefule',
+      // position: 'SA to governor of Ogun State ,2015- 2023',
+      position: 'Co-founder, Metastable Labs',
+
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: abiola
+      image: justice
     },
     {
       title: 'Odunayo Eweniyi',
