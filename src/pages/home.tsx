@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import Hero from '@/components/local/hero';
 import MobileApp from '@/components/local/mobileApp';
 import Nav from '@/components/local/nav';
@@ -15,7 +15,6 @@ function Home() {
   const [showSponsorModal, setShowSponsorModal] = useState(false);
   const [showExhibitorModal, setShowExhibitorModal] = useState(false);
   const [showSucessModal, setShowSucessModal] = useState(false);
-  
 
   const openSponsorModal = () => setShowSponsorModal(true);
   const closeSponsorModal = () => setShowSponsorModal(false);
@@ -30,9 +29,9 @@ function Home() {
       <div className='container max-md:px-5'>
         <Nav />
       </div>
-      <Hero onOpenSponsorModal={openSponsorModal}/>
+      <Hero onOpenSponsorModal={openSponsorModal} />
       <SectionOne onOpenSponsorModal={openSponsorModal} />
-      <SectionTwo onOpenSponsorModal={openSponsorModal} onOpenExhibitorModal={openExhibitorModal}  />
+      <SectionTwo onOpenSponsorModal={openSponsorModal} onOpenExhibitorModal={openExhibitorModal} />
       <div>
         <Merch />
       </div>
@@ -44,17 +43,16 @@ function Home() {
       </div>
 
       <Modal show={showSponsorModal} onClose={closeSponsorModal}>
-        <SponsorForm onClose={closeSponsorModal} openModal={openSucessModal}/>
+        <SponsorForm onClose={closeSponsorModal} openModal={openSucessModal} />
       </Modal>
 
       <Modal show={showExhibitorModal} onClose={closeExhibitorModal}>
-        <ExhibitorsForm onClose={closeExhibitorModal} openModal={openSucessModal}/>
+        <ExhibitorsForm onClose={closeExhibitorModal} openModal={openSucessModal} />
       </Modal>
 
       <Modal show={showSucessModal} onClose={closeSucessModal}>
-        <SucessModal onClose={closeSucessModal}/>
+        <SucessModal />
       </Modal>
-      
     </div>
   );
 }
