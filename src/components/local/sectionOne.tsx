@@ -45,7 +45,7 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
       <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
         <div className='max-w-[420px]'>
           <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
-            Our numbers in the last 4 years.
+            Our numbers in the last 5 years.
           </h1>
           <p className='text-base font-normal tracking-[0.2px] text-[#B0C5D6] my-5'>
             It all started with a dream in 2019 to bring together startup entrepreneurs, talents,
@@ -72,10 +72,10 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
 
         <div className='flex justify-between w-full bg-[#0E140F] p-6 overflow-hidden'>
           <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
-            7200+<span className='text-sm tracking-[3px]'>ATTENDEES</span>
+            9000+<span className='text-sm tracking-[3px]'>ATTENDEES</span>
           </h2>
           <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
-            50+<span className='text-sm tracking-[3px]'>SPEAKERS</span>
+            65+<span className='text-sm tracking-[3px]'>SPEAKERS</span>
           </h2>
           <h2 className='flex items-center gap-4 font-semibold text-white md:text-5xl'>
             30+<span className='text-sm tracking-[3px]'>SESSIONS</span>

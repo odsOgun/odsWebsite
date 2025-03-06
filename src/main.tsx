@@ -65,9 +65,7 @@ import Sponsor from './pages/sponsor.tsx';
 // import Exhibitor from './pages/exhibitor.tsx';
 import Speakers from './pages/speakers.tsx';
 import PastSpeakers from './pages/past-speaker.tsx';
-// import ExhibitorForm from './components/form/exhibitor.tsx';
-// import SponsorForm from './components/form/sponsor.tsx';
-
+import Statistics from './pages/statistics.tsx';
 
 const router = createBrowserRouter([
   {
@@ -95,21 +93,12 @@ const router = createBrowserRouter([
     element: <PastSpeakers />,
     errorElement: <ErrorPage />
   },
-  // {
-  //   path: '/exhibitors',
-  //   element: <Exhibitor />,
-  //   errorElement: <ErrorPage />
-  // },
-  // {
-  //   path: '/exhibitors',
-  //   element: <ExhibitorForm />,
-  //   errorElement: <ErrorPage />
-  // },
-  // {
-  //   path: '/sponsors',
-  //   element: <SponsorForm />,
-  //   errorElement: <ErrorPage />
-  // }
+ 
+  {
+    path: '/statistics',
+    element: <Statistics />,
+    errorElement: <ErrorPage />
+  }
 ]);
 
 createRoot(document.getElementById('root')!).render(

@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
 
           <div className='text-[#627587] text-center text-xs md:text-base leading-[18px] md:leading-6 font-normal tracking-[-0.2px] md:tracking-[0.2px]'>
-            <p>Copyright © 2024 Ogun Digital Summit. All rights reserved.</p>
+            <p>Copyright © 2025 Ogun Digital Summit. All rights reserved.</p>
           </div>
         </div>
       </div>

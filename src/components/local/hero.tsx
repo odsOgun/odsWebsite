@@ -45,14 +45,18 @@ function Hero({ onOpenSponsorModal }: SectionOneProps) {
           <div className='flex flex-col gap-6 md:gap-8'>
             <div className='text-[34px] md:text-6xl leading-[40px] md:leading-[64px] text-left md:text-center tracking-[0.5px] md:tracking-[-1px] text-[#23323F] max-md:max-w-[332px]'>
               <h2 className='italic font-normal platypi-gf'>
+                Be a part of Ogun Digital summit 2025
+                
+              </h2>
+              {/* <h2 className='italic font-normal platypi-gf'>
                 Innovation:{' '}
                 <span className='font-semibold tracking-[0.5px] md:tracking-[-1px] not-italic'>
                   Pathway to our nation's prosperity
                 </span>
-              </h2>
+              </h2> */}
             </div>
             <p className='text-sm md:text-base leading-[22px] md:leading-[22px] font-normal tracking-[0.2px] text-[#627587]  md:text-center'>
-              Ogun Digital Summit 2024 is focused on improving collaborations, paving the way for
+              Ogun Digital Summit 2025 is focused on improving collaborations, paving the way for
               new innovations and igniting conversation towards technology advancements and
               prosperity for Nigeria's digital technology ecosystem.
             </p>

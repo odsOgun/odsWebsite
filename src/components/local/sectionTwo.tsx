@@ -15,8 +15,8 @@ enum Tabs {
 
 const events = [
   {
-    day: 'Tuesday',
-    date: '29th October',
+    day: 'Thursday',
+    date: '20th November',
     title: 'Startup Pitch Competition',
     items: [
       'Strictly by Invitation',
@@ -26,24 +26,24 @@ const events = [
     ],
     filter: Tabs.OffConference
   },
-  {
-    day: 'Wednesday',
-    date: '30th October',
-    title: 'Conference Day 1',
-    items: [
-      'Art and Culture',
-      'Entertainment Industry',
-      'Creative Economy',
-      'Cultural and Art Exhibition',
-      'Outdoor Party',
-      'Demos'
-    ],
-    filter: Tabs.Conference
-  },
+  // {
+  //   day: 'Wednesday',
+  //   date: '30th October',
+  //   title: 'Conference Day 1',
+  //   items: [
+  //     'Art and Culture',
+  //     'Entertainment Industry',
+  //     'Creative Economy',
+  //     'Cultural and Art Exhibition',
+  //     'Outdoor Party',
+  //     'Demos'
+  //   ],
+  //   filter: Tabs.Conference
+  // },
   {
     day: 'Thursday',
-    date: '31th October',
-    title: 'Conference Day 2',
+    date: '20th November',
+    title: 'Conference Day ',
     items: [
       'Funding for Business/Startup',
       'Technology and Mental Health',
@@ -55,13 +55,13 @@ const events = [
     ],
     filter: Tabs.Conference
   },
-  {
-    day: 'Friday',
-    date: '1st November',
-    title: 'Founders Mixers',
-    items: ['Networking and Dinner', 'For founders, entrepreneurs and talents.'],
-    filter: Tabs.OffConference
-  }
+  // {
+  //   day: 'Friday',
+  //   date: '1st November',
+  //   title: 'Founders Mixers',
+  //   items: ['Networking and Dinner', 'For founders, entrepreneurs and talents.'],
+  //   filter: Tabs.OffConference
+  // }
 ];
 
 const sponsorCardItems = [
@@ -187,7 +187,8 @@ function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoPr
             />
 
             <div
-              className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-10'} my-10 w-full `}
+              // className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-10'} my-10 w-full `}
+              className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-4'} my-10 w-[70%] max-w-full`}
             >
               {events.map((item, index) => (
                 <CalendarCard
