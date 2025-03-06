@@ -16,7 +16,6 @@ import speaker14 from '@/assets/img/speaker14.png';
 import speaker15 from '@/assets/img/speaker17.png';
 import speaker17 from '@/assets/img/speaker16.png';
 import speaker18 from '@/assets/img/speaker15.png';
-
 // import master1 from '@/assets/img/master1.png';
 // import master2 from '@/assets/img/master2.png';
 // import master3 from '@/assets/img/master3.png';

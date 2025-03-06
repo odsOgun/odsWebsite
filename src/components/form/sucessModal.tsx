@@ -1,9 +1,13 @@
+// interface ModalProps {
+//   onClose: () => void;
+//   Modal: () => void;
+// }
 
-
-interface ModalProps {
-  onClose: () => void;
-}
-function SucessModal({ onClose }: ModalProps) {
+function SucessModal() {
+  //redirect to home page
+  const redirectToHome = () => {
+    window.location.href = '/';
+  };
   return (
     <>
       <div className='max-w-[542px] m-auto relative z-10 bg-[#FFFFFF] rounded-[20px] p-8 md:px-16 overflow-y-auto'>
@@ -17,7 +21,10 @@ function SucessModal({ onClose }: ModalProps) {
           information
         </p>
         <div className='flex justify-center'>
-          <button onClick={onClose} className='bg-[#178A2D] font-semibold h-10 w-[190px] text-sm text-[#ffff] rounded-[2px] items-center tracking-[0.2px] text-[#23323F] !self-center'>
+          <button
+            onClick={redirectToHome}
+            className='bg-[#178A2D] font-semibold h-10 w-[190px] text-sm text-[#ffff] rounded-[2px] items-center tracking-[0.2px] text-[#23323F] !self-center'
+          >
             Done
           </button>
         </div>
