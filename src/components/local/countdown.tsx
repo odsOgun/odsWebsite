@@ -39,7 +39,7 @@ const CountDown: React.FC = () => {
         <div className='max-md:mt-1 max-md:mb-1 md:py-[13px] md:pr-4'>
           <div className='flex flex-col gap-1 max-md:text-center'>
             <div className=' text-xs md:text-sm leading-5 font-semibold text-[#F2F9FF] tracking-[3px]'>
-              Nov 20, 2024
+              Nov 20, 2025
             </div>
             <div className='text-xs md:text-sm leading-[18px] md:leading-[22px] font-normal text-[#B0C5D6] tracking-[0.2px]'>
               June 12 cultural centre, Kuto, Abeokuta Ogun state

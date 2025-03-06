@@ -23,13 +23,18 @@ import onyeka from '@/assets/img/past-speaker/onyeka.png';
 import aderenle from '@/assets/img/past-speaker/aderenle.png';
 import daniel from '@/assets/img/past-speaker/daniel.png';
 import raheem from '@/assets/img/past-speaker/raheem.png';
-import abiola from '@/assets/img/past-speaker/abiola.png';
 import owolabi from '@/assets/img/past-speaker/owolabi.png';
 import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
+import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
+import falola from '@/assets/img/past-speaker/falola.png';
+import justice from '@/assets/img/past-speaker/justice.jpeg';
 
-import { useEffect, useState } from 'react';
+
+import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
+import { ArrowRight } from '@/assets/icons';
+import { ArrowLeft } from '@/assets/icons';
 
 const PastSpeakers = () => {
   const Ods23 = [
@@ -70,11 +75,13 @@ const PastSpeakers = () => {
     },
 
     {
-      title: 'Abiola Odetola',
-      position: 'SA to governor of Ogun State ,2015- 2023',
+      title: 'Justice Eziefule',
+      // position: 'SA to governor of Ogun State ,2015- 2023',
+      position: 'Co-founder, Metastable Labs',
+
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: abiola
+      image: justice
     },
     {
       title: 'Odunayo Eweniyi',
@@ -101,6 +108,13 @@ const PastSpeakers = () => {
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: tolulope
+    },
+    {
+      title: ' Ifeoluwa Oyeniyi',
+      position: 'Senior Product Manager, Vigipay ',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: oyeniyi
     },
     {
       title: 'Rahaman Abiola',
@@ -136,6 +150,13 @@ const PastSpeakers = () => {
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: Edidiong
+    },
+    {
+      title: 'Oluwaseyi Falola',
+      position: 'Senior Product Designer, Lazerpay',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: falola
     },
     {
       title: 'Bolaji Ajibare',
@@ -250,6 +271,28 @@ const PastSpeakers = () => {
 
   const handleClick = (index: number): void => {
     setSelectedYear(index);
+  };
+
+  // Define the types for state variables
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const itemsPerPage: number = 8; // Define how many items per page
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
+  const visibleItems = Ods22.slice(currentIndex, currentIndex + itemsPerPage);
+
+  // Handle the 'Previous' button click
+  const handlePrev = (): void => {
+    if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex - itemsPerPage);
+    }
+  };
+  // Handle the 'Next' button click
+  const handleNext = (): void => {
+    const totalItems: number = 10; // Example total items
+    if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setCurrentIndex(currentIndex + itemsPerPage);
+    }
   };
   return (
     <div>
@@ -386,9 +429,10 @@ const PastSpeakers = () => {
         <>
           {selectedYear === 1 && (
             <div
+              ref={sectionRef}
               className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
             >
-              {Ods22.map((item, index) => (
+              {visibleItems.map((item, index) => (
                 <div
                   key={index}
                   className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
@@ -428,6 +472,26 @@ const PastSpeakers = () => {
               ))}
             </div>
           )}
+          <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
+            <span
+              className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
+                currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+              onClick={handlePrev}
+            >
+              <ArrowLeft fill='#2B4155' />
+            </span>
+            <span
+              className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
+                currentIndex + itemsPerPage >= visibleItems.length
+                  ? 'opacity-50 cursor-not-allowed'
+                  : ''
+              }`}
+              onClick={handleNext}
+            >
+              <ArrowRight fill='#2B4155' />
+            </span>
+          </div>
         </>
         <>
           {selectedYear === 2 && (

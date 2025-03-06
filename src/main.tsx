@@ -62,7 +62,7 @@ import ErrorPage from './error-page.tsx';
 import About from './pages/about.tsx';
 import Home from './pages/home.tsx';
 import Sponsor from './pages/sponsor.tsx';
-import Exhibitor from './pages/exhibitor.tsx';
+// import Exhibitor from './pages/exhibitor.tsx';
 import Speakers from './pages/speakers.tsx';
 import PastSpeakers from './pages/past-speaker.tsx';
 import Statistics from './pages/statistics.tsx';
@@ -93,11 +93,7 @@ const router = createBrowserRouter([
     element: <PastSpeakers />,
     errorElement: <ErrorPage />
   },
-  {
-    path: '/exhibitors',
-    element: <Exhibitor />,
-    errorElement: <ErrorPage />
-  },
+ 
   {
     path: '/statistics',
     element: <Statistics />,

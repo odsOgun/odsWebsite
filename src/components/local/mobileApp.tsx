@@ -16,7 +16,7 @@ const MobileApp = () => {
                 Unlocking Tech Innovations Without Boundaries
               </h3>
               <p className='text-center text-[#627587] text-sm leading-[22px] tracking-[0.2px] font-normal md:text-base md:text-left '>
-                The ODS 24 Mobile App is your all-in-one tool for an immersive tech experience at
+                The ODS 25 Mobile App is your all-in-one tool for an immersive tech experience at
                 your fingertip. Connect with like minds like never before
               </p>
             </div>
