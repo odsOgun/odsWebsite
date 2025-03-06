@@ -6,7 +6,6 @@ import RocketIcon from '@/assets/svgs/rocket.svg';
 import One from '@/assets/img/one.png';
 import Two from '@/assets/img/two.png';
 import Three from '@/assets/img/three.png';
-import Sitelinks from '@/mock/sitelinks.json';
 
 const cardItems = [
   {

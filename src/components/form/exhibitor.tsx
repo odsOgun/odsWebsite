@@ -9,7 +9,7 @@ interface ModalProps {
   onClose: () => void;
  openModal: () => void;
 }
-function ExhibitorsForm({ onClose, openModal }: ModalProps) {
+function ExhibitorsForm({ onClose }: ModalProps) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BsArrowLeftShort } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 interface ModalProps {
@@ -10,7 +9,7 @@ interface ModalProps {
 
  
 }
-function SponsorForm({ onClose , openModal}: ModalProps) {
+function SponsorForm({ onClose }: ModalProps) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

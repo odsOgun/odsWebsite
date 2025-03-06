@@ -17,10 +17,10 @@ import speaker15 from '@/assets/img/speaker17.png';
 import speaker17 from '@/assets/img/speaker16.png';
 import speaker18 from '@/assets/img/speaker15.png';
 
-import master1 from '@/assets/img/master1.png';
-import master2 from '@/assets/img/master2.png';
-import master3 from '@/assets/img/master3.png';
-import master4 from '@/assets/img/master5.png';
+// import master1 from '@/assets/img/master1.png';
+// import master2 from '@/assets/img/master2.png';
+// import master3 from '@/assets/img/master3.png';
+// import master4 from '@/assets/img/master5.png';
 import Guest from '@/assets/img/guest.png';
 import Guest1 from '@/assets/img/guest1.png';
 import Guest2 from '@/assets/img/guest2.png';
@@ -30,7 +30,7 @@ import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import { ArrowRight } from '@/assets/icons';
-import { ArrowLeft } from '@/assets/icons';
+// import { ArrowLeft } from '@/assets/icons';
 
 const Speakers = () => {
   const whatToLookForwardItems = [
@@ -157,51 +157,51 @@ const Speakers = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
   const visibleItems = whatToLookForwardItems.slice(currentIndex, currentIndex + itemsPerPage);
 
-  // Handle the 'Previous' button click
-  const handlePrev = (): void => {
-    if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      setCurrentIndex(currentIndex - itemsPerPage);
-    }
-  };
-  // Handle the 'Next' button click
-  const handleNext = (): void => {
-    const totalItems: number = 10; // Example total items
-    if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      setCurrentIndex(currentIndex + itemsPerPage);
-    }
-  };
-  const Master = [
-    {
-      title: 'Omolara Dada',
-      position: 'Growth Lead, Anchor',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master1
-    },
-    {
-      title: 'Sodiq Akinjobi',
-      position: 'Developer Ecostystem CM at google',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master2
-    },
-    {
-      title: 'Kutaje O. Joseph',
-      position: 'UX design mentor, Designlab ',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master3
-    },
-    {
-      title: 'Ibiniyi Obikoya',
-      position: 'Tech Lead, Korapay',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: master4
-    }
-  ];
+  // // Handle the 'Previous' button click
+  // const handlePrev = (): void => {
+  //   if (currentIndex - itemsPerPage >= 0 && sectionRef.current) {
+  //     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  //     setCurrentIndex(currentIndex - itemsPerPage);
+  //   }
+  // };
+  // // Handle the 'Next' button click
+  // const handleNext = (): void => {
+  //   const totalItems: number = 10; // Example total items
+  //   if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
+  //     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  //     setCurrentIndex(currentIndex + itemsPerPage);
+  //   }
+  // };
+  // const Master = [
+  //   {
+  //     title: 'Omolara Dada',
+  //     position: 'Growth Lead, Anchor',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master1
+  //   },
+  //   {
+  //     title: 'Sodiq Akinjobi',
+  //     position: 'Developer Ecostystem CM at google',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master2
+  //   },
+  //   {
+  //     title: 'Kutaje O. Joseph',
+  //     position: 'UX design mentor, Designlab ',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master3
+  //   },
+  //   {
+  //     title: 'Ibiniyi Obikoya',
+  //     position: 'Tech Lead, Korapay',
+  //     description:
+  //       'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+  //     image: master4
+  //   }
+  // ];
 
   const [showNav, setShowNav] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
