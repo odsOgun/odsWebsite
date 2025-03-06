@@ -151,7 +151,7 @@ function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoPr
         <div className='w-full md:flex md:justify-between'>
           <div className='md:basis-1/2'>
             <h1 className='text-[#23323F] text-2xl md:text-4xl platypi-gf font-semibold'>
-              Take a Masterclass session during Ogun Digital Summit 2024 and make a real impact.
+              Take a Masterclass session during Ogun Digital Summit 2025 and make a real impact.
             </h1>
             <p className='text-base font-normal tracking-[0.2px] text-[#627587] my-5'>
               Join our masterclass trainers to help us train young individuals at ODS. It's free and

@@ -52,10 +52,21 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
             creatives and founders with a strong focus to promote youth empowerment, tech
             entrepreneurship and social innovation.
           </p>
-          <button onClick={onOpenSponsorModal} className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'>
-            <span className='text-sm font-semibold'>Become a Sponsor</span>
-            <ArrowRight fill='#23323F' />
-          </button>
+          <div className='flex gap-[10px]'>
+            <button
+              onClick={onOpenSponsorModal}
+              className='bg-[#ACFAAC] font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F]'
+            >
+              <span className='text-sm font-semibold'>Become a Sponsor</span>
+              <ArrowRight fill='#23323F' />
+            </button>
+            <a href="/statistics" >
+              <button className='bg-inherit font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#ACFAAC]'>
+                <span className='text-sm font-semibold'>View Our Statistics</span>
+                <ArrowRight fill='#ACFAAC' />
+              </button>
+            </a>
+          </div>
         </div>
 
         <div className='flex flex-col items-end w-full gap-8 py-20 md:flex-row'>
