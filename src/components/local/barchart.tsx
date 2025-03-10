@@ -17,6 +17,7 @@ const data = [
   { year: "2024", attendees: 3000, color: "#000000" },
 ];
 
+
 const BarChartComponent: React.FC = () => {
   return (
     <div className="max-w-[700px] p-4 bg-[#F9F9FA] rounded-[16px] mx-auto mt-[28px]">

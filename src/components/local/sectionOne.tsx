@@ -117,7 +117,7 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
           </div>
 
           <div>
-            <div className='max-w-[670px]'>
+            <div className='max-w-[670px] md:mt-[100px] mt-[80px]'>
               <h1 className='text-2xl font-semibold text-white md:text-4xl platypi-gf'>
                 Why thousands of young individuals attend Ogun Digital Summit annually.
               </h1>
