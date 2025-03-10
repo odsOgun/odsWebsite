@@ -135,7 +135,7 @@ function SponsorForm({ onClose, openModal }: ModalProps) {
     <div>
       <div className='max-w-[640px] h-[95vh] mx-auto relative z-10 bg-[#FFFFFF] rounded-[20px] p-8 md:p-20 overflow-y-auto'>
         <ToastContainer />
-        <div className='flex justify-center sm:justify-start gap-20 items-center mb-4'>
+        <div className='flex md:justify-center justify-start gap-16 sm:gap-20 items-center mb-4'>
           <div onClick={onClose}>
             <BsArrowLeftShort className='cursor-pointer text-[#787676] w-6 h-6' />
           </div>

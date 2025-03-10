@@ -471,10 +471,10 @@ const PastSpeakers = () => {
       >
         <div className=' max-w-[335px] md:max-w-[669px] mb-14 md:mb-20 '>
           <h3 className='platypi-gf text-center text-[#23323F] md:mb-[16px] font-semibold text-2xl leading-[40px] tracking-[-0.5px] md:text-[34px]  md:text-left  '>
-            Our past speakers in the last 4 years.
+            Our past speakers in the last 5 years.
           </h3>
           <p className='text-center  text-[#627587] text-sm leading-[24px] tracking-[0.2px] font-normal md:text-base md:text-left '>
-            For the past 4 years, we have had amazing array of speakers who have have graced Ogun
+            For the past 5 years, we have had amazing array of speakers who have have graced Ogun
             digital summit over the years
           </p>
         </div>
@@ -781,7 +781,7 @@ const PastSpeakers = () => {
           </span>
           <span
             className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
-              currentIndex + itemsPerPage >= visibleItems.length || visibleItems2.length
+              currentIndex + itemsPerPage <= visibleItems.length || visibleItems2.length
                 ? 'opacity-50 cursor-not-allowed'
                 : ''
             }`}
