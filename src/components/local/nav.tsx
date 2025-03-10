@@ -18,11 +18,12 @@ function Nav() {
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
     // { label: 'Sponsor', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' },
-    { label: 'Sponsor', link: '/' },
+    // { label: 'Sponsor', link: '/' },
+    { label: 'Statistics', link: '/statistics' },
 
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
     // { label: 'Exhibitors', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' },
-    { label: 'Exhibitors', link: '/' },
+    // { label: 'Exhibitors', link: '/' },
 
     { label: 'Speakers', link: '/speaker' }
   ];
@@ -76,7 +77,7 @@ function Nav() {
   function MobileNav() {
     return (
       <div
-        className={`mobileNav absolute h-[408px] w-[90vw] bg-white px-5 pt-5 pb-10 md:hidden ${navState ? 'showNav' : ''}`}
+        className={`mobileNav absolute h-fit w-[90vw] bg-white px-5 pt-5 pb-10 md:hidden ${navState ? 'showNav' : ''}`}
       >
         <div className='flex flex-col w-full gap-6'>
           {navItems.map((item, index) => {

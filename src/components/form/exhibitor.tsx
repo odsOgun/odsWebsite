@@ -3,19 +3,20 @@ import { BsArrowLeftShort } from 'react-icons/bs';
 
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 interface ModalProps {
-  
   onClose: () => void;
- openModal: () => void;
+  openModal: () => void;
 }
-function ExhibitorsForm({ onClose }: ModalProps) {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    organisation: '',
-    phoneNumber: ''
-  });
+const initialFormData = {
+  fullName: '',
+  email: '',
+  organisation: '',
+  phoneNumber: ''
+};
+function ExhibitorsForm({ onClose, openModal }: ModalProps) {
+  const [formData, setFormData] = useState(initialFormData);
 
   const [errors, setErrors] = useState({
     fullName: '',
@@ -23,6 +24,7 @@ function ExhibitorsForm({ onClose }: ModalProps) {
     organisation: '',
     phoneNumber: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -31,7 +33,7 @@ function ExhibitorsForm({ onClose }: ModalProps) {
       email: '',
       organisation: '',
       phoneNumber: ''
-    })
+    });
     setFormData({
       ...formData,
       [name]: value
@@ -47,7 +49,7 @@ function ExhibitorsForm({ onClose }: ModalProps) {
 
   const validate = () => {
     let valid = true;
-    let errors = {
+    const errors = {
       fullName: '',
       email: '',
       organisation: '',
@@ -84,32 +86,37 @@ function ExhibitorsForm({ onClose }: ModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
+      setIsLoading(true);
       console.log(formData);
-      // try {
-      //   const response = await fetch('https://your-backend-endpoint.com/api/exhibitors', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify(formData)
-      //   });
-      //   if (response.ok) {
-      //     // Handle successful response
-      //     console.log('Form submitted successfully');
-      //     openModal();
-      //   } else {
-      //     // Handle error response
-      //     console.error('Form submission failed');
-      //   }
-      // } catch (error) {
-      //   console.error('Error submitting form:', error);
-      // }
+      try {
+        const response = await fetch('https://ods2025.onrender.com/api/v1/exhibitor/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        const responseData = await response.json();
+
+        if (responseData.message === 'Successful.') {
+          openModal();
+          setFormData(initialFormData);
+          setIsLoading(false);
+        } else {
+          toast.error(responseData.message);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        toast.error('Error submitting form:' + error);
+        setIsLoading(false);
+      }
     }
   };
 
   return (
     <div>
       <div className='max-w-[640px] h-[95vh] m-auto relative z-10 bg-[#FFFFFF] rounded-[20px] p-8 md:p-20 overflow-y-auto'>
+        <ToastContainer />
         <div className='flex justify-center sm:justify-start gap-10 md:gap-20 items-center mb-4'>
           <div onClick={onClose}>
             <BsArrowLeftShort className='cursor-pointer text-[#787676] w-6 h-6  ' />
@@ -183,7 +190,7 @@ function ExhibitorsForm({ onClose }: ModalProps) {
           </div>
           <div className='flex justify-center'>
             <button className='bg-[#178A2D] font-semibold h-10 w-[190px] text-sm text-[#ffff] rounded-[2px] items-center tracking-[0.2px] text-[#23323F] !self-center'>
-              Submit
+              {isLoading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
         </form>

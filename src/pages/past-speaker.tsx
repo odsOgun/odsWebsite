@@ -28,6 +28,27 @@ import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
 import falola from '@/assets/img/past-speaker/falola.png';
 import justice from '@/assets/img/past-speaker/justice.jpeg';
+import speaker1 from '@/assets/img/Speaker1.png';
+import speaker2 from '@/assets/img/speaker2.png';
+import speaker3 from '@/assets/img/speaker3.png';
+import speaker4 from '@/assets/img/speaker4.png';
+import speaker5 from '@/assets/img/speaker5.png';
+import speaker10 from '@/assets/img/speaker10.png';
+import speaker7 from '@/assets/img/speaker7.png';
+import speaker8 from '@/assets/img/speaker8.png';
+import speaker9 from '@/assets/img/speaker9.png';
+import speaker11 from '@/assets/img/speaker11.png';
+import speaker12 from '@/assets/img/speaker12.png';
+import speaker13 from '@/assets/img/speaker13.png';
+import speaker14 from '@/assets/img/speaker14.png';
+import speaker15 from '@/assets/img/speaker17.png';
+import speaker17 from '@/assets/img/speaker16.png';
+import speaker18 from '@/assets/img/speaker15.png';
+import master1 from '@/assets/img/master1.png';
+import master2 from '@/assets/img/master2.png';
+import master3 from '@/assets/img/master3.png';
+import master4 from '@/assets/img/master5.png';
+
 import { useEffect, useRef, useState } from 'react';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
@@ -35,6 +56,123 @@ import { ArrowRight } from '@/assets/icons';
 import { ArrowLeft } from '@/assets/icons';
 
 const PastSpeakers = () => {
+  const Ods24 = [
+    {
+      title: 'Kashifu Inuwa',
+      position: 'DG, NITDA',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker17
+    },
+    {
+      title: 'Iyin Aboyeji',
+      position: 'Managing Partner, Accelerate Africa',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker11
+    },
+    {
+      title: 'Mohammed Jega',
+      position: 'Co-founder Domineum',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker1
+    },
+    {
+      title: 'Mayowa Kuyoro',
+      position: 'Partner McKinsey',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker14
+    },
+    {
+      title: 'Salem King',
+      position: 'Content Creator/Storyteller',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker13
+    },
+    {
+      title: 'Dr. Ademola Adenubi',
+      position: 'Founder, EduTAMS',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker15
+    },
+
+    {
+      title: 'Bayo Omoboriowo',
+      position: 'Founder Madhouse by tikera',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker4
+    },
+    {
+      title: 'Kiki Osinbajo',
+      position: 'CEO, Ciar',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker5
+    },
+
+    {
+      title: 'Dr. Smile',
+      position: 'Comedian',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker3
+    },
+    {
+      title: 'Dr Ajidahun Olusina',
+      position: 'Co-founder tryprivhealth',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker10
+    },
+    {
+      title: 'Dr Ishola Adebayo',
+      position: 'Lecturer, Tai Solarin UOE',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker18
+    },
+    {
+      title: 'Adenrele Sonariwo',
+      position: 'Entrepreneur and Art curator',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker7
+    },
+    {
+      title: 'Rahaman Abiola',
+      position: 'Editor-in-Chief - Legit.ng',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker8
+    },
+    {
+      title: 'Dr Gbonjubola Abiri',
+      position: 'CEO, Redi-Med Services',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker2
+    },
+    {
+      title: 'Niyi Fagbemi',
+      position: 'Travel Film Maker',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker9
+    },
+
+    {
+      title: 'Samuel Ogunyinka (Psalmist)',
+      position: 'Spoken word artist',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: speaker12
+    }
+  ];
   const Ods23 = [
     {
       title: 'Olubunmi Fabanwo',
@@ -169,6 +307,34 @@ const PastSpeakers = () => {
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: oluwajoba
+    },
+    {
+      title: 'Omolara Dada',
+      position: 'Growth Lead, Anchor',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: master1
+    },
+    {
+      title: 'Sodiq Akinjobi',
+      position: 'Developer Ecostystem CM at google',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: master2
+    },
+    {
+      title: 'Kutaje O. Joseph',
+      position: 'UX design mentor, Designlab ',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: master3
+    },
+    {
+      title: 'Ibiniyi Obikoya',
+      position: 'Tech Lead, Korapay',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: master4
     }
   ];
   const Ods21 = [
@@ -276,6 +442,9 @@ const PastSpeakers = () => {
   const itemsPerPage: number = 8; // Define how many items per page
   const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for the section to scroll to
   const visibleItems = Ods22.slice(currentIndex, currentIndex + itemsPerPage);
+  const visibleItems2 = Ods24.slice(currentIndex, currentIndex + itemsPerPage);
+  const totalItems: number =
+    Ods24.length || Ods23.length || Ods22.length || Ods21.length || Ods20.length;
 
   // Handle the 'Previous' button click
   const handlePrev = (): void => {
@@ -286,7 +455,6 @@ const PastSpeakers = () => {
   };
   // Handle the 'Next' button click
   const handleNext = (): void => {
-    const totalItems: number = 10; // Example total items
     if (currentIndex + itemsPerPage < totalItems && sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
       setCurrentIndex(currentIndex + itemsPerPage);
@@ -347,7 +515,7 @@ const PastSpeakers = () => {
               color: selectedYear === 0 ? '#ffff' : '#5A5A5A'
             }}
           >
-            ODS 2023
+            ODS 2024
           </button>
           <button
             className='rounded-[10px] sm:text-sm text-xs font-semibold w-[166px] py-2'
@@ -357,7 +525,7 @@ const PastSpeakers = () => {
               color: selectedYear === 1 ? '#ffff' : '#5A5A5A'
             }}
           >
-            ODS 2022
+            ODS 2023
           </button>
           <button
             className='rounded-[10px] sm:text-sm text-xs font-semibold w-[166px] py-2'
@@ -367,7 +535,7 @@ const PastSpeakers = () => {
               color: selectedYear === 2 ? '#ffff' : '#5A5A5A'
             }}
           >
-            ODS 2021
+            ODS 2022
           </button>
           <button
             className='rounded-[10px] sm:text-sm text-xs font-semibold w-[166px] py-2'
@@ -377,55 +545,115 @@ const PastSpeakers = () => {
               color: selectedYear === 3 ? '#ffff' : '#5A5A5A'
             }}
           >
+            ODS 2021
+          </button>
+          <button
+            className='rounded-[10px] sm:text-sm text-xs font-semibold w-[166px] py-2'
+            onClick={() => handleClick(4)}
+            style={{
+              backgroundColor: selectedYear === 4 ? '#FA6C20' : 'transparent',
+              color: selectedYear === 4 ? '#ffff' : '#5A5A5A'
+            }}
+          >
             ODS 2020
           </button>
         </div>
-        {selectedYear === 0 && (
-          <div
-            className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
-          >
-            {Ods23.map((item, index) => (
-              <div
-                key={index}
-                className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
-                style={{
-                  backgroundImage: showModal === index ? 'none' : `url(${item.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
+        <>
+          {selectedYear === 0 && (
+            <div
+              ref={sectionRef}
+              className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
+            >
+              {visibleItems2.map((item, index) => (
                 <div
-                  className={`h-[200px] w-[447px] rounded-md mx-auto   ${showModal === index ? 'block' : 'hidden'}`}
+                  key={index}
+                  className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
                   style={{
-                    backgroundImage: `url(${item.image})`,
+                    backgroundImage: showModal === index ? 'none' : `url(${item.image})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundPosition: 'center'
                   }}
-                ></div>
-                <div
-                  className={`absolute bottom-0 w-full px-4 py-6 ${showModal === index ? ' ' : 'bg-[#101611]'} text-white transition-all duration-300 ease-in-out ${
-                    hoveredIndex === index
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-full'
-                  }`}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <h1 className='font-semibold text-base text-[#F2F9FF] mb-2'>{item.title}</h1>
-                  <p className='text-[12px] leading-6 text-[#B0C5D6]'>{item.position}</p>
-                  <p
-                    className={`text-sm leading-6 text-[#B0C5D6] ${showModal === index ? 'block' : 'hidden'} `}
+                  <div
+                    className={`h-[200px] w-[447px] rounded-md mx-auto   ${showModal === index ? 'block' : 'hidden'}`}
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  ></div>
+                  <div
+                    className={`absolute bottom-0 w-full px-4 py-6 ${showModal === index ? ' ' : 'bg-[#101611]'} text-white transition-all duration-300 ease-in-out ${
+                      hoveredIndex === index
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-full'
+                    }`}
                   >
-                    {item.description}
-                  </p>
+                    <h1 className='font-semibold text-base text-[#F2F9FF] mb-2'>{item.title}</h1>
+                    <p className='text-[12px] leading-6 text-[#B0C5D6]'>{item.position}</p>
+                    <p
+                      className={`text-sm leading-6 text-[#B0C5D6] ${showModal === index ? 'block' : 'hidden'} `}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </>
         <>
           {selectedYear === 1 && (
+            <div
+              ref={sectionRef}
+              className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
+            >
+              {Ods23.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative rounded-2xl h-[360px] lg:max-w-[300px] w-auto overflow-hidden sm:mb-0 mb-[16px] cursor-pointer transition-transform transform ${showModal === index ? 'w-[475px] h-[456px] absolute z-30 bg-white pt-[56px] ' : 'h-[360px] w-[300px]'}`}
+                  style={{
+                    backgroundImage: showModal === index ? 'none' : `url(${item.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div
+                    className={`h-[200px] w-[447px] rounded-md mx-auto   ${showModal === index ? 'block' : 'hidden'}`}
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  ></div>
+                  <div
+                    className={`absolute bottom-0 w-full px-4 py-6 ${showModal === index ? ' ' : 'bg-[#101611]'} text-white transition-all duration-300 ease-in-out ${
+                      hoveredIndex === index
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-full'
+                    }`}
+                  >
+                    <h1 className='font-semibold text-base text-[#F2F9FF] mb-2'>{item.title}</h1>
+                    <p className='text-[12px] leading-6 text-[#B0C5D6]'>{item.position}</p>
+                    <p
+                      className={`text-sm leading-6 text-[#B0C5D6] ${showModal === index ? 'block' : 'hidden'} `}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
+        <>
+          {selectedYear === 2 && (
             <div
               ref={sectionRef}
               className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
@@ -470,29 +698,9 @@ const PastSpeakers = () => {
               ))}
             </div>
           )}
-          <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
-            <span
-              className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
-                currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
-              }`}
-              onClick={handlePrev}
-            >
-              <ArrowLeft fill='#2B4155' />
-            </span>
-            <span
-              className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
-                currentIndex + itemsPerPage >= visibleItems.length
-                  ? 'opacity-50 cursor-not-allowed'
-                  : ''
-              }`}
-              onClick={handleNext}
-            >
-              <ArrowRight fill='#2B4155' />
-            </span>
-          </div>
         </>
         <>
-          {selectedYear === 2 && (
+          {selectedYear === 3 && (
             <div
               className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
             >
@@ -538,7 +746,7 @@ const PastSpeakers = () => {
           )}
         </>
         <>
-          {selectedYear === 3 && (
+          {selectedYear === 4 && (
             <div
               className={`m-auto w-[90%] lg:w-[1280px] sm:grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-rows-1  justify-between gap-[24px] md:flex-row  transition-all duration-300 translate-x-  ease-in-out ${showModal ? '' : ''}`}
             >
@@ -590,6 +798,26 @@ const PastSpeakers = () => {
             </div>
           )}
         </>
+        <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
+          <span
+            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
+              currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            onClick={handlePrev}
+          >
+            <ArrowLeft fill='#2B4155' />
+          </span>
+          <span
+            className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
+              currentIndex + itemsPerPage >= visibleItems.length || visibleItems2.length
+                ? 'opacity-50 cursor-not-allowed'
+                : ''
+            }`}
+            onClick={handleNext}
+          >
+            <ArrowRight fill='#2B4155' />
+          </span>
+        </div>
       </section>
 
       <MobileApp />
