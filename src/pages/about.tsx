@@ -1,4 +1,4 @@
-  import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from '@/components/local/nav';
 import { HeartIcon, PersonIcon, ConcentricCirclesIcon, StarIcon } from '@/assets/icons';
 import HeroImg from '@/assets/img/about-hero.png';
@@ -13,8 +13,8 @@ import Sitelinks from '@/mock/sitelinks.json';
 import { ArrowRight } from '@/assets/icons';
 import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
-
-
+import hero2 from '@/assets/img/hero2.png';
+import hero3 from '@/assets/img/hero3.png';
 const items = [
   {
     icon: HeartIcon,
@@ -96,6 +96,11 @@ const journeyItems = [
     ]
   }
 ];
+const images = [
+  { src: HeroImg, alt: 'Hero Image' },
+  { src: hero2, alt: 'Image 1' },
+  { src: hero3, alt: 'Image 2' }
+];
 
 function About() {
   const [showNav, setShowNav] = useState(false);
@@ -111,7 +116,15 @@ function About() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <div className='h-screen'>
@@ -126,7 +139,12 @@ function About() {
         >
           <div
             className='w-full h-screen bg-red-50'
-            style={{ backgroundImage: `url(${HeroImg})`, backgroundPosition: 'center' }}
+            // style={{ backgroundImage: `url(${HeroImg})`, backgroundPosition: 'center' }}
+            style={{
+              backgroundImage: `url(${images[currentIndex].src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
           ></div>
 
           <div className='md:w-1/2  absolute bottom-16 md:left-28'>
@@ -271,6 +289,7 @@ function About() {
                 className={`px-10 py-6 rounded-lg my-5 last:my-0 mx-auto ${
                   [
                     'md:w-full',
+                    'md:w-[calc(100%-50px)]',
                     'md:w-[calc(100%-100px)]',
                     'md:w-[calc(100%-200px)]',
                     'md:w-[calc(100%-300px)]'
@@ -297,10 +316,10 @@ function About() {
               </button>
             </a>
             {/* <a href={Sitelinks.ourImpact} target='_blank'> */}
-              <button className='bg-transparent font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F] border border-[#ffff] ml-5'>
-                <span className='text-sm font-semibold text-white'>Our Statistics</span>
-                <ArrowRight />
-              </button>
+            <button className='bg-transparent font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F] border border-[#ffff] ml-5'>
+              <span className='text-sm font-semibold text-white'>Our Statistics</span>
+              <ArrowRight />
+            </button>
             {/* </a> */}
           </div>
         </div>
