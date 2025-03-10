@@ -13,10 +13,7 @@ const initialFormData = {
   fullName: '',
   email: '',
   organisation: '',
-  phoneNumber: '',
-  twitterLink: '',
-  linkedinLink: '',
-  website: ''
+  phoneNumber: ''
 };
 function ExhibitorsForm({ onClose, openModal }: ModalProps) {
   const [formData, setFormData] = useState(initialFormData);
@@ -92,7 +89,7 @@ function ExhibitorsForm({ onClose, openModal }: ModalProps) {
       setIsLoading(true);
       console.log(formData);
       try {
-        const response = await fetch('https://ods2025.onrender.com/api/v1/auth/exhibitor', {
+        const response = await fetch('https://ods2025.onrender.com/api/v1/exhibitor/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

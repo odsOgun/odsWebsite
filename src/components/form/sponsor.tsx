@@ -82,8 +82,8 @@ function SponsorForm({ onClose, openModal }: ModalProps) {
       valid = false;
     }
 
-    if (!formData.phoneNumber) {
-      errors.phoneNumber = 'Phone Number is required';
+    if (!formData.phoneNumber || formData.phoneNumber.length !== 13) {
+      errors.phoneNumber = 'Phone Number is required or invalid';
       valid = false;
     }
 
@@ -106,7 +106,7 @@ function SponsorForm({ onClose, openModal }: ModalProps) {
       setIsLoading(true);
       console.log(formData);
       try {
-        const response = await fetch('https://ods2025.onrender.com/api/v1/auth/sponsor', {
+        const response = await fetch('https://ods2025.onrender.com/api/v1/sponsor/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -225,7 +225,7 @@ function SponsorForm({ onClose, openModal }: ModalProps) {
               Company LinkedIn Link
             </label>
             <input
-              placeholder='www.linkedin.com/username'
+              placeholder='www.linkedin.com/in/username'
               type='text'
               id='linkedinLink'
               name='linkedinLink'
