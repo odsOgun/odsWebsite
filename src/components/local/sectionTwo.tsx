@@ -188,7 +188,7 @@ function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoPr
 
             <div
               // className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-10'} my-10 w-full `}
-              className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-4'} my-10 w-[70%] max-w-full`}
+              className={`flex flex-col md:flex-row ${activeTab === Tabs.All ? 'gap-4' : 'gap-4'} my-10 w-[100%] md:w-[70%] max-w-full`}
             >
               {events.map((item, index) => (
                 <CalendarCard
