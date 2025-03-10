@@ -4,6 +4,7 @@ import ODSLogoMobile from '@/assets/svgs/nav/ODSLogo2.svg';
 import MenuSvg from '@/assets/svgs/nav/menu.svg';
 import { useState } from 'react';
 import Sitelinks from '@/mock/sitelinks.json';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   // Define types for navigation items
@@ -33,8 +34,10 @@ function Nav() {
   return (
     <nav className='flex items-center justify-center w-full'>
       <div className='flex items-center h-[54px] w-full py-2 max-w-[1120px] px-2 md:h-16 md:py-[10px] md:px-2 max-md:justify-between'>
-        <img src={ODSLogo} className='logo md:hidden' alt='ODS logo' />
-        <img src={ODSLogoMobile} className='logo max-md:hidden' alt='ODS logo' />
+        <Link to='/'>
+          <img src={ODSLogo} className='logo md:hidden' alt='ODS logo' />
+          <img src={ODSLogoMobile} className='logo max-md:hidden' alt='ODS logo' />
+        </Link>
 
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {

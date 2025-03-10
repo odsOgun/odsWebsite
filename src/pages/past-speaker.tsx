@@ -28,16 +28,16 @@ import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
 import falola from '@/assets/img/past-speaker/falola.png';
 import justice from '@/assets/img/past-speaker/justice.jpeg';
-import speaker1 from '@/assets/img/Speaker1.png';
+// import speaker1 from '@/assets/img/Speaker1.png';
 import speaker2 from '@/assets/img/speaker2.png';
-import speaker3 from '@/assets/img/speaker3.png';
+// import speaker3 from '@/assets/img/speaker3.png';
 import speaker4 from '@/assets/img/speaker4.png';
 import speaker5 from '@/assets/img/speaker5.png';
 import speaker10 from '@/assets/img/speaker10.png';
-import speaker7 from '@/assets/img/speaker7.png';
+// import speaker7 from '@/assets/img/speaker7.png';
 import speaker8 from '@/assets/img/speaker8.png';
 import speaker9 from '@/assets/img/speaker9.png';
-import speaker11 from '@/assets/img/speaker11.png';
+// import speaker11 from '@/assets/img/speaker11.png';
 import speaker12 from '@/assets/img/speaker12.png';
 import speaker13 from '@/assets/img/speaker13.png';
 import speaker14 from '@/assets/img/speaker14.png';
@@ -64,20 +64,7 @@ const PastSpeakers = () => {
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker17
     },
-    {
-      title: 'Iyin Aboyeji',
-      position: 'Managing Partner, Accelerate Africa',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker11
-    },
-    {
-      title: 'Mohammed Jega',
-      position: 'Co-founder Domineum',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker1
-    },
+
     {
       title: 'Mayowa Kuyoro',
       position: 'Partner McKinsey',
@@ -114,14 +101,6 @@ const PastSpeakers = () => {
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker5
     },
-
-    {
-      title: 'Dr. Smile',
-      position: 'Comedian',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker3
-    },
     {
       title: 'Dr Ajidahun Olusina',
       position: 'Co-founder tryprivhealth',
@@ -135,13 +114,6 @@ const PastSpeakers = () => {
       description:
         'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
       image: speaker18
-    },
-    {
-      title: 'Adenrele Sonariwo',
-      position: 'Entrepreneur and Art curator',
-      description:
-        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
-      image: speaker7
     },
     {
       title: 'Rahaman Abiola',
