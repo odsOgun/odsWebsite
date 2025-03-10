@@ -8,9 +8,9 @@ import BarChartComponent from "@/components/local/barchart";
 
 const Statistics = () => {
     const cardValues = [
-        {id: 1, attendees: 7265, title: 'Total Attendees'},
-        {id: 1, attendees: 3671, title: 'Total Registered'},
-        {id: 1, attendees: 36, title: 'Total Speakers'},
+        {id: 1, attendees: 7265, title: 'Total Attendees', bg: '#EDEEFC'},
+        {id: 1, attendees: 3671, title: 'Total Registered', bg: '#E6F1FD'},
+        {id: 1, attendees: 36, title: 'Total Speakers', bg: '#E2EFE4'},
     ]
   return (
     <div>
@@ -33,7 +33,7 @@ const Statistics = () => {
         <div className='art-bg' />
         <div className=" py-[83px] px-[16px] md:px-0">
             <div className="flex justify-center flex-col md:flex-row items-center gap-[28px]">
-                {cardValues.map((cardValue) => (<div className="bg-[#EDEEFC] w-full md:w-[200px] rounded-[16px] p-[24px]" key={cardValue.id}>
+                {cardValues.map((cardValue) => (<div className='w-full md:w-[200px] rounded-[16px] p-[24px]' key={cardValue.id} style={{background:cardValue.bg}}>
                     <h2 className="font-regular text-[14px] text-[#000] leading-[20px] mb-[8px]">{cardValue.title}</h2>
                     <p>{cardValue.attendees}</p> 
                 </div>))}
