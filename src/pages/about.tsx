@@ -15,6 +15,7 @@ import MobileApp from '@/components/local/mobileApp';
 import Footer from '@/components/local/footer';
 import hero2 from '@/assets/img/hero2.png';
 import hero3 from '@/assets/img/hero3.png';
+import { Link } from 'react-router-dom';
 const items = [
   {
     icon: HeartIcon,
@@ -316,10 +317,12 @@ function About() {
               </button>
             </a>
             {/* <a href={Sitelinks.ourImpact} target='_blank'> */}
-            <button className='bg-transparent font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F] border border-[#ffff] ml-5'>
-              <span className='text-sm font-semibold text-white'>Our Statistics</span>
-              <ArrowRight />
-            </button>
+            <Link to='/statistics'>
+              <button className='bg-transparent font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#23323F] border border-[#ffff] ml-5'>
+                <span className='text-sm font-semibold text-white'>Our Statistics</span>
+                <ArrowRight />
+              </button>
+            </Link>
             {/* </a> */}
           </div>
         </div>
