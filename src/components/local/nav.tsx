@@ -132,7 +132,7 @@ function Nav() {
                   <div
                     key={index}
                     onClick={item.link}
-                    className={`py-[2px] text-[#627587] cursor-pointer ${
+                    className={`font-semibold text-base leading-6 tracking-[0.2px] py-[2px] text-[#627587] cursor-pointer ${
                       item.hasIcon
                         ? 'flex justify-center text-[#627587] items-center gap-[10px]'
                         : ''
