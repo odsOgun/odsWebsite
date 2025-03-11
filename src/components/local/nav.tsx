@@ -5,6 +5,10 @@ import MenuSvg from '@/assets/svgs/nav/menu.svg';
 import { useState } from 'react';
 import Sitelinks from '@/mock/sitelinks.json';
 import { Link } from 'react-router-dom';
+import Modal from '../modal';
+import SponsorForm from '../form/sponsor';
+import ExhibitorsForm from '../form/exhibitor';
+import SucessModal from '../form/sucessModal';
 
 function Nav() {
   // Define types for navigation items
@@ -12,27 +16,33 @@ function Nav() {
     label: string;
     hasIcon?: boolean;
     icon?: React.ReactNode;
-    link?: string;
+    link?: string | (() => void);
   }
+  const [showSponsorModal, setShowSponsorModal] = useState(false);
+  const [showExhibitorModal, setShowExhibitorModal] = useState(false);
+  const [showSucessModal, setShowSucessModal] = useState(false);
+
+  const openSponsorModal = () => setShowSponsorModal(true);
+  const closeSponsorModal = () => setShowSponsorModal(false);
+
+  const openExhibitorModal = () => setShowExhibitorModal(true);
+  const closeExhibitorModal = () => setShowExhibitorModal(false);
+  const openSucessModal = () => setShowSucessModal(true);
+  const closeSucessModal = () => setShowSucessModal(false);
 
   const navItems: NavItemProps[] = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    // { label: 'Sponsor', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagFPHzIMU2TSypBt/form' },
-    // { label: 'Sponsor', link: '/' },
-    { label: 'Statistics', link: '/statistics' },
-
+    { label: 'Sponsor', link: openSponsorModal },
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
-    // { label: 'Exhibitors', link: 'https://airtable.com/appyfwCgYP4N5vYUY/pagn6mVmzmgXH8ZVR/form' },
-    // { label: 'Exhibitors', link: '/' },
-
+    { label: 'Exhibitors', link: openExhibitorModal },
     { label: 'Speakers', link: '/speaker' }
   ];
 
   const [navState, setNavState] = useState<boolean>(false);
 
   return (
-    <nav className='flex items-center justify-center w-full'>
+    <nav className={`flex items-center justify-center w-full ${navState ? 'fixed' : ''}`}>
       <div
         className={`flex items-center h-[54px] w-full py-2 max-w-[1120px] px-2 md:h-16 md:py-[10px] md:px-2 max-md:justify-between `}
       >
@@ -43,12 +53,25 @@ function Nav() {
 
         <div className='flex items-center justify-center flex-1 gap-4 text-sm font-semibold leading-6 text-[#627587] tracking-[0.2px] max-md:hidden'>
           {navItems.map((item, index) => {
-            // Determine the target based on the link
-            const target = item.link?.startsWith('/') ? '_self' : '_blank';
-
-            return (
-              <a href={item?.link} target={target} key={index}>
+            if (typeof item.link === 'string') {
+              const target = item.link.startsWith('/') ? '_self' : '_blank';
+              return (
+                <a href={item.link} target={target} key={index}>
+                  <div
+                    className={`py-[2px] px-3 cursor-pointer ${
+                      item.hasIcon ? 'flex justify-center items-center gap-[10px]' : ''
+                    }`}
+                  >
+                    {item.label}
+                    {item.icon && item.icon}
+                  </div>
+                </a>
+              );
+            } else if (typeof item.link === 'function') {
+              return (
                 <div
+                  key={index}
+                  onClick={item.link}
                   className={`py-[2px] px-3 cursor-pointer ${
                     item.hasIcon ? 'flex justify-center items-center gap-[10px]' : ''
                   }`}
@@ -56,8 +79,9 @@ function Nav() {
                   {item.label}
                   {item.icon && item.icon}
                 </div>
-              </a>
-            );
+              );
+            }
+            return null;
           })}
         </div>
 
@@ -88,22 +112,39 @@ function Nav() {
         >
           <div className='flex flex-col w-full gap-6'>
             {navItems.map((item, index) => {
-              const target = item.link?.startsWith('/') ? '_self' : '_blank';
-
-              return (
-                <a
-                  href={item?.link}
-                  target={target}
-                  key={index}
-                  onClick={() => setNavState(!navState)}
-                >
-                  <div className='flex items-center cursor-pointer h-7'>
+              if (typeof item.link === 'string') {
+                const target = item.link.startsWith('/') ? '_self' : '_blank';
+                return (
+                  <a
+                    href={item.link}
+                    target={target}
+                    key={index}
+                    onClick={() => setNavState(!navState)}
+                  >
+                    <div className='flex items-center cursor-pointer h-7'>
+                      <div className='font-semibold text-base leading-6 tracking-[0.2px] text-[#627587]'>
+                        {item.label}
+                      </div>
+                    </div>
+                  </a>
+                );
+              } else if (typeof item.link === 'function') {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      // item.link();
+                      setNavState(!navState);
+                    }}
+                    className='flex items-center cursor-pointer h-7'
+                  >
                     <div className='font-semibold text-base leading-6 tracking-[0.2px] text-[#627587]'>
                       {item.label}
                     </div>
                   </div>
-                </a>
-              );
+                );
+              }
+              return null;
             })}
           </div>
           <div className='flex flex-col items-center gap-6 mt-6'>
@@ -127,6 +168,17 @@ function Nav() {
             onClick={() => setNavState(!navState)}
           ></div>
         )}
+        <Modal show={showSponsorModal} onClose={closeSponsorModal}>
+          <SponsorForm onClose={closeSponsorModal} openModal={openSucessModal} />
+        </Modal>
+
+        <Modal show={showExhibitorModal} onClose={closeExhibitorModal}>
+          <ExhibitorsForm onClose={closeExhibitorModal} openModal={openSucessModal} />
+        </Modal>
+
+        <Modal show={showSucessModal} onClose={closeSucessModal}>
+          <SucessModal />
+        </Modal>
       </div>
     );
   }
