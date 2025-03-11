@@ -133,7 +133,7 @@ function Nav() {
                   <div
                     key={index}
                     onClick={() => {
-                      item.link();
+                      // item.link();
                       setNavState(!navState);
                     }}
                     className='flex items-center cursor-pointer h-7'
