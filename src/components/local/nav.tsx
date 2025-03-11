@@ -42,7 +42,7 @@ function Nav() {
   const [navState, setNavState] = useState<boolean>(false);
 
   return (
-    <nav className={`flex items-center justify-center w-full ${navState ? 'fixed' : ''}`}>
+    <nav className={` flex items-center justify-center w-full`}>
       <div
         className={`flex items-center h-[54px] w-full py-2 max-w-[1120px] px-2 md:h-16 md:py-[10px] md:px-2 max-md:justify-between `}
       >
@@ -63,7 +63,6 @@ function Nav() {
                     }`}
                   >
                     {item.label}
-                    {item.icon && item.icon}
                   </div>
                 </a>
               );
@@ -77,7 +76,6 @@ function Nav() {
                   }`}
                 >
                   {item.label}
-                  {item.icon && item.icon}
                 </div>
               );
             }
@@ -113,10 +111,11 @@ function Nav() {
           <div className='flex flex-col w-full gap-6'>
             {navItems.map((item, index) => {
               if (typeof item.link === 'string') {
-                const target = item.link.startsWith('/') ? '_self' : '_blank';
+                const target = item.link?.startsWith('/') ? '_self' : '_blank';
+
                 return (
                   <a
-                    href={item.link}
+                    href={item?.link}
                     target={target}
                     key={index}
                     onClick={() => setNavState(!navState)}
@@ -132,15 +131,14 @@ function Nav() {
                 return (
                   <div
                     key={index}
-                    onClick={() => {
-                      // item.link();
-                      setNavState(!navState);
-                    }}
-                    className='flex items-center cursor-pointer h-7'
+                    onClick={item.link}
+                    className={`py-[2px] text-[#627587] cursor-pointer ${
+                      item.hasIcon
+                        ? 'flex justify-center text-[#627587] items-center gap-[10px]'
+                        : ''
+                    }`}
                   >
-                    <div className='font-semibold text-base leading-6 tracking-[0.2px] text-[#627587]'>
-                      {item.label}
-                    </div>
+                    {item.label}
                   </div>
                 );
               }
@@ -164,7 +162,7 @@ function Nav() {
         </div>
         {navState && (
           <div
-            className='fixed right-0 top-14 w-[100vh] h-full bg-[#000000] bg-opacity-70 cursor-pointer z-10'
+            className='fixed right-0 top-0 w-[100vh] h-full bg-[#000000] bg-opacity-70 cursor-pointer z-10'
             onClick={() => setNavState(!navState)}
           ></div>
         )}
