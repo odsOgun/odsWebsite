@@ -408,7 +408,17 @@ const PastSpeakers = () => {
   const handleClick = (index: number): void => {
     setSelectedYear(index);
   };
+  const handleNextMobile = (index: number): void => {
+    if (index < 4) {
+      setSelectedYear(index + 1);
+    }
+  };
 
+  const handlePrevMobile = (index: number): void => {
+    if (index > 0) {
+      setSelectedYear(index - 1);
+    }
+  };
   // Define the types for state variables
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const itemsPerPage: number = 8; // Define how many items per page
@@ -478,7 +488,7 @@ const PastSpeakers = () => {
             digital summit over the years
           </p>
         </div>
-        <div className='md:w-[668px]  h-[44px] bg-[#F7F8F8] rounded-[10px] flex justify-between items-center mb-10 md:mb-20 p-[2px] '>
+        <div className='md:w-[668px]  h-[44px] bg-[#F7F8F8] rounded-[10px] hidden sm:flex justify-between items-center mb-10 md:mb-20 p-[2px] '>
           <button
             className='rounded-[10px] sm:text-sm text-xs font-semibold w-[166px] py-2'
             onClick={() => handleClick(0)}
@@ -528,6 +538,52 @@ const PastSpeakers = () => {
             }}
           >
             ODS 2020
+          </button>
+        </div>
+        <div className=' flex justify-center gap-[21px] items-center mb-12 sm:hidden'>
+          <button
+            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[32px] w-[32px] transform  cursor-pointer ${
+              selectedYear === 0 ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            // onClick={handlePrev}
+            onClick={() => handlePrevMobile(selectedYear)}
+          >
+            <ArrowLeft fill={` ${selectedYear === 0 ? 'transparent' : '#2B4155'}`} />
+          </button>
+          {selectedYear === 0 && (
+            <button className='rounded-[10px] sm:text-sm text-xs font-semibold w-[199px] py-2 bg-[#FA6C20] text-white h-10'>
+              ODS 2024
+            </button>
+          )}
+          {selectedYear === 1 && (
+            <button className='rounded-[10px] sm:text-sm text-xs font-semibold w-[199px] py-2 bg-[#FA6C20] text-white h-10'>
+              ODS 2023
+            </button>
+          )}
+          {selectedYear === 2 && (
+            <button className='rounded-[10px] sm:text-sm text-xs font-semibold w-[199px] py-2 bg-[#FA6C20] text-white h-10'>
+              ODS 2022
+            </button>
+          )}
+          {selectedYear === 3 && (
+            <button className='rounded-[10px] sm:text-sm text-xs font-semibold w-[199px] py-2 bg-[#FA6C20] text-white h-10'>
+              ODS 2021
+            </button>
+          )}
+          {selectedYear === 4 && (
+            <button className='rounded-[10px] sm:text-sm text-xs font-semibold w-[199px] py-2 bg-[#FA6C20] text-white h-10'>
+              ODS 2020
+            </button>
+          )}
+
+          <button
+            className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[32px] w-[32px] transform  cursor-pointer ${
+              selectedYear === 4 ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            // onClick={handleNext}
+            onClick={() => handleNextMobile(selectedYear)}
+          >
+            <ArrowRight fill={` ${selectedYear === 4 ? 'transparent' : '#2B4155'}`} />
           </button>
         </div>
         <>
@@ -772,7 +828,7 @@ const PastSpeakers = () => {
         </>
         <div className='flex justify-center items-center gap-6 mt-10  sm:mt-[64px]'>
           <span
-            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer${
+            className={`rounded-full flex justify-center items-center bg-[#CDD5DC] h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
               currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
             }`}
             onClick={handlePrev}
@@ -781,9 +837,7 @@ const PastSpeakers = () => {
           </span>
           <span
             className={`rounded-full bg-[#CDD5DC] flex justify-center items-center h-[56px] w-[56px] transform -translate-y-1/2 cursor-pointer ${
-              currentIndex + itemsPerPage <= visibleItems.length || visibleItems2.length
-                ? 'opacity-50 cursor-not-allowed'
-                : ''
+              currentIndex + itemsPerPage >= totalItems ? 'opacity-50 cursor-not-allowed' : ''
             }`}
             onClick={handleNext}
           >
