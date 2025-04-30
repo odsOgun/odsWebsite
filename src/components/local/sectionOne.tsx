@@ -6,6 +6,7 @@ import RocketIcon from '@/assets/svgs/rocket.svg';
 import One from '@/assets/img/one.png';
 import Two from '@/assets/img/two.png';
 import Three from '@/assets/img/three.png';
+import ContectTrack from './contectTrack';
 
 const cardItems = [
   {
@@ -59,7 +60,7 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
               <span className='text-sm font-semibold'>Become a Sponsor</span>
               <ArrowRight fill='#23323F' />
             </button>
-            <a href="/statistics" >
+            <a href='/statistics'>
               <button className='bg-inherit font-semibold h-10 min-w-[171px] rounded-[2px] flex justify-center items-center tracking-[0.2px] text-[#ACFAAC]'>
                 <span className='text-sm font-semibold'>View Our Statistics</span>
                 <ArrowRight fill='#ACFAAC' />
@@ -91,7 +92,9 @@ function SectionOne({ onOpenSponsorModal }: SectionOneProps) {
             30+<span className='text-sm tracking-[3px]'>SESSIONS</span>
           </h2>
         </div>
-
+      </div>
+      <ContectTrack />
+      <div className='max-w-[1120px] w-full px-8 mx-auto py-20 xl:box-content'>
         <div className='py-20'>
           <div className='md:w-1/2 md:mx-auto'>
             <h2 className='text-2xl font-semibold text-center text-white md:text-4xl platypi-gf'>
