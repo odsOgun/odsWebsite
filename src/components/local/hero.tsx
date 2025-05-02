@@ -5,7 +5,6 @@ import OgunGov from '@/assets/svgs/sponsors/ogunGov.svg';
 import TechEconomy from '@/assets/svgs/sponsors/techeconomy.svg';
 import OgunDaily from '@/assets/svgs/sponsors/ogunDaily.svg';
 import CountDown from './countdown';
-import Sitelinks from '@/mock/sitelinks.json';
 import useIsScreenWidthBelow from '@/hooks/useIsScreenWidthBelow';
 // mobile
 import GrazacLogoMobile from '/img/mobile/grazac.svg';
