@@ -120,10 +120,11 @@ const whatToLookForwardItems = [
 ];
 interface SectionTwoProps {
   onOpenSponsorModal: () => void;
+  onOpenComingModal: () => void;
   onOpenExhibitorModal: () => void;
 }
 
-function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoProps ) {
+function SectionTwo({ onOpenSponsorModal, onOpenComingModal , onOpenExhibitorModal}: SectionTwoProps ) {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.Conference);
   return (
     <div className='bg-white' id='exhibitors'>
@@ -250,12 +251,12 @@ function SectionTwo({ onOpenSponsorModal , onOpenExhibitorModal  }: SectionTwoPr
                 starts here, wherever you sit in the ecosystem, you'll find the insights,
                 inspiration and connections that you need to thrive.
               </p>
-              <a href={Sitelinks.register} target='_blank'>
-                <button className='bg-[#178A2D] font-semibold h-10 min-w-[120px] rounded flex justify-center items-center tracking-[0.2px] text-white leading-6'>
+              {/* <a href={Sitelinks.register} target='_blank'> */}
+                <button className='bg-[#178A2D] font-semibold h-10 min-w-[120px] rounded flex justify-center items-center tracking-[0.2px] text-white leading-6' onClick ={onOpenComingModal}>
                   <span className='text-sm font-semibold'>Register</span>
                   <ArrowRight />
                 </button>
-              </a>
+              {/* </a> */}
             </div>
           </div>
 

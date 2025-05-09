@@ -10,15 +10,18 @@ import SponsorForm from '@/components/form/sponsor';
 import ExhibitorsForm from '@/components/form/exhibitor';
 import Modal from '@/components/modal';
 import SucessModal from '@/components/form/sucessModal';
+import ComingSoon from '@/components/comingModal';
 
 function Home() {
   const [showSponsorModal, setShowSponsorModal] = useState(false);
   const [showExhibitorModal, setShowExhibitorModal] = useState(false);
   const [showSucessModal, setShowSucessModal] = useState(false);
+  const [showComingModal, setShowComingModal] = useState(false)
 
   const openSponsorModal = () => setShowSponsorModal(true);
   const closeSponsorModal = () => setShowSponsorModal(false);
-
+  const openComingModal = () => setShowComingModal(true);
+  const closeComingModal = () => setShowComingModal(false);
   const openExhibitorModal = () => setShowExhibitorModal(true);
   const closeExhibitorModal = () => setShowExhibitorModal(false);
   const openSucessModal = () => setShowSucessModal(true);
@@ -29,9 +32,9 @@ function Home() {
       <div className='container max-md:px-5'>
         <Nav />
       </div>
-      <Hero onOpenSponsorModal={openSponsorModal} />
+      <Hero onOpenSponsorModal={openSponsorModal}  onOpenComingModal={openComingModal}  />
       <SectionOne onOpenSponsorModal={openSponsorModal} />
-      <SectionTwo onOpenSponsorModal={openSponsorModal} onOpenExhibitorModal={openExhibitorModal} />
+      <SectionTwo onOpenSponsorModal={openSponsorModal}   onOpenExhibitorModal={openExhibitorModal} onOpenComingModal={openComingModal} />
       <div>
         <Merch />
       </div>
@@ -52,6 +55,9 @@ function Home() {
 
       <Modal show={showSucessModal} onClose={closeSucessModal}>
         <SucessModal />
+      </Modal>
+      <Modal show={showComingModal} onClose={closeComingModal}>
+        <ComingSoon onClose={closeComingModal} />
       </Modal>
     </div>
   );
