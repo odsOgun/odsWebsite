@@ -40,7 +40,7 @@ function Nav() {
     { label: 'Sponsor', link: openSponsorModal },
     { label: 'Store', link: 'https://selar.co/m/ods2024' },
     { label: 'Exhibitors', link: openExhibitorModal },
-    { label: 'Speakers', link: openComingModal }
+    { label: 'Speakers', link: '/speaker' },
   ];
 
   const [navState, setNavState] = useState<boolean>(false);
