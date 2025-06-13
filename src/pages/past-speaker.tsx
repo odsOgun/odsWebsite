@@ -30,6 +30,8 @@ import oluwatobi from '@/assets/img/past-speaker/oluwatobi.png';
 import oyeniyi from '@/assets/img/past-speaker/oyeniyi.png';
 import falola from '@/assets/img/past-speaker/falola.png';
 import justice from '@/assets/img/past-speaker/justice.jpeg';
+import yosola from '@/assets/img/past-speaker/yosolaade.jpg';
+
 // import speaker1 from '@/assets/img/Speaker1.png';
 import speaker2 from '@/assets/img/speaker2.png';
 // import speaker3 from '@/assets/img/speaker3.png';
@@ -170,6 +172,13 @@ const PastSpeakers = () => {
       image: ibikun
     },
     {
+      title: 'Yosola Adekanmbi',
+      position: 'Flutter Mobile Developer, Beebz Inc ',
+      description:
+        'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
+      image: yosola
+    },
+    {
       title: 'Joshua Chibueze',
       position: 'Co-founder, piggyvest',
       description:
@@ -206,7 +215,8 @@ const PastSpeakers = () => {
     //   description:
     //     'I’m a highly motivated and solution oriented software engineer and tech entrepreneur. I use my skills and knowledge to develop and contribute innovative ideas. I am interested in Edtech, Startup Ecosytem, Investment, Blockchain, Artificial Intelligence, Machine Learning and Decentralized Finance.',
     //   image: bayo
-    // }
+    // },
+
     {
       title: 'Daniel Fayemi',
       position: 'Ex- Engineering Lead, Binance',
